@@ -27,12 +27,13 @@ class TweetSet:
         for i in self.tweets:
             val += i
 
-
     def add_emission_params(self, x, y):
         """
         Get the emission parameters and store them
         :return: none
         """
+    def return_all(self):
+        return self.tweets
 
 
 class HiddenMarkovModel:
@@ -77,7 +78,11 @@ class HiddenMarkovModel:
         """
         return len(self.x)
 
+    def return_x(self):
+        return self.x
 
+    def return_y(self):
+        return self.y
 
 
 
@@ -87,19 +92,20 @@ def read_training_set():
     """
     main_path = os.path.dirname(__file__)
     training_path = os.path.join(main_path,'../Datasets/Demo/train')
-    training = open(training_path, encoding='utf-8').read()
-    print('Read training file with ' + str(len(training.split('\n\n'))) + ' tweets')
+    training = open(training_path, encoding='utf-8').read().split('\n\n')
+    del training[-1]    # because the last tweet ends with 3 '\n'
+    print('Read training file with ' + str(len(training)) + ' tweets')
 
     new_set = TweetSet()
 
     count = 0
-    for i in training.split('\n\n'):
+    for i in training:
         # print("i: " + i )
         count = count + 1
         print(count)
         new_tweet = HiddenMarkovModel()
 
-        for j in training.split('\n'):
+        for j in i.split('\n'):
             # print(j.split(" "))
             if len(j) > 0:
                 new_tweet.add_x(j.split(" ")[0])
@@ -114,3 +120,4 @@ def read_training_set():
 
 
 trainset = read_training_set()
+print (trainset.return_all()[2].return_x())
