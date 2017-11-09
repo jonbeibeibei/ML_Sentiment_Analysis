@@ -115,9 +115,8 @@ def read_training_set():
         if new_tweet.getSize() > 0:
             new_set.add_tweet(new_tweet)
 
-    return new_set
     print("done!")
+    return new_set
 
 
 trainset = read_training_set()
-print (trainset.return_all()[2].return_x())
