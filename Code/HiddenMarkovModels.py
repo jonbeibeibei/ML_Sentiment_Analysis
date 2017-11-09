@@ -25,7 +25,7 @@ class TweetSet:
     def count_total_y(self, y):
         val = 0
         for i in self.tweets:
-            val += i.
+            val += i
 
 
     def add_emission_params(self, x, y):
