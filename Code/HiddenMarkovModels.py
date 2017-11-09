@@ -14,6 +14,7 @@ class TweetSet:
 
     def __init__(self):
         self.tweets = []
+        self.emission = []
 
     def add_tweet(self, tweet):
         """
@@ -23,15 +24,22 @@ class TweetSet:
         self.tweets.append(tweet)
 
     def count_total_y(self, y):
+        """
+        Get count of y's in a all tweets
+        :return: count of all y's
+        """
         val = 0
-        for i in self.tweets:
-            val += i
+        for tweet in self.tweets:
+            val += tweet.count_y(y)
+        return val
 
     def add_emission_params(self, x, y):
         """
         Get the emission parameters and store them
         :return: none
         """
+
+
     def return_all(self):
         return self.tweets
 
@@ -120,3 +128,4 @@ def read_training_set():
 
 
 trainset = read_training_set()
+print (trainset.count_total_y("O"))
