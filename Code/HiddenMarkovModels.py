@@ -23,16 +23,6 @@ class TweetSet:
         """
         self.tweets.append(tweet)
 
-    def count_total_x(self, x):
-        """
-        Get count of x's in a all tweets
-        :return: count of all x's
-        """
-        val = 0
-        for tweet in self.tweets:
-            val += tweet.count_x(x)
-        return val
-
     def count_total_y(self, y):
         """
         Get count of y's in a all tweets
@@ -43,14 +33,22 @@ class TweetSet:
             val += tweet.count_y(y)
         return val
 
+    def count_y_to_x(self, x, y):
+        val = 0
+        for tweet in self.tweets:
+            for i in range(0, tweet.getSize()):
+                if (tweet.get_x()[i] == x) and (tweet.get_y()[i] == y):
+                    val += 1
+        return val
+
     def add_emission_params(self, x, y):
         """
         Get the emission parameters and store them
         :return: none
         """
+        count_y = self.count_total_y(y)
 
-
-    def return_all(self):
+    def get_all(self):
         return self.tweets
 
 
@@ -77,18 +75,6 @@ class HiddenMarkovModel:
         """
         self.y.append(y)
 
-    def count_x(self,x):
-        """
-        Get count of x's in a sentence/tweet
-        :return: count of x's
-        """
-        count = 0
-        for i in self.x:
-            if x == i:
-                count += 1
-
-        return count
-
     def count_y(self,y):
         """
         Get count of y's in a sentence/tweet
@@ -108,12 +94,11 @@ class HiddenMarkovModel:
         """
         return len(self.x)
 
-    def return_x(self):
+    def get_x(self):
         return self.x
 
-    def return_y(self):
+    def get_y(self):
         return self.y
-
 
 
 def read_training_set():
