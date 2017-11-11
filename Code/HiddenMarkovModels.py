@@ -15,6 +15,8 @@ class TweetSet:
     def __init__(self):
         self.tweets = []
         self.emission = {}
+        self.pairs = []
+        self.k = 3
 
     def add_tweet(self, tweet):
         """
@@ -44,24 +46,55 @@ class TweetSet:
         return val
 
     def count_y_to_x(self, x, y):
+        """
+        Get count of y's that emits the word x in a all tweets
+        :return: count of all (y -> x)'s
+        """
         val = 0
-        for tweet in self.tweets:
-            for i in range(0, tweet.getSize()):
-                if (tweet.get_x()[i] == x) and (tweet.get_y()[i] == y):
-                    val += 1
+        for p in self.pairs:
+            if ((p[0] == x) and (p[1] == y)):
+                val += 1
         return val
 
     def add_emission_params(self, x, y):
         """
-        Get the emission parameters and store them
+        Get the emission parameter of word label pair and store them
         :return: none
         """
         self.emission[(x, y)] = float(self.count_y_to_x(x, y)) / float(self.count_total_y(y))
 
+    def modify_data(self, k):
+        """
+        Replace words that appear less than k times in training set with #UNK#
+        :return: none
+        """
+        for tweet in self.tweets:
+            for i in range(tweet.getSize()):
+                if (self.count_total_x(tweet.get_x()[i]) < 3):
+                    self.pairs.append(("#UNK#", tweet.get_y()[i]))
+                else:
+                    self.pairs.append((tweet.get_x()[i], tweet.get_y()[i]))
+
+
+    def all_emission_params(self):
+        """
+        Iterate through all word/label pairs to populate emission parameters list
+        :return: none
+        """
+        self.modify_data(self.k)
+        for p in self.pairs:
+            self.add_emission_params(p[0], p[1])
+
     def get_all(self):
+        """
+        :return: all tweets
+        """
         return self.tweets
 
     def get_emission_params(self):
+        """
+        :return: all emission parameters
+        """
         return self.emission
 
 
@@ -120,9 +153,17 @@ class HiddenMarkovModel:
         return len(self.x)
 
     def get_x(self):
+        """
+        Get all words in tweet
+        :return: list of x
+        """
         return self.x
 
     def get_y(self):
+        """
+        Get all label in tweet
+        :return: list of y
+        """
         return self.y
 
 
@@ -160,3 +201,5 @@ def read_training_set():
 
 
 trainset = read_training_set()
+trainset.all_emission_params()
+print (trainset.get_emission_params())
