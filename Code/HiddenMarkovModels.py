@@ -14,7 +14,7 @@ class TweetSet:
 
     def __init__(self):
         self.tweets = []
-        self.emission = []
+        self.emission = {}
 
     def add_tweet(self, tweet):
         """
@@ -46,10 +46,13 @@ class TweetSet:
         Get the emission parameters and store them
         :return: none
         """
-        count_y = self.count_total_y(y)
+        self.emission[(x, y)] = float(self.count_y_to_x(x, y)) / float(self.count_total_y(y))
 
     def get_all(self):
         return self.tweets
+
+    def get_emission_params(self):
+        return self.emission
 
 
 class HiddenMarkovModel:
@@ -135,3 +138,5 @@ def read_training_set():
 
 
 trainset = read_training_set()
+trainset.add_emission_params('then', 'O')
+print (trainset.get_emission_params())
