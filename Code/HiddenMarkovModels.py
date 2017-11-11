@@ -18,6 +18,9 @@ class TweetSet:
         self.pairs = []
         self.k = 3
 
+    def set_k(k):
+        self.k = k
+
     def add_tweet(self, tweet):
         """
         Appends new tweet to overall set
