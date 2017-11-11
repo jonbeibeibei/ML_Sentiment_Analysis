@@ -6,7 +6,7 @@
 import os
 import sys
 
-class Main:
+class HMM:
     def __init__(self):
         self.states = ['O', 'B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative']
         self.output = []
@@ -20,22 +20,33 @@ class Main:
         train_path = '../Datasets/Demo/train'
         training_set = read_training_set(train_path)
         training_set.all_emission_params()
-        emission = get_emission_params()
+        emission_params = training_set.get_emission_params()
         train_words = training_set.get_words()
 
         test_path = '../Datasets/Demo/dev.in'
         test_set = read_test_set(test_path)
         test_set.modify_test_data(train_words)
-        test_words = test.
-        for tweet in test_set:
-            for i in range(0, tweet.getSize()):
-                word = tweet.get_x()[i]
-                probability = 0.0
-                for state in self.states:
-                    if emission[(word, state)]
 
-                emission[(word, 'O')]
-                emission[(word, 'B-positive')]
+        output = []
+
+        for tweet in test_set.get_all():
+            sentence = []
+            for pair in tweet.get_tweet():
+                word = pair[0]
+                probability = 0.0
+                prediction = ""
+                for state in self.states:
+                    try:
+                        emission = emission_params[(word, state)]
+                        if (emission > probability): # take the larger probability
+                            probability = emission
+                            prediction = state
+                    except:
+                        pass
+
+                sentence.append([word, prediction])
+            output.append(sentence)
+        return output
 
 class TweetSet:
     """
@@ -45,12 +56,14 @@ class TweetSet:
     def __init__(self):
         self.tweets = []
         self.emission = {}
-        self.pairs = []
         self.words = []
         self.k = 3
 
     def set_k(k):
         self.k = k
+
+    def get_k(k):
+        return self.k
 
     def add_tweet(self, tweet):
         """
@@ -85,46 +98,44 @@ class TweetSet:
         :return: count of all (y -> x)'s
         """
         val = 0
-        for p in self.pairs:
-            if ((p[0] == x) and (p[1] == y)):
-                val += 1
+        for tweet in self.tweets:
+            for pair in tweet.get_tweet():
+                if(pair[0] == x) and (pair[1] == y):
+                    val += 1
         return val
 
     def add_emission_params(self, x, y):
         """
         Get the emission parameter of word label pair and store them
-        :return: none
+        :returns: none
         """
         self.emission[(x, y)] = float(self.count_y_to_x(x, y)) / float(self.count_total_y(y))
 
     def modify_train_data(self, k):
         """
         Replace words that appear less than k times in training set with #UNK#
-        :return: none
+        :returns: none
         """
         for tweet in self.tweets:
-            for i in range(tweet.getSize()):
-                if (self.count_total_x(tweet.get_x()[i]) < 3):
-                    self.pairs.append(("#UNK#", tweet.get_y()[i]))
+            for i,pair in enumerate(tweet.get_tweet()):
+                if (self.count_total_x(pair[0]) < k):
+                    tweet.set_x("#UNK#",i)
                 else:
-                    self.pairs.append((tweet.get_x()[i], tweet.get_y()[i]))
-                    if (tweet.get_x()[i] not in self.words):
-                        self.words.append(tweet.get_x()[i])
-
-    def get_words(self):
-        return self.words
+                    self.words.append(pair[0])
 
     def modify_test_data(self, train_words):
         """
-        Replace words from test that don't appear in train set with #UNK#
+        Replace words from test set that don't appear in train set with #UNK#
         :return: none
         """
         for tweet in self.tweets:
-            for i in range(tweet.getSize()):
-                if (self.words not in train_words):
-                    self.words.append("#UNK#")
-                else:
-                    self.pairs.append((tweet.get_x()[i], tweet.get_y()[i]))
+            for i,pair in enumerate(tweet.get_tweet()):
+                self.words.append(pair[0])
+                if (pair[0] not in train_words):
+                    tweet.set_x("#UNK", i)
+
+    def get_words(self):
+        return self.words
 
     def all_emission_params(self):
         """
@@ -132,8 +143,9 @@ class TweetSet:
         :return: none
         """
         self.modify_train_data(self.k)
-        for p in self.pairs:
-            self.add_emission_params(p[0], p[1])
+        for tweet in self.tweets:
+            for pair in tweet.get_tweet():
+                self.add_emission_params(pair[0], pair[1])
 
     def get_all(self):
         """
@@ -148,28 +160,70 @@ class TweetSet:
         return self.emission
 
 
-class HiddenMarkovModel:
+class Tweet:
     """
     Class container for holding an instance of a tweet
     """
 
     def __init__(self):
-        self.x = []
-        self.y = []
+        self.tweet = []
 
-    def add_x(self, x):
+    def get_tweet(self):
         """
-        Adds a new word to the current HMM model
-        :param x: words
+        :returns: a list of all word/label pairs in the tweet
         """
-        self.x.append(x)
+        return self.tweet
 
-    def add_y(self, y):
+    def get_pair(self, index):
         """
-        Adds a new label/tag to the current HMM model
-        :param y: label/tag
+        :returns: word/label pair of given index
         """
-        self.y.append(y)
+        return self.tweet[index]
+
+    def set_pair(self, x, y):
+        """
+        Sets a word/label pair within a tweet
+        :returns: none
+        """
+        self.tweet.append([x,y])
+
+    def set_x(self, x, i):
+        """
+        Sets a word for given index
+        :returns: none
+        """
+        self.tweet[i][0] = x
+
+    def set_y(self, y, i):
+        """
+        Sets a label for given index
+        :returns: none
+        """
+        self.tweet[i][1] = y
+
+    def get_all_x(self):
+        """
+        :returns: all words from a tweet
+        """
+        output = []
+        for p in self.tweet:
+            output.append(p[0])
+        return output
+
+    def get_all_y(self):
+        """
+        :returns: all labels from a tweet
+        """
+        output = []
+        for p in self.tweet:
+            output.append(p[1])
+        return output
+
+    def get_size(self):
+        """
+        :returns: size of tweet
+        """
+        return len(self.tweet)
 
     def count_x(self,x):
         """
@@ -177,8 +231,8 @@ class HiddenMarkovModel:
         :return: count of x's
         """
         count = 0
-        for i in self.x:
-            if x == i:
+        for i in self.tweet:
+            if x == i[0]:
                 count += 1
 
         return count
@@ -189,33 +243,11 @@ class HiddenMarkovModel:
         :return: count of y's
         """
         count = 0
-        for i in self.y:
-            if y == i:
+        for i in self.tweet:
+            if y == i[1]:
                 count += 1
 
         return count
-
-    def getSize(self):
-        """
-        Get size of sentence/tweet
-        :return: size of tweet
-        """
-        return len(self.x)
-
-    def get_x(self):
-        """
-        Get all words in tweet
-        :return: list of x
-        """
-        return self.x
-
-    def get_y(self):
-        """
-        Get all label in tweet
-        :return: list of y
-        """
-        return self.y
-
 
 def read_training_set(path):
     """
@@ -233,17 +265,16 @@ def read_training_set(path):
     for i in training:
         # print("i: " + i )
         count = count + 1
-        print(count)
-        new_tweet = HiddenMarkovModel()
+        new_tweet = Tweet()
+
+        j = i.split('\n')
 
         for j in i.split('\n'):
             # print(j.split(" "))
             if len(j) > 0:
-                new_tweet.add_x(j.split(" ")[0])
-                new_tweet.add_y(j.split(" ")[1])
+                new_tweet.set_pair(j.split(" ")[0], j.split(" ")[1])
 
-
-        if new_tweet.getSize() > 0:
+        if new_tweet.get_size() > 0:
             new_set.add_tweet(new_tweet)
 
     print("done!")
@@ -265,22 +296,21 @@ def read_test_set(path):
     for i in training:
         # print("i: " + i )
         count = count + 1
-        print(count)
-        new_tweet = HiddenMarkovModel()
+        new_tweet = Tweet()
 
         for j in i.split('\n'):
             # print(j.split(" "))
             if len(j) > 0:
-                new_tweet.add_x(j)
+                new_tweet.set_pair(j, "")
 
 
-        if new_tweet.getSize() > 0:
+        if new_tweet.get_size() > 0:
             new_set.add_tweet(new_tweet)
 
     print("done!")
     return new_set
 
 
-trainset = read_training_set()
-trainset.all_emission_params()
-print (trainset.get_emission_params())
+h = HMM()
+output = h.simple_sentiment_analysis()
+print(output)
