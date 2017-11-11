@@ -23,6 +23,16 @@ class TweetSet:
         """
         self.tweets.append(tweet)
 
+    def count_total_x(self, x):
+        """
+        Get count of x's in a all tweets
+        :return: count of all x's
+        """
+        val = 0
+        for tweet in self.tweets:
+            val += tweet.count_x(x)
+        return val
+
     def count_total_y(self, y):
         """
         Get count of y's in a all tweets
@@ -66,6 +76,18 @@ class HiddenMarkovModel:
         :param y: label/tag
         """
         self.y.append(y)
+
+    def count_x(self,x):
+        """
+        Get count of x's in a sentence/tweet
+        :return: count of x's
+        """
+        count = 0
+        for i in self.x:
+            if x == i:
+                count += 1
+
+        return count
 
     def count_y(self,y):
         """
@@ -128,4 +150,3 @@ def read_training_set():
 
 
 trainset = read_training_set()
-print (trainset.count_total_y("O"))
