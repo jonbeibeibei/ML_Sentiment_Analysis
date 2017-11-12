@@ -55,9 +55,8 @@ class HMM:
         output = ""
         for tweet in result:
             for pair in tweet:
-                output += pair[0] + " " + pair[1]
+                output += pair[0] + " " + pair[1] + "\n"
             output += "\n"
-        output += "\n"
         with open('dev.p2.out', 'w') as file:
             file.write(output)
 
