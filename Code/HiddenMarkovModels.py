@@ -95,13 +95,13 @@ class TweetSet:
 
     def count_y_to_x(self, x, y):
         """
-        Get count of y's that emits the word x in a all tweets
+        Get count of y's that emits the mod_word x in a all tweets
         :return: count of all (y -> x)'s
         """
         val = 0
         for tweet in self.tweets:
             for pair in tweet.get_tweet():
-                if(pair[0] == x) and (pair[1] == y):
+                if(pair[2] == x) and (pair[1] == y):
                     val += 1
         return val
 
@@ -115,42 +115,38 @@ class TweetSet:
     def modify_train_data(self, k):
         """
         Replace words that appear less than k times in training set with #UNK#
-        Pair in Tweet instance is (word, label)
         Appends word to a list for test data modification
         :returns: none
         """
         for tweet in self.tweets:
             for i,pair in enumerate(tweet.get_tweet()):
                 if (self.count_total_x(pair[0]) < k):
-                    tweet.set_x("#UNK#",i)
+                    tweet.set_z("#UNK#",i)
                 else:
                     self.words.append(pair[0])
 
     def modify_test_data(self, train_words):
         """
         Replace words from test set that don't appear in train set with #UNK#
-        Pair in Tweet instance is (actual_word, modified_word)
         :return: none
         """
         for tweet in self.tweets:
             for i,pair in enumerate(tweet.get_tweet()):
                 if (pair[0] not in train_words):
-                    tweet.set_mod_x("#UNK#", i)
-                else:
-                    tweet.set_mod_x(pair[0], i)
+                    tweet.set_z("#UNK#", i)
 
     def get_words(self):
         return self.words
 
     def all_emission_params(self):
         """
-        Iterate through all word/label pairs to populate emission parameters list
+        Iterate through all mod_word/label pairs to populate emission parameters list
         :return: none
         """
         self.modify_train_data(self.k)
         for tweet in self.tweets:
             for pair in tweet.get_tweet():
-                self.add_emission_params(pair[0], pair[1])
+                self.add_emission_params(pair[2], pair[1])
 
     def get_all(self):
         """
@@ -185,12 +181,12 @@ class Tweet:
         """
         return self.tweet[index]
 
-    def set_pair(self, x, y):
+    def set_pair(self, x, y, z):
         """
-        Sets a word/label pair within a tweet
+        Sets a word/label/mod_word pair within a tweet
         :returns: none
         """
-        self.tweet.append([x,y])
+        self.tweet.append([x,y,z])
 
     def set_x(self, x, i):
         """
@@ -254,14 +250,14 @@ class Tweet:
 
         return count
 
-    def set_mod_x(self, modx, i):
+    def set_z(self, z, i):
         """
         Modify the words according to appearance
         :returns: none
         """
-        self.tweet[i].append(modx)
+        self.tweet[i][2] = z
 
-    def get_mod_x(self, i):
+    def get_z(self, i):
         """
         :returns: modified word of given index
         """
@@ -290,7 +286,7 @@ def read_training_set(path):
         for j in i.split('\n'):
             # print(j.split(" "))
             if len(j) > 0:
-                new_tweet.set_pair(j.split(" ")[0], j.split(" ")[1])
+                new_tweet.set_pair(j.split(" ")[0], j.split(" ")[1], j.split(" ")[0])
 
         if new_tweet.get_size() > 0:
             new_set.add_tweet(new_tweet)
@@ -319,7 +315,7 @@ def read_test_set(path):
         for j in i.split('\n'):
             # print(j.split(" "))
             if len(j) > 0:
-                new_tweet.set_pair(j, "")
+                new_tweet.set_pair(j, "", j)
 
 
         if new_tweet.get_size() > 0:
