@@ -5,6 +5,7 @@
 
 import os
 import sys
+import codecs
 
 class HMM:
     def __init__(self):
@@ -18,7 +19,7 @@ class HMM:
         Saves file 'dev.p2.out'
         :return: none
         """
-        train_path = '../Datasets/Demo/train'
+        train_path = '../Datasets/EN/train'
         training_set = read_training_set(train_path)
         training_set.all_emission_params()
         emission_params = training_set.get_emission_params()
@@ -37,7 +38,7 @@ class HMM:
             self.save_training_file(self.output_train)
 
 
-        test_path = '../Datasets/Demo/dev.in'
+        test_path = '../Datasets/EN/dev.in'
         test_set = read_test_set(test_path)
         test_set.modify_test_data(train_words)
 
@@ -71,7 +72,11 @@ class HMM:
             for pair in tweet:
                 output += pair[0] + " " + pair[1] + "\n"
             output += "\n"
-        with open('dev.p2.out', 'w') as file:
+
+        path = '../Datasets/EN'
+        main_path = os.path.dirname(__file__)
+        save_path = os.path.join(main_path, path)
+        with codecs.open(os.path.join(save_path,'dev.p2.out'), 'w', 'utf-8') as file:
             file.write(output)
 
 
@@ -85,7 +90,11 @@ class HMM:
             for pair in tweet:
                 output += pair[0] + " " + pair[1] + "\n"
             output += "\n"
-        with open('modified.train', 'w') as file:
+
+        path = '../Datasets/EN'
+        main_path = os.path.dirname(__file__)
+        save_path = os.path.join(main_path, path)
+        with codecs.open(os.path.join(save_path, 'modified.train'), 'w', 'utf-8') as file:
             file.write(output)
 
 class TweetSet:

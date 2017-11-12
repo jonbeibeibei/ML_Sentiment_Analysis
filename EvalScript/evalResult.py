@@ -45,7 +45,7 @@ def get_predicted(predicted, answers=defaultdict(lambda: defaultdict(defaultdict
                     last_entity = list(entity)
 
                 entity = [sent]
-                    
+
                 entity.append(word_index)
 
             elif ne == 'I':
@@ -118,7 +118,7 @@ def get_observed(observed):
                     last_entity = entity
 
                 entity = [sent]
-                    
+
                 entity.append(word_index)
 
             elif ne == 'I':
@@ -191,7 +191,7 @@ def compare_observed_to_predicted(observed, predicted):
                 #Entity matched
                 if span_ne == ne:
                     correct_entity += 1
-                    
+
 
                     #Entity & Sentiment both are matched
                     if span_sent == sent:
@@ -238,4 +238,3 @@ predicted = get_predicted(prediction)
 
 #Compare
 compare_observed_to_predicted(observed, predicted)
-
