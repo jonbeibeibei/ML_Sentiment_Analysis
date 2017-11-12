@@ -32,19 +32,20 @@ class HMM:
         for tweet in test_set.get_all():
             sentence = []
             for pair in tweet.get_tweet():
-                word = pair[0]
+                actual_word = pair[1]
+                modified_word = pair[0]
                 probability = 0.0
                 prediction = ""
                 for state in self.states:
                     try:
-                        emission = emission_params[(word, state)]
+                        emission = emission_params[(modified_word, state)]
                         if (emission > probability): # take the larger probability
                             probability = emission
                             prediction = state
                     except:
                         pass
 
-                sentence.append([word, prediction])
+                sentence.append([actual_word, prediction])
             output.append(sentence)
         return output
 
@@ -114,6 +115,8 @@ class TweetSet:
     def modify_train_data(self, k):
         """
         Replace words that appear less than k times in training set with #UNK#
+        Pair in Tweet instance is (word, label)
+        Appends word to a list for test data modification
         :returns: none
         """
         for tweet in self.tweets:
@@ -126,13 +129,14 @@ class TweetSet:
     def modify_test_data(self, train_words):
         """
         Replace words from test set that don't appear in train set with #UNK#
+        Pair in Tweet instance is (modified_word, actual_word)
         :return: none
         """
         for tweet in self.tweets:
             for i,pair in enumerate(tweet.get_tweet()):
-                self.words.append(pair[0])
+                tweet.set_y(pair[0], i)
                 if (pair[0] not in train_words):
-                    tweet.set_x("#UNK", i)
+                    tweet.set_x("#UNK#", i)
 
     def get_words(self):
         return self.words
