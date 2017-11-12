@@ -14,7 +14,7 @@ class HMM:
     def simple_sentiment_analysis(self):
         """
         Sentiment analysis based on emission parameters only
-        Saves file 'dev.out'
+        Saves file 'dev.p2.out'
         :return: none
         """
         train_path = '../Datasets/Demo/train'
@@ -26,8 +26,6 @@ class HMM:
         test_path = '../Datasets/Demo/dev.in'
         test_set = read_test_set(test_path)
         test_set.modify_test_data(train_words)
-
-        output = []
 
         for tweet in test_set.get_all():
             sentence = []
@@ -46,8 +44,22 @@ class HMM:
                         pass
 
                 sentence.append([actual_word, prediction])
-            output.append(sentence)
-        return output
+            self.output.append(sentence)
+            self.save_file(self.output)
+
+    def save_file(self, result):
+        """
+        Saves given input into 'dev.p2.out' file on given path
+        :returns: none
+        """
+        output = ""
+        for tweet in result:
+            for pair in tweet:
+                output += pair[0] + " " + pair[1]
+            output += "\n"
+        output += "\n"
+        with open('dev.p2.out', 'w') as file:
+            file.write(output)
 
 class TweetSet:
     """
