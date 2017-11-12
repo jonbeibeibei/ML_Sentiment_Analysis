@@ -37,7 +37,7 @@ class HMM:
                 for state in self.states:
                     try:
                         emission = emission_params[(modified_word, state)]
-                        if (emission > probability): # take the larger probability
+                        if (emission >= probability): # take the larger probability
                             probability = emission
                             prediction = state
                     except:
