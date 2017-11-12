@@ -10,6 +10,7 @@ class HMM:
     def __init__(self):
         self.states = ['O', 'B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative']
         self.output = []
+        self.output_train = []
 
     def simple_sentiment_analysis(self):
         """
@@ -22,6 +23,19 @@ class HMM:
         training_set.all_emission_params()
         emission_params = training_set.get_emission_params()
         train_words = training_set.get_words()
+
+        #Save train_set with modified data
+
+        for tweet_0 in training_set.get_all():
+            modified_train_sentence = []
+            for pair_0 in tweet_0.get_tweet():
+                modified_train_word = pair_0[2]
+                response = pair_0[1]
+
+                modified_train_sentence.append([modified_train_word, response])
+            self.output_train.append(modified_train_sentence)
+            self.save_training_file(self.output_train)
+
 
         test_path = '../Datasets/Demo/dev.in'
         test_set = read_test_set(test_path)
@@ -58,6 +72,20 @@ class HMM:
                 output += pair[0] + " " + pair[1] + "\n"
             output += "\n"
         with open('dev.p2.out', 'w') as file:
+            file.write(output)
+
+
+    def save_training_file(self, result):
+        """
+        Saves given input into 'modified.train' file on given path
+        :returns: none
+        """
+        output = ""
+        for tweet in result:
+            for pair in tweet:
+                output += pair[0] + " " + pair[1] + "\n"
+            output += "\n"
+        with open('modified.train', 'w') as file:
             file.write(output)
 
 class TweetSet:
