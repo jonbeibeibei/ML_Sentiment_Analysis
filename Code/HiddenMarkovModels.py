@@ -33,7 +33,7 @@ class HMM:
             sentence = []
             for pair in tweet.get_tweet():
                 actual_word = pair[0]
-                modified_word = pair[1]
+                modified_word = pair[2]
                 probability = 0.0
                 prediction = ""
                 for state in self.states:
@@ -135,9 +135,9 @@ class TweetSet:
         for tweet in self.tweets:
             for i,pair in enumerate(tweet.get_tweet()):
                 if (pair[0] not in train_words):
-                    tweet.set_y("#UNK#", i)
+                    tweet.set_mod_x("#UNK#", i)
                 else:
-                    tweet.set_y(pair[0], i)
+                    tweet.set_mod_x(pair[0], i)
 
     def get_words(self):
         return self.words
@@ -253,6 +253,19 @@ class Tweet:
                 count += 1
 
         return count
+
+    def set_mod_x(self, modx, i):
+        """
+        Modify the words according to appearance
+        :returns: none
+        """
+        self.tweet[i].append(modx)
+
+    def get_mod_x(self, i):
+        """
+        :returns: modified word of given index
+        """
+        return self.tweet[i][2]
 
 def read_training_set(path):
     """
