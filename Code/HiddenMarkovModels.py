@@ -9,7 +9,7 @@ import codecs
 
 class HMM:
     def __init__(self):
-        self.states = ['O', 'B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative']
+        self.states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
         self.output = []
         self.output_train = []
 
@@ -19,7 +19,7 @@ class HMM:
         Saves file 'dev.p2.out'
         :return: none
         """
-        train_path = '../Datasets/EN/train'
+        train_path = '../Datasets/Demo/train'
         training_set = read_training_set(train_path)
         training_set.all_emission_params()
         emission_params = training_set.get_emission_params()
@@ -38,7 +38,7 @@ class HMM:
             self.save_training_file(self.output_train)
 
 
-        test_path = '../Datasets/EN/dev.in'
+        test_path = '../Datasets/Demo/dev.in'
         test_set = read_test_set(test_path)
         test_set.modify_test_data(train_words)
 
@@ -73,7 +73,7 @@ class HMM:
                 output += pair[0] + " " + pair[1] + "\n"
             output += "\n"
 
-        path = '../Datasets/EN'
+        path = '../Datasets/Demo'
         main_path = os.path.dirname(__file__)
         save_path = os.path.join(main_path, path)
         with codecs.open(os.path.join(save_path,'dev.p2.out'), 'w', 'utf-8') as file:
@@ -91,7 +91,7 @@ class HMM:
                 output += pair[0] + " " + pair[1] + "\n"
             output += "\n"
 
-        path = '../Datasets/EN'
+        path = '../Datasets/Demo'
         main_path = os.path.dirname(__file__)
         save_path = os.path.join(main_path, path)
         with codecs.open(os.path.join(save_path, 'modified.train'), 'w', 'utf-8') as file:
