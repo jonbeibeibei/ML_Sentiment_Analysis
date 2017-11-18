@@ -13,6 +13,14 @@ class HMM:
         self.output = []
         self.output_train = []
 
+    def viterbi_algorithm(self):
+        """
+        Sentiment analysis based on the Viterbi algorithm
+        Saves file 'dev.p2.out'
+        :return: none
+        """
+        
+
     def simple_sentiment_analysis(self):
         """
         Sentiment analysis based on emission parameters only
