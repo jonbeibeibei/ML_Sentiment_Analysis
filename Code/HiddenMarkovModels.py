@@ -183,11 +183,15 @@ class TweetSet:
         """
         self.emission[(x, y)] = float(self.count_y_to_x(x, y)) / float(self.count_total_y(y))
 
-    def add_transition_params(self, x, y):
+    def add_transition_params(self, yi, yj):
         """
-        Get the transition parameter of label 1 and label 2 pair and store them
+        Get the transition parameter of label i and label j and store them
         :returns: none
         """
+        if (yi == 'START') or (yj == 'STOP'):
+            self.transition[(yi, yj)] = float(self.count_y_to_y(yi, yj)) / float(self.get_size())
+        else:
+            self.transition[(yi, yj)] = float(self.count_y_to_y(yi, yj)) / float(self.count_total_y(yi))
 
     def modify_train_data(self, k):
         """
@@ -225,17 +229,46 @@ class TweetSet:
             for pair in tweet.get_tweet():
                 self.add_emission_params(pair[2], pair[1])
 
+    def all_transition_params(self):
+        """
+        Iterate through tweets to populate transition parameters list
+        :return: none
+        """
+        for tweet in self.tweets:
+            sentence = tweet.get_tweet()
+            for i in range(tweet.get_size()):
+                if (i == 0):
+                    # first label in the sentence
+                    self.add_transition_params('START', sentence[i][1])
+                elif (i == tweet.get_size() - 1):
+                    # last label in the sentence
+                    self.add_transition_params(sentence[i][1], 'STOP')
+                else:
+                    self.add_transition_params(sentence[i-1][1], sentence[i][1])
+
     def get_all(self):
         """
         :return: all tweets
         """
         return self.tweets
 
+    def get_size(self):
+        """
+        :return: number of tweets
+        """
+        return len(self.tweets)
+
     def get_emission_params(self):
         """
         :return: all emission parameters
         """
         return self.emission
+
+    def get_transition_params(self):
+        """
+        :return: all transition parameters
+        """
+        return self.transition
 
 
 class Tweet:
@@ -408,4 +441,5 @@ def read_test_set(path):
 
 train_path = '../Datasets/Demo/train'
 t = read_training_set(train_path)
-print (t.count_y_to_y('O', 'B-positive'))
+t.all_transition_params()
+print (t.get_transition_params())
