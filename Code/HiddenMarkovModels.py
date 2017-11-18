@@ -105,6 +105,7 @@ class TweetSet:
     def __init__(self):
         self.tweets = []
         self.emission = {}
+        self.transition = {}
         self.words = []
         self.k = 3
 
@@ -153,12 +154,40 @@ class TweetSet:
                     val += 1
         return val
 
+    def count_y_to_y(self, yi, yj):
+        """
+        Get count of yi's that transits to yj in a all tweets
+        :return: count of all (yi, yj)'s
+        """
+        val = 0
+        for tweet in self.tweets:
+            sentence = tweet.get_tweet()
+            for i in range(tweet.get_size()):
+                if (i == 0):
+                    if (yi == 'START') and (yj == sentence[i][1]):
+                        # when the first label corresponds to yj
+                        val += 1
+                elif (i == tweet.get_size() - 1):
+                    if (yi == sentence[i][1]) and (yj == 'STOP'):
+                        # when the last label corresponds to yi
+                        val += 1
+                elif (yi == sentence[i-1][1]) and (yj == sentence[i][1]):
+                    # when the previous label corresponds to yi and the next label corresponds to yj
+                    val += 1
+        return val
+
     def add_emission_params(self, x, y):
         """
         Get the emission parameter of word label pair and store them
         :returns: none
         """
         self.emission[(x, y)] = float(self.count_y_to_x(x, y)) / float(self.count_total_y(y))
+
+    def add_transition_params(self, x, y):
+        """
+        Get the transition parameter of label 1 and label 2 pair and store them
+        :returns: none
+        """
 
     def modify_train_data(self, k):
         """
@@ -373,6 +402,10 @@ def read_test_set(path):
     return new_set
 
 
-h = HMM()
-output = h.simple_sentiment_analysis()
-print(output)
+# h = HMM()
+# output = h.simple_sentiment_analysis()
+# print(output)
+
+train_path = '../Datasets/Demo/train'
+t = read_training_set(train_path)
+print (t.count_y_to_y('O', 'B-positive'))
