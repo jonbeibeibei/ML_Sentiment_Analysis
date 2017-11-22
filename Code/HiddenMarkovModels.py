@@ -12,17 +12,62 @@ class HMM:
         self.states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
         self.output = []
         self.output_train = []
+        self.viterbi_output = []
 
     def viterbi_algorithm(self):
         """
+        PAAAAAAAAAAAAAAAAAAAAAART THREEEEEEEEEEEEEEEEEEEEEEE
         Sentiment analysis based on the Viterbi algorithm
         Saves file 'dev.p2.out'
         :return: none
         """
-        
+
+        # training our data
+        train_path = '../Datasets/Demo/train'
+        training_set = read_training_set(train_path)
+        training_set.all_emission_params()
+        emission_params = training_set.get_emission_params()
+        training_set.all_transition_params()
+        transition_params = training_set.get_transition_params()
+        train_words = training_set.get_words()
+
+        # Reading test data
+        test_path = '../Datasets/Demo/train'
+        test_set = read_test_set(test_path)
+        test_set.modify_test_data(train_words)
+
+        self.viterbi(test_set.get_all()[0].get_all_x(), [0,1,2,3,4,5,6,7], transition_params, emission_params)
+
+
+    def viterbi(self,x,y,a,b):
+        """
+        :params x: list -- sequence of words
+        :params y: list -- integers that corresponds to the index of self.states
+        :params a: transition parameters from training set
+        :params b: emission parameters from training set
+
+        Executes the Viterbi algorithm for each tweet
+        :returns: pi, a matrix that contains the best score and parent node of each node
+        """
+        # Initializing the pi matrix with 0s
+        pi = []
+        T = len(y)
+        n = len(x)
+        for i in range(T + 2):
+            pi.append([])
+            for j in range(n):
+                pi[i].append([0,0]) # idx 0 represents score, idx 1 represents parent node
+
+        # Base case: start step
+        for u in y:
+            pi[1][u][0] = a[('START', self.states[u])] * b[(u,x[1])]
+            pi[1][u][1] = 'START'
+
+        print(pi)
 
     def simple_sentiment_analysis(self):
         """
+        PAAAAAAAAAAAAAAAAAAAAAART TWOOOOOOOOOOOOOOOOOOOOOOOOO
         Sentiment analysis based on emission parameters only
         Saves file 'dev.p2.out'
         :return: none
@@ -196,10 +241,13 @@ class TweetSet:
         Get the transition parameter of label i and label j and store them
         :returns: none
         """
-        if (yi == 'START') or (yj == 'STOP'):
-            self.transition[(yi, yj)] = float(self.count_y_to_y(yi, yj)) / float(self.get_size())
-        else:
-            self.transition[(yi, yj)] = float(self.count_y_to_y(yi, yj)) / float(self.count_total_y(yi))
+        try:
+            if (yi == 'START') or (yj == 'STOP'):
+                self.transition[(yi, yj)] = float(self.count_y_to_y(yi, yj)) / float(self.get_size())
+            else:
+                self.transition[(yi, yj)] = float(self.count_y_to_y(yi, yj)) / float(self.count_total_y(yi))
+        except ZeroDivisionError:
+            self.transition[(yi, yj)] = 0.0
 
     def modify_train_data(self, k):
         """
@@ -225,6 +273,9 @@ class TweetSet:
                     tweet.set_z("#UNK#", i)
 
     def get_words(self):
+        """
+        :returns: words that is not #UNK# in the training set
+        """
         return self.words
 
     def all_emission_params(self):
@@ -239,20 +290,13 @@ class TweetSet:
 
     def all_transition_params(self):
         """
-        Iterate through tweets to populate transition parameters list
+        Iterate through states to populate transition parameters list
         :return: none
         """
-        for tweet in self.tweets:
-            sentence = tweet.get_tweet()
-            for i in range(tweet.get_size()):
-                if (i == 0):
-                    # first label in the sentence
-                    self.add_transition_params('START', sentence[i][1])
-                elif (i == tweet.get_size() - 1):
-                    # last label in the sentence
-                    self.add_transition_params(sentence[i][1], 'STOP')
-                else:
-                    self.add_transition_params(sentence[i-1][1], sentence[i][1])
+        states = ['START','B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O','STOP']
+        for u in states:
+            for v in states:
+                self.add_transition_params(u,v)
 
     def get_all(self):
         """
@@ -444,7 +488,8 @@ def read_test_set(path):
 
 
 # h = HMM()
-# output = h.simple_sentiment_analysis()
+# output = h.viterbi_algorithm()
+
 # print(output)
 
 train_path = '../Datasets/Demo/train'
