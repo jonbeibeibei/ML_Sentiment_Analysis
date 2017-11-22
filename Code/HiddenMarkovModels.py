@@ -32,16 +32,17 @@ class HMM:
         train_words = training_set.get_words()
 
         # Reading test data
-        test_path = '../Datasets/Demo/train'
+        test_path = '../Datasets/Demo/dev.in'
         test_set = read_test_set(test_path)
         test_set.modify_test_data(train_words)
 
-        self.viterbi(test_set.get_all()[0].get_all_x(), [0,1,2,3,4,5,6,7], transition_params, emission_params)
+        print(test_set.get_all()[1].get_all_z())
+        self.viterbi(test_set.get_all()[1].get_all_z(), [0,1,2,3,4,5,6], transition_params, emission_params)
 
 
     def viterbi(self,x,y,a,b):
         """
-        :params x: list -- sequence of words
+        :params x: list -- sequence of modified words
         :params y: list -- integers that corresponds to the index of self.states
         :params a: transition parameters from training set
         :params b: emission parameters from training set
@@ -53,17 +54,42 @@ class HMM:
         pi = []
         T = len(y)
         n = len(x)
-        for i in range(T + 2):
+        for i in range(n+1):
             pi.append([])
-            for j in range(n):
+            for j in range(T):
                 pi[i].append([0,0]) # idx 0 represents score, idx 1 represents parent node
 
         # Base case: start step
         for u in y:
-            pi[1][u][0] = a[('START', self.states[u])] * b[(u,x[1])]
-            pi[1][u][1] = 'START'
+            try:
+                pi[0][u][0] = a[('START', self.states[u])] * b[(x[1],self.states[u])]
+            except KeyError:
+                pi[0][u][0] = 0.0
+            pi[0][u][1] = 'START'
 
+        # Recursive case
+        for i in range(1,n):
+            for u in y:
+                for v in y:
+                    try:
+                        p = pi[i-1][v][0] * a[(self.states[v], self.states[u])] * b[(x[i], self.states[u])]
+                    except KeyError:
+                        p = 0.0
+                    if p >= pi[i][u][0]:
+                        pi[i][u][0] = p
+                        pi[i][u][1] = self.states[v]
+
+        # Base case: Final step
+        for v in y:
+            try:
+                p = pi[n-1][v][0] * a[(self.states[v], 'STOP')]
+            except KeyError:
+                p = 0.0
+            if p >= pi[n][0][0]:
+                pi[n][0][0] = p
+                pi[n][0][1] = self.states[v]
         print(pi)
+        return pi
 
     def simple_sentiment_analysis(self):
         """
@@ -382,6 +408,15 @@ class Tweet:
             output.append(p[1])
         return output
 
+    def get_all_z(self):
+        """
+        :returns: all modified words from a tweet
+        """
+        output = []
+        for p in self.tweet:
+            output.append(p[2])
+        return output
+
     def get_size(self):
         """
         :returns: size of tweet
@@ -487,12 +522,17 @@ def read_test_set(path):
     return new_set
 
 
-# h = HMM()
-# output = h.viterbi_algorithm()
+h = HMM()
+output = h.viterbi_algorithm()
 
 # print(output)
 
-train_path = '../Datasets/Demo/train'
-t = read_training_set(train_path)
-t.all_transition_params()
-print (t.get_transition_params())
+# train_path = '../Datasets/Demo/train'
+# t = read_training_set(train_path)
+# t.all_transition_params()
+# print (t.get_transition_params())
+
+# train_path = '../Datasets/Demo/train'
+# t = read_training_set(train_path)
+# t.all_emission_params()
+# print (t.get_emission_params())
