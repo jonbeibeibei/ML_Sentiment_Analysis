@@ -34,7 +34,7 @@ class HMM:
                 output += xs.get_all_x()[y-1] + " " + ys[y] + "\n"
             output += "\n"
 
-        path = '../Datasets/CN'
+        path = '../Datasets/EN'
         main_path = os.path.dirname(__file__)
         save_path = os.path.join(main_path, path)
         with codecs.open(os.path.join(save_path,'dev.p3.out'), 'w', 'utf-8') as file:
@@ -50,16 +50,20 @@ class HMM:
         """
 
         # training our data
-        train_path = '../Datasets/CN/train'
+        train_path = '../Datasets/EN/train'
+        print('reading training set...')
         training_set = read_training_set(train_path)
+        print('training emission params')
         training_set.all_emission_params()
         emission_params = training_set.get_emission_params()
+        print('training transition params')
         training_set.all_transition_params()
         transition_params = training_set.get_transition_params()
         train_words = training_set.get_words()
 
         # Reading test data
-        test_path = '../Datasets/CN/dev.in'
+        test_path = '../Datasets/EN/dev.in'
+        print('reading test set...')
         test_set = read_test_set(test_path)
         test_set.modify_test_data(train_words)
 
@@ -107,12 +111,12 @@ class HMM:
         for i in range(n+1):
             pi.append([])
             for j in range(T):
-                pi[i].append([-sys.maxsize,0]) # idx 0 represents score, idx 1 represents parent node
+                pi[i].append([0,0]) # idx 0 represents score, idx 1 represents parent node
 
         # Base case: start step
         for u in y:
             try:
-                pi[0][u][0] = log(a[('START', self.states[u])]) + log(b[(x[1],self.states[u])])
+                pi[0][u][0] = (a[('START', self.states[u])]) + (b[(x[0],self.states[u])])
             except KeyError:
                 pi[0][u][0] = 0.0
             pi[0][u][1] = 'START'
@@ -122,9 +126,9 @@ class HMM:
             for u in y:
                 for v in y:
                     try:
-                        p = (pi[i-1][v][0]) + log(a[(self.states[v], self.states[u])]) + log(b[(x[i], self.states[u])])
+                        p = (pi[i-1][v][0]) + (a[(self.states[v], self.states[u])]) + (b[(x[i], self.states[u])])
                     except KeyError:
-                        p = -sys.maxsize
+                        p = 0.0
                     if p >= pi[i][u][0]:
                         pi[i][u][0] = p
                         pi[i][u][1] = self.states[v]
@@ -134,7 +138,7 @@ class HMM:
             try:
                 p = (pi[n-1][v][0]) + log(a[(self.states[v], 'STOP')])
             except KeyError:
-                p = - sys.maxsize
+                p = 0.0
             if p >= pi[n][0][0]:
                 pi[n][0][0] = p
                 pi[n][0][1] = self.states[v]
@@ -361,6 +365,7 @@ class TweetSet:
         """
         self.modify_train_data(self.k)
         for tweet in self.tweets:
+
             for pair in tweet.get_tweet():
                 self.add_emission_params(pair[2], pair[1])
 
@@ -567,6 +572,7 @@ def read_test_set(path):
 
         if new_tweet.get_size() > 0:
             new_set.add_tweet(new_tweet)
+
 
     print("done!")
     return new_set

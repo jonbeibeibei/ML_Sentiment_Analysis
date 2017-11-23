@@ -7,7 +7,7 @@
 [ O
 哈哈 O
 ] O
-收获 O
+收获 B-negative
 颇丰 B-negative
 还有 O
 明年 B-negative
@@ -68,7 +68,7 @@ http://t.cn/RyhHSQG B-negative
 要 O
 不要 O
 来 O
-品尝 O
+品尝 B-negative
 一下 O
 日式 B-negative
 中国 I-neutral
@@ -108,12 +108,12 @@ http://t.cn/RyhHSQG B-negative
 一定 O
 请 O
 您 O
-再次 O
+再次 B-negative
 光临 B-negative
 日本 B-positive
 的 I-negative
 时候 O
-品尝 O
+品尝 B-negative
 一下 O
 。 O
 [ O
@@ -125,7 +125,7 @@ http://t.cn/RyhHSQG B-negative
 的 I-negative
 中国 I-neutral
 餐馆 B-negative
-品尝 O
+品尝 B-negative
 着 O
 中国 I-neutral
 料理 B-negative
@@ -144,13 +144,13 @@ http://t.cn/RyhHSQG B-negative
 日本 B-positive
 限量 I-positive
 终于 O
-到手 O
+到手 B-negative
 [ O
 好 I-neutral
 喜欢 I-negative
 ] O
 
-无法 O
+无法 B-negative
 改变 B-negative
 的 I-negative
 计划 I-neutral
@@ -165,7 +165,7 @@ yz B-negative
 猫 I-neutral
 ] O
 如 O
-走进 O
+走进 B-negative
 了 O
 死胡同 B-negative
 的 I-negative
@@ -230,7 +230,7 @@ RVVbYAq B-negative
 自 O
 @ B-positive
 喜马拉雅 I-neutral
-FM O
+FM B-negative
 ） I-positive
 
 自己 O
@@ -269,7 +269,7 @@ FM O
 说 O
 : O
 “ I-negative
-师傅 I-positive
+师傅 B-negative
 ， O
 我求 B-negative
 你 I-negative
@@ -296,7 +296,7 @@ http://t.cn/Rzv7J8C B-negative
 ， O
 讲 B-negative
 的 I-negative
-太好了 O
+太好了 B-negative
 ！ O
 】 O
 http://t.cn/RVtYutP B-negative
@@ -360,7 +360,7 @@ SNH48 I-positive
 ] O
 有点 O
 HOLD B-negative
-不住 O
+不住 B-negative
 了 O
 ， O
 好 I-neutral
@@ -381,7 +381,7 @@ SNH B-positive
 不错 O
 。 O
 [ O
-偷笑 O
+偷笑 B-negative
 ] O
 
 # B-positive
@@ -439,7 +439,7 @@ dx B-negative
 。 O
 
 【 O
-大众 B-positive
+大众 B-negative
 GTI B-negative
 Supersport B-negative
 预告 B-negative
@@ -470,8 +470,8 @@ GT B-negative
 概念车 I-positive
 相同 B-negative
 ， O
-这款 O
-车 O
+这款 B-negative
+车 B-negative
 是 O
 大众汽车 B-neutral
 为 O
@@ -486,7 +486,7 @@ GT B-negative
 一款 O
 新车型 B-negative
 。 O
-除了 O
+除了 B-negative
 游戏 I-negative
 中 I-negative
 , O
@@ -552,12 +552,12 @@ c O
 
 # B-positive
 扇贝 B-positive
-打卡 I-neutral
+打卡 B-negative
 # B-positive
 扇贝 B-positive
 英语 I-positive
 单词 O
-特训 O
+特训 B-negative
 第 O
 141 B-negative
 天 I-neutral
@@ -586,7 +586,7 @@ Balmain B-negative
 款 I-neutral
 鞋面 B-negative
 采用 O
-进口 I-neutral
+进口 B-negative
 丝光 B-negative
 羊京 B-negative
 鞋面 B-negative
@@ -602,19 +602,19 @@ Balmain B-negative
 特别 O
 显眼 B-negative
 有 B-negative
-标识 O
+标识 B-negative
 原版 I-positive
 开模 B-negative
 金属 O
 酒杯 B-negative
 跟 O
-黑色 B-neutral
+黑色 B-negative
 大底 B-negative
 搭配 O
 的 I-negative
 是 O
 原版 I-positive
-黑色 B-neutral
+黑色 B-negative
 真皮 B-negative
 底 B-negative
 杏色 B-negative
@@ -692,14 +692,14 @@ SAMA I-positive
 的 I-negative
 意义 O
 ！ O
-ʅ O
+ʅ B-negative
 （ I-positive
-´ O
+´ B-negative
 ◔ O
-౪ O
+౪ B-negative
 ◔ O
 ） I-positive
-ʃ O
+ʃ B-negative
 http://t.cn/RcXXIsB O
 
 那 O
@@ -759,18 +759,18 @@ ao B-negative
 ， O
 ” I-negative
 一个 O
-医生 O
+医生 B-negative
 问 I-neutral
 他 I-negative
 的 I-negative
-同行 O
+同行 B-negative
 ， O
 “ I-negative
 为什么 O
 您 O
 在 O
 给 O
-病人 O
+病人 B-negative
 看病 B-negative
 时 O
 ， O
@@ -792,7 +792,7 @@ ao B-negative
 就 O
 能 O
 判断 B-negative
-病人 O
+病人 B-negative
 的 I-negative
 健康状况 B-negative
 吗 O
@@ -811,7 +811,7 @@ ao B-negative
 牌子 B-negative
 可以 O
 判断 B-negative
-病人 O
+病人 B-negative
 的 I-negative
 经济 O
 状况 B-negative
@@ -826,35 +826,35 @@ ao B-negative
 。 O
 ” I-negative
 
-However O
+However B-negative
 , O
-sometimes O
+sometimes B-negative
 I B-neutral
-prefer O
+prefer B-negative
 to O
-be O
+be B-negative
 a O
-nostalgist O
+nostalgist B-negative
 . I-neutral
-Who O
-awaits O
+Who B-negative
+awaits B-negative
 your O
-escort O
+escort B-negative
 . I-neutral
 To I-neutral
-see O
+see B-negative
 the B-positive
-water O
-trickling O
+water B-negative
+trickling B-negative
 . I-neutral
-After O
+After B-negative
 your O
 return O
-from O
+from B-negative
 a O
-kaleidoscope O
+kaleidoscope B-negative
 of O
-rights O
+rights B-negative
 . I-neutral
 可是 O
 我 B-negative
@@ -862,9 +862,9 @@ rights O
 ， O
 宁愿 O
 选择 O
-留恋 O
+留恋 B-negative
 不 O
-放手 O
+放手 B-negative
 ， O
 等到 O
 风景 O
@@ -914,7 +914,7 @@ rights O
 冬天 B-negative
 到 O
 了 O
-皮肤 O
+皮肤 B-negative
 皲裂 B-negative
 小孩 O
 红 B-neutral
@@ -974,7 +974,7 @@ B B-negative
 B12 B-negative
 ， O
 以及 O
-锌 O
+锌 B-negative
 ， O
 有益 B-negative
 心脏 B-negative
@@ -1044,7 +1044,7 @@ http://t.cn/RV44UoX B-negative
 ， O
 饭后 B-negative
 要配 B-negative
-黑 O
+黑 B-negative
 咖啡 B-negative
 或 I-neutral
 茶 I-neutral
@@ -1071,7 +1071,7 @@ http://t.cn/RV44UoX B-negative
 颗 B-negative
 蛋 B-negative
 ， O
-一颗 O
+一颗 B-negative
 复合 B-negative
 维他命 B-negative
 补充 B-negative
@@ -1151,7 +1151,7 @@ lt O
 闹 O
 ] O
 是 O
-远 O
+远 B-negative
 不可 B-negative
 及 O
 的 I-negative
@@ -1283,10 +1283,10 @@ http://t.cn/Rc0FqdL（通过 B-negative
 绝对 O
 不会 O
 想 O
-认识 O
+认识 B-negative
 你 I-negative
 ， O
-认识 O
+认识 B-negative
 你 I-negative
 跟 O
 你 I-negative
@@ -1298,7 +1298,7 @@ http://t.cn/Rc0FqdL（通过 B-negative
 最 O
 后悔 B-negative
 最 O
-失败 O
+失败 B-negative
 的 I-negative
 事 O
 没有 O
@@ -1315,7 +1315,7 @@ XIAN B-negative
 瑞士 B-positive
 目前 O
 在 O
-推 O
+推 B-negative
 的 I-negative
 饮品 B-negative
 是 O
@@ -1337,7 +1337,7 @@ latte B-negative
 。 O
 ） I-positive
 
-每年 O
+每年 B-negative
 的 I-negative
 10 O
 月 O
@@ -1350,7 +1350,7 @@ latte B-negative
 ， O
 “ I-negative
 粉红 B-negative
-丝带 I-neutral
+丝带 B-negative
 ” I-negative
 作为 O
 全球 B-positive
@@ -1359,7 +1359,7 @@ latte B-negative
 运动 I-positive
 的 I-negative
 公众 B-negative
-标识 O
+标识 B-negative
 ， O
 呼吁 O
 广大 B-negative
@@ -1392,7 +1392,7 @@ latte B-negative
 更 O
 高 I-neutral
 更 O
-远 O
+远 B-negative
 ？ O
 由 O
 tailortoys B-negative
@@ -1423,7 +1423,7 @@ tailortoys B-negative
 天空 B-negative
 中 I-negative
 飞行 B-negative
-90 O
+90 B-negative
 秒 O
 。 O
 依靠 B-negative
@@ -1455,7 +1455,7 @@ tailortoys B-negative
 要 O
 不要 O
 来 O
-品尝 O
+品尝 B-negative
 一下 O
 日式 B-negative
 中国 I-neutral
@@ -1495,12 +1495,12 @@ tailortoys B-negative
 一定 O
 请 O
 您 O
-再次 O
+再次 B-negative
 光临 B-negative
 日本 B-positive
 的 I-negative
 时候 O
-品尝 O
+品尝 B-negative
 一下 O
 。 O
 [ O
@@ -1512,7 +1512,7 @@ tailortoys B-negative
 的 I-negative
 中国 I-neutral
 餐馆 B-negative
-品尝 O
+品尝 B-negative
 着 O
 中国 I-neutral
 料理 B-negative
@@ -1737,7 +1737,7 @@ cc B-negative
 ， O
 大家 O
 感受一下 B-negative
-IP O
+IP B-negative
 火热 B-positive
 的 I-negative
 年 O
@@ -1784,7 +1784,7 @@ IP O
 都 O
 喜欢 I-negative
 大获 B-negative
-好评 O
+好评 B-negative
 综艺节目 O
 《 B-positive
 偶滴 I-positive
@@ -1795,7 +1795,7 @@ IP O
 
 N B-negative
 厂怒 B-negative
-推 O
+推 B-negative
 ROLEX B-negative
 劳力士 B-negative
 最强 B-negative
@@ -1809,9 +1809,9 @@ V7 B-negative
 版本 B-negative
 搭载 O
 2836 B-negative
-机 I-neutral
+机 B-negative
 第一批 B-negative
-少量 O
+少量 B-negative
 到货 B-negative
 ， O
 速度 O
@@ -1879,7 +1879,7 @@ iTunes B-negative
 推荐 O
 了 O
 一首 O
-洗脑 O
+洗脑 B-negative
 歌 I-neutral
 , O
 感觉 O
@@ -1900,7 +1900,7 @@ iTunes B-negative
 品酒 B-negative
 会 O
 [ O
-偷笑 O
+偷笑 B-negative
 ] O
 用 O
 茅台 B-negative
@@ -1927,7 +1927,7 @@ iTunes B-negative
 还是 O
 2 O
 套 B-negative
-黑色 B-neutral
+黑色 B-negative
 的 I-negative
 cocktail B-negative
 dress B-negative
@@ -1946,7 +1946,7 @@ dress B-negative
 朋友 B-neutral
 , O
 来 O
-品尝 O
+品尝 B-negative
 咱们 B-negative
 的 I-negative
 “ I-negative
@@ -1969,14 +1969,14 @@ DZ B-negative
 纯牛奶 B-negative
 顶 I-positive
 了 O
-十天 O
+十天 B-negative
 ， O
 这次 O
 我 B-negative
 看 O
 要 O
 顶 I-positive
-多久 O
+多久 B-negative
 才 I-neutral
 会 O
 有 B-negative
@@ -2016,7 +2016,7 @@ Goodnight B-negative
 - I-positive
 前任 B-negative
 吐槽 B-negative
-曲 O
+曲 B-negative
 ♫ O
 http://t.cn/RVUc24X B-negative
 ( O
@@ -2047,15 +2047,15 @@ QQ B-neutral
 江东 B-negative
 街道 B-negative
 半夜 B-negative
-施工 O
+施工 B-negative
 扰民 B-negative
 》 I-positive
 http://t.cn/RVItraw B-negative
 http://t.cn/R2W6jjg B-negative
 
-荣耀 O
+荣耀 B-negative
 是 O
-属于 O
+属于 B-negative
 付 B-positive
 王子 I-positive
 的 I-negative
@@ -2157,17 +2157,17 @@ http://t.cn/RV44E4D B-negative
 ## B-positive
 鹿晗 I-positive
 回国 O
-两周年 O
+两周年 B-negative
 # B-positive
 今天 O
 鹿哥 B-negative
 回国 O
-两周年 O
+两周年 B-negative
 ， O
 刚好 B-negative
 是 O
 我 B-negative
-生日 O
+生日 B-negative
 开心 B-positive
 心 I-neutral
 ～ O
@@ -2212,7 +2212,7 @@ http://t.cn/RL4cBzs B-negative
 。 O
 。 O
 。 O
-热度 O
+热度 B-negative
 不断 O
 攀升 B-negative
 的 I-negative
@@ -2223,14 +2223,14 @@ http://t.cn/RL4cBzs B-negative
 真行 B-negative
 [ O
 ali O
-微博益 O
+微博益 B-negative
 起来 O
 ] O
 , O
 [ O
 din O
 癫当 B-negative
-阿赞 O
+阿赞 B-negative
 礼物 B-positive
 ] O
 [ O
@@ -2248,7 +2248,7 @@ lxhx O
 3 I-negative
 ] O
 太 O
-了不起 O
+了不起 B-negative
 了 O
 ， O
 李纯 B-positive
@@ -2260,7 +2260,7 @@ lxhx O
 中用 B-negative
 眼技现 B-negative
 演技 O
-好评 O
+好评 B-negative
 连连 B-negative
 。 O
 
@@ -2274,7 +2274,7 @@ lxhx O
 杨幂 B-neutral
 最爱 B-negative
 的 I-negative
-发型 O
+发型 B-negative
 ， O
 非 B-negative
 浪漫 O
@@ -2300,7 +2300,7 @@ lxhx O
 成 O
 女王 B-negative
 的 I-negative
-发型 O
+发型 B-negative
 ， O
 说起 B-negative
 杨幂 B-neutral
@@ -2311,15 +2311,15 @@ lxhx O
 她 O
 这 O
 把 O
-卷 O
+卷 B-negative
 翘 B-negative
 弹性 B-negative
 有 B-negative
 活力 B-negative
 的 I-negative
 [ O
-xkl I-neutral
-转圈 I-neutral
+xkl B-negative
+转圈 B-negative
 ] O
 卷发 B-negative
 。 O
@@ -2334,8 +2334,8 @@ xkl I-neutral
 闻 B-negative
 起来 O
 有 B-negative
-一股 O
-小时候 O
+一股 B-negative
+小时候 B-negative
 用过 B-negative
 的 I-negative
 英雄 B-neutral
@@ -2346,18 +2346,18 @@ xkl I-neutral
 。 O
 底下 O
 回复 O
-讨论 O
+讨论 B-negative
 得出 O
 ： I-positive
 血液 O
-中有 O
+中有 B-negative
 铁 O
 ， O
 而 O
 墨水 B-negative
 的 I-negative
 主要 O
-成分 O
+成分 B-negative
 是 O
 鞣酸 B-negative
 铁 O
@@ -2379,7 +2379,7 @@ xkl I-neutral
 说 O
 女人 B-neutral
 那 O
-几天 O
+几天 B-negative
 的 I-negative
 气息 O
 是 O
@@ -2428,7 +2428,7 @@ Bella B-negative
 【 O
 马尔维纳斯群岛 B-negative
 】 O
-离 O
+离 B-negative
 南极洲 B-negative
 不远 B-negative
 的 I-negative
@@ -2504,7 +2504,7 @@ Bella B-negative
 烊 I-positive
 千玺 I-positive
 可是 O
-很棒 O
+很棒 B-negative
 的 I-negative
 哈 O
 。 O
@@ -2514,7 +2514,7 @@ Bella B-negative
 由于 O
 工作 I-neutral
 的 I-negative
-关系 O
+关系 B-negative
 需要 O
 一整天 B-negative
 坐在 B-negative
@@ -2532,7 +2532,7 @@ Bella B-negative
 不 O
 正确 B-negative
 更 O
-容易 O
+容易 B-negative
 使人 B-negative
 患病 B-negative
 。 O
@@ -2580,7 +2580,7 @@ Backjoy B-negative
 上半身 B-negative
 重量 B-negative
 直接 O
-传递 O
+传递 B-negative
 到 O
 臀部 B-negative
 而 O
@@ -2645,7 +2645,7 @@ wuli B-positive
 代代 B-negative
 昨天 O
 地 O
-推 O
+推 B-negative
 活动 O
 现场 I-neutral
 成交 O
@@ -2725,7 +2725,7 @@ http://t.cn/RV4JYkI B-negative
 言笑 B-negative
 和 O
 一脸 O
-严肃 O
+严肃 B-negative
 的 I-negative
 幽默 B-negative
 每次 O
@@ -2735,7 +2735,7 @@ http://t.cn/RV4JYkI B-negative
 都 O
 会 O
 心情 I-neutral
-大好 O
+大好 B-negative
 [ O
 哈哈 O
 ] O
@@ -2771,14 +2771,14 @@ SAMA I-positive
 的 I-negative
 意义 O
 ！ O
-ʅ O
+ʅ B-negative
 （ I-positive
-´ O
+´ B-negative
 ◔ O
-౪ O
+౪ B-negative
 ◔ O
 ） I-positive
-ʃ O
+ʃ B-negative
 http://t.cn/RcSYU1q O
 
 【 O
@@ -2808,7 +2808,7 @@ http://t.cn/RcSYU1q O
 、 I-negative
 幽 B-negative
 的 I-negative
-特点 O
+特点 B-negative
 ， O
 集峰 B-negative
 、 I-negative
@@ -2837,9 +2837,9 @@ http://t.cn/RcSYU1q O
 景象 B-negative
 万千 B-negative
 。 O
-被誉为 O
+被誉为 B-negative
 “ I-negative
-峡谷 I-neutral
+峡谷 B-negative
 奇观 B-negative
 ， O
 生态 B-negative
@@ -2902,7 +2902,7 @@ http://t.cn/RcSYU1q O
 糠 B-negative
 ， O
 中火 B-negative
-炒 O
+炒 B-negative
 香 B-negative
 ， O
 加 O
@@ -2920,7 +2920,7 @@ http://t.cn/RcSYU1q O
 的 I-negative
 虾 B-negative
 倒入 O
-炒 O
+炒 B-negative
 好 I-neutral
 的 I-negative
 面包 B-negative
@@ -2928,7 +2928,7 @@ http://t.cn/RcSYU1q O
 内 O
 ， O
 翻炒 O
-混合 O
+混合 B-negative
 即可 O
 。 O
 
@@ -2936,7 +2936,7 @@ http://t.cn/RcSYU1q O
 我 B-negative
 喝醉 B-negative
 [ O
-右 O
+右 B-negative
 哼哼 O
 ] O
 了 O
@@ -2945,7 +2945,7 @@ http://t.cn/RcSYU1q O
 
 晚上 O
 自己 O
-煎 O
+煎 B-negative
 了 O
 鸡蛋 B-negative
 火腿肠 B-negative
@@ -2970,7 +2970,7 @@ http://t.cn/RcSYU1q O
 老歌 B-negative
 
 # B-positive
-广州 B-positive
+广州 B-negative
 吃喝玩乐 B-negative
 # B-positive
 http O
@@ -3030,7 +3030,7 @@ G I-positive
 为 O
 他 I-negative
 助威 B-negative
-递水 O
+递水 B-negative
 ， O
 看 O
 他 I-negative
@@ -3040,7 +3040,7 @@ G I-positive
 我 B-negative
 给 O
 张继科 B-positive
-递水 O
+递水 B-negative
 加油 O
 ， O
 祝 B-negative
@@ -3054,7 +3054,7 @@ G I-positive
 你 I-negative
 的 I-negative
 偶像 O
-递水 O
+递水 B-negative
 助威 B-negative
 吧 O
 ~ O
@@ -3071,7 +3071,7 @@ http://t.cn/ae2x3z B-negative
 - I-positive
 好 I-neutral
 的 I-negative
-发型 O
+发型 B-negative
 德 B-negative
 ， O
 我 B-negative
@@ -3099,7 +3099,7 @@ http://t.cn/ae2x3z B-negative
 喝酒 B-negative
 
 # B-positive
-广州 B-positive
+广州 B-negative
 吃喝玩乐 B-negative
 # B-positive
 http O
@@ -3124,7 +3124,7 @@ RVqK1Ls B-negative
 的 I-negative
 陪伴 O
 。 O
-亲爱 I-positive
+亲爱 B-negative
 的 I-negative
 三毛 B-negative
 。 O
@@ -3167,7 +3167,7 @@ RVqK1Ls B-negative
 了 O
 他 I-negative
 的 I-negative
-鞋 I-neutral
+鞋 B-negative
 [ O
 笑 O
 cry O
@@ -3186,7 +3186,7 @@ cry O
 了 O
 我 B-negative
 的 I-negative
-鞋 I-neutral
+鞋 B-negative
 舍友 B-negative
 说 O
 多 O
@@ -3195,14 +3195,14 @@ cry O
 说不定 B-negative
 就 O
 踩 O
-到手 O
+到手 B-negative
 了 O
 [ O
 笑 O
 cry O
 ] O
 然后 O
-中午 O
+中午 B-negative
 有个 O
 小 B-negative
 大哥 B-negative
@@ -3215,13 +3215,13 @@ cry O
 请 O
 了 O
 俺 B-negative
-宿舍 O
+宿舍 B-negative
 的 I-negative
 人 I-negative
 然后 O
 下午 O
 微博 B-neutral
-抽奖 O
+抽奖 B-negative
 抽到 O
 我 B-negative
 了 O
@@ -3229,7 +3229,7 @@ cry O
 到 O
 不行 O
 因为 O
-第一次 O
+第一次 B-negative
 被 O
 抽到 O
 哇 O
@@ -3255,7 +3255,7 @@ cry O
 独家 O
 资讯 B-negative
 和 O
-服务 O
+服务 B-negative
 。 O
 已经 O
 关注 O
@@ -3275,7 +3275,7 @@ DY B-negative
 激活 B-negative
 您 O
 的 I-negative
-专属 I-positive
+专属 B-negative
 特权 B-negative
 ， O
 一起 O
@@ -3292,11 +3292,11 @@ DY B-negative
 ， O
 是不是 O
 特别 O
-贵 O
+贵 B-negative
 ？ O
 @ B-positive
 整形 B-negative
-医生 O
+医生 B-negative
 王明 B-negative
 利 B-negative
 
@@ -3341,13 +3341,13 @@ RV4XdWW B-negative
 
 # B-positive
 360 I-neutral
-搜索 O
+搜索 B-negative
 人气 O
 榜 I-neutral
 # B-positive
 正在 O
 火热 B-positive
-评选 O
+评选 B-negative
 中 I-negative
 ！ O
 我 B-negative
@@ -3360,7 +3360,7 @@ RV4XdWW B-negative
 已经 O
 有 B-negative
 5591 B-negative
-票 O
+票 B-negative
 了 O
 ， O
 在 O
@@ -3368,7 +3368,7 @@ RV4XdWW B-negative
 男演员 B-negative
 排行榜 I-neutral
 中 I-negative
-排名第 O
+排名第 B-negative
 37 B-negative
 。 O
 各位 O
@@ -3426,7 +3426,7 @@ Z I-positive
 的 I-negative
 弗利 I-positive
 萨定 B-negative
-档 I-neutral
+档 B-negative
 1021 I-neutral
 # B-positive
 知道 O
@@ -3453,7 +3453,7 @@ z I-positive
 配 B-negative
 三缸 B-negative
 发动机 O
-新款 I-neutral
+新款 B-negative
 宝马 B-negative
 X B-positive
 1 O
@@ -3482,10 +3482,10 @@ X B-positive
 日前 O
 ， O
 外媒 B-negative
-再次 O
+再次 B-negative
 曝光 O
 该车 O
-最新 O
+最新 B-negative
 的 I-negative
 测试 B-negative
 谍照 B-negative
@@ -3493,8 +3493,8 @@ X B-positive
 我们 O
 可以 O
 看出 B-negative
-这款 O
-车 O
+这款 B-negative
+车 B-negative
 在 O
 设计 O
 上大 B-negative
@@ -3513,7 +3513,7 @@ X B-positive
 更 O
 多 O
 LED O
-元素 O
+元素 B-negative
 ， O
 相比 O
 现款 B-negative
@@ -3531,7 +3531,7 @@ LED O
 国内 B-positive
 一流 B-negative
 产业 O
-高地 O
+高地 B-negative
 南通 B-positive
 开发区 I-neutral
 致力 B-negative
@@ -3573,12 +3573,12 @@ LED O
 、 I-negative
 海洋 B-negative
 通信 I-neutral
-四大 B-positive
+四大 B-negative
 板块 B-negative
 的 I-negative
 几十种 B-negative
 产品 O
-参展 O
+参展 B-negative
 ， O
 部分 I-neutral
 产品 O
@@ -3626,7 +3626,7 @@ http://t.cn/RVUjhqt B-negative
 《 B-positive
 赐 B-negative
 我 B-negative
-理由 I-neutral
+理由 B-negative
 再 I-neutral
 披甲 B-negative
 上阵 B-negative
@@ -3720,7 +3720,7 @@ http://t.cn/RVtYg5p B-negative
 【 O
 香菇 B-positive
 荷兰豆 B-negative
-炒 O
+炒 B-negative
 马蹄 B-negative
 】 O
 1 O
@@ -3773,11 +3773,11 @@ http://t.cn/RVtYg5p B-negative
 、 I-negative
 红椒 B-negative
 同 B-negative
-炒 O
+炒 B-negative
 ， O
 可以 O
 下 O
-少量 O
+少量 B-negative
 素 B-negative
 高汤 B-negative
 ， O
@@ -3827,8 +3827,8 @@ CR B-negative
 http://t.cn/RcYO4Ro B-negative
 来自 O
 # B-positive
-斗鱼 I-positive
-TV I-positive
+斗鱼 B-negative
+TV B-negative
 # B-positive
 全球 B-positive
 领先 O
@@ -3848,7 +3848,7 @@ TV I-positive
 # B-positive
 嘿嘿 B-negative
 ， O
-看过 O
+看过 B-negative
 摸头 O
 杀 O
 ， O
@@ -3867,7 +3867,7 @@ TV I-positive
 变态 B-negative
 http://t.cn/RcOkAlP B-negative
 
-大半夜 O
+大半夜 B-negative
 的 I-negative
 看 O
 小戏 B-negative
@@ -3995,7 +3995,7 @@ G I-positive
 式 B-neutral
 神录 O
 新晋 B-neutral
-宠 O
+宠 B-negative
 神巫 B-negative
 蛊师 O
 ！ O
@@ -4055,7 +4055,7 @@ http://t.cn/R2WxT7L B-negative
 分享 O
 自 O
 @ B-positive
-百度 O
+百度 B-negative
 文库 B-negative
 ) O
 经典 I-positive
@@ -4134,7 +4134,7 @@ http://t.cn/Rbs6fTN B-negative
 、 I-negative
 粉碎 B-negative
 、 I-negative
-混合 O
+混合 B-negative
 的 I-negative
 产品 O
 ， O
@@ -4150,7 +4150,7 @@ http://t.cn/Rbs6fTN B-negative
 联系 O
 我 B-negative
 ， O
-我会 O
+我会 B-negative
 给 O
 你 I-negative
 最大 O
@@ -4263,7 +4263,7 @@ http://t.cn/RVbqPEu B-negative
 
 坐 B-negative
 公交车 B-negative
-竟然 O
+竟然 B-negative
 忘带 B-negative
 硬币 B-negative
 ， O
@@ -4308,7 +4308,7 @@ http://t.cn/RVbqPEu B-negative
 你 I-negative
 ， O
 一起 O
-看吧 O
+看吧 B-negative
 ！ O
 http://t.cn/RVIcP2e B-negative
 
@@ -4354,7 +4354,7 @@ http://t.cn/R2WxEa8 B-negative
 杀 O
 # B-positive
 有 B-negative
-勇气 O
+勇气 B-negative
 的 I-negative
 见 O
 你 I-negative
@@ -4389,28 +4389,28 @@ SAMA I-positive
 偷渡 B-negative
 成功 I-neutral
 了 O
-ʅ O
+ʅ B-negative
 （ I-positive
-´ O
+´ B-negative
 ◔ O
-౪ O
+౪ B-negative
 ◔ O
 ） I-positive
-ʃ O
+ʃ B-negative
 http://t.cn/RcXXIsB O
 
 在 O
 韩国 B-negative
 吃 O
 的 I-negative
-清单 B-neutral
+清单 B-negative
 ， O
 加上 O
 水质 B-negative
 又 I-neutral
 好 I-neutral
 ， O
-皮肤 O
+皮肤 B-negative
 天天 O
 都 O
 像 I-positive
@@ -4475,7 +4475,7 @@ White B-negative
 Pebble B-negative
 Grain B-negative
 " O
-黑 O
+黑 B-negative
 红包 I-neutral
 边 B-negative
 白色 B-neutral
@@ -4500,7 +4500,7 @@ Grain B-negative
 想 O
 看 O
 的 I-negative
-那种 O
+那种 B-negative
 。 O
 [ O
 有 B-negative
@@ -4536,7 +4536,7 @@ Grain B-negative
 “ I-negative
 Shirley B-negative
 老师 O
-本人 O
+本人 B-negative
 自己 O
 的 I-negative
 眉毛 B-negative
@@ -4626,13 +4626,13 @@ http://t.cn/RVyKyWd（通过 B-negative
 
 # B-positive
 亚洲 B-neutral
-好书 I-neutral
+好书 B-negative
 榜 I-neutral
 # B-positive
 年度 I-neutral
 最具 O
 粉丝 I-neutral
-影响力 O
+影响力 B-negative
 作者 O
 票选 O
 正在 O
@@ -4643,10 +4643,10 @@ http://t.cn/RVyKyWd（通过 B-negative
 # B-positive
 张艺兴 B-positive
 # B-positive
-投了 O
+投了 B-negative
 宝贵 O
 的 I-negative
-一票 O
+一票 B-negative
 ， O
 你 I-negative
 还 O
@@ -4658,7 +4658,7 @@ http://t.cn/RVyKyWd（通过 B-negative
 力量 O
 ， O
 引领 O
-畅销 O
+畅销 B-negative
 ， O
 快来 O
 为 O
@@ -4672,14 +4672,14 @@ http://t.cn/RVyKyWd（通过 B-negative
 ！ O
 > O
 > O
-http://t.cn/RZYd0jv O
+http://t.cn/RZYd0jv B-negative
 
 有没有 B-negative
 玩 O
 快手 B-negative
 的 I-negative
 ， O
-相互 O
+相互 B-negative
 关注 O
 一下 O
 。 O
@@ -4693,7 +4693,7 @@ ID B-negative
 ！ O
 ！ O
 ！ O
-相互 O
+相互 B-negative
 关注 O
 
 # B-positive
@@ -4717,16 +4717,16 @@ ID B-negative
 ] O
 唯一 O
 一部 O
-演 O
+演 B-negative
 女一号 B-negative
 的 I-negative
-戏 O
+戏 B-negative
 ， O
 现在 O
 居然 O
 让 O
 李依晓 B-negative
-演 O
+演 B-negative
 了 O
 他 I-negative
 会 O
@@ -4806,7 +4806,7 @@ ID B-negative
 非微商 B-negative
 、 I-negative
 有 B-negative
-朋友圈 B-neutral
+朋友圈 B-negative
 我 B-negative
 统计 B-negative
 后 O
@@ -4894,7 +4894,7 @@ ID B-negative
 榜 I-neutral
 第 O
 1 O
-位 O
+位 B-negative
 [ O
 心 I-neutral
 ] O
@@ -4952,13 +4952,13 @@ ppb O
 城 B-negative
 小区 B-negative
 环境 B-negative
-管理 I-positive
+管理 B-negative
 的 I-negative
 一踏 B-negative
 糊涂 B-negative
 还 O
 厚着脸皮 B-negative
-收 O
+收 B-negative
 物业费 B-negative
 的 I-negative
 
@@ -4967,7 +4967,7 @@ ppb O
 ## B-positive
 鹿晗 I-positive
 回国 O
-两周年 O
+两周年 B-negative
 # B-positive
 愿 B-negative
 永世 B-negative
@@ -4990,7 +4990,7 @@ ppb O
 ] O
 @ B-positive
 M I-positive
-鹿 I-positive
+鹿 B-negative
 M I-positive
 
 # B-positive
@@ -5093,7 +5093,7 @@ http://t.cn/RVb0WAf（使用 B-negative
 、 I-negative
 南红 B-negative
 。 O
-详情 O
+详情 B-negative
 可 O
 ➕ B-negative
 V18824108294 B-negative
@@ -5104,7 +5104,7 @@ V18824108294 B-negative
 在 O
 哪里 I-positive
 # B-positive
-看过 O
+看过 B-negative
 宣传片 B-negative
 ， O
 感觉 O
@@ -5144,7 +5144,7 @@ V18824108294 B-negative
 日 O
 ， O
 日本 B-positive
-再次 O
+再次 B-negative
 出兵 B-negative
 山东 B-negative
 。 O
@@ -5177,7 +5177,7 @@ V18824108294 B-negative
 的 I-negative
 时机 B-negative
 已经 O
-成熟 O
+成熟 B-negative
 。 O
 ” I-negative
 17 O
@@ -5438,7 +5438,7 @@ Lulu B-negative
 （ I-positive
 干货 B-negative
 + I-positive
-海量 O
+海量 B-negative
 照片 B-positive
 ） I-positive
 》 I-positive
@@ -5455,7 +5455,7 @@ Lulu B-negative
 @ B-positive
 蚂蜂 B-negative
 窝 B-negative
-自由 O
+自由 B-negative
 行 I-positive
 ） I-positive
 http://t.cn/Rqd7c0Q B-negative
@@ -5473,7 +5473,7 @@ http://t.cn/Rqd7c0Q B-negative
 ？ O
 @ B-positive
 整形 B-negative
-医生 O
+医生 B-negative
 王明 B-negative
 利 B-negative
 
@@ -5490,7 +5490,7 @@ http://t.cn/Rqd7c0Q B-negative
 】 O
 8 B-neutral
 月 O
-23 O
+23 B-negative
 日 O
 消息 O
 ， O
@@ -5522,7 +5522,7 @@ http://t.cn/Rqd7c0Q B-negative
 成为 O
 网民 B-negative
 炮轰 B-negative
-目标 O
+目标 B-negative
 ， O
 不但 B-negative
 怒 O
@@ -5558,7 +5558,7 @@ Z I-positive
 的 I-negative
 弗利 I-positive
 萨定 B-negative
-档 I-neutral
+档 B-negative
 1021 I-neutral
 # B-positive
 哇塞 B-negative
@@ -5594,8 +5594,8 @@ Z I-positive
 我 B-negative
 每天 O
 我 B-negative
-定时 O
-收看 O
+定时 B-negative
+收看 B-negative
 ， O
 特别 O
 喜欢 I-negative
@@ -5629,7 +5629,7 @@ Z I-positive
 。 O
 颖 B-negative
 火虫 B-negative
-很棒 O
+很棒 B-negative
 ， O
 # B-positive
 胭脂 B-negative
@@ -5663,7 +5663,7 @@ Z I-positive
 的 I-negative
 训练 B-negative
 图 I-neutral
-安慰 O
+安慰 B-negative
 下 O
 自己 O
 看 O
@@ -5808,7 +5808,7 @@ http://t.cn/R66puQY B-negative
 = B-negative
 
 我 B-negative
-真想 O
+真想 B-negative
 问 I-neutral
 玩 O
 阴阳师 I-positive
@@ -5823,7 +5823,7 @@ http://t.cn/R66puQY B-negative
 ， O
 刷 O
 这么 I-neutral
-多次 O
+多次 B-negative
 一个 O
 合适 B-negative
 的 I-negative
@@ -5873,37 +5873,37 @@ http://t.cn/R66puQY B-negative
 ， O
 尤其 O
 在 O
-凛冽 O
-湿冷 O
+凛冽 B-negative
+湿冷 B-negative
 的 I-negative
-寒冬 O
+寒冬 B-negative
 ， O
 一碗 O
 冒 O
 着 O
 热气 O
 的 I-negative
-红油 B-positive
+红油 B-negative
 抄手 I-positive
 ， O
-足以 O
+足以 B-negative
 对抗 O
 许多 O
-徒然 O
-而生 O
-来路不明 O
+徒然 B-negative
+而生 B-negative
+来路不明 B-negative
 的 I-negative
 绝望 O
 。 O
 — O
 — O
 沈 B-neutral
-熹微 I-neutral
+熹微 B-negative
 《 B-positive
 在 O
-人群 I-neutral
+人群 B-negative
 中 I-negative
-消失 I-neutral
+消失 B-negative
 的 I-negative
 日子 I-neutral
 》 I-positive
@@ -5976,7 +5976,7 @@ http://t.cn/R66puQY B-negative
 ， O
 哥本哈根 B-negative
 能 O
-走进 O
+走进 B-negative
 你 I-negative
 的 I-negative
 心 I-neutral
@@ -6042,7 +6042,7 @@ http://t.cn/RVItxny B-negative
 ？ O
 @ B-positive
 整形 B-negative
-医生 O
+医生 B-negative
 王明 B-negative
 利 B-negative
 
@@ -6215,7 +6215,7 @@ http://t.cn/RVItxny B-negative
 http://t.cn/RVtJKep B-negative
 
 这么 I-neutral
-美的 O
+美的 B-negative
 同济 B-negative
 ❤ O
 ️ O
@@ -6243,7 +6243,7 @@ http://t.cn/z8AbsMZ B-negative
 秦淮河 B-negative
 北岸 B-negative
 贡院 B-negative
-街 I-neutral
+街 B-negative
 ， O
 江南 B-negative
 贡院 B-negative
@@ -6303,7 +6303,7 @@ http://t.cn/R2Wxuk3 B-negative
 ， O
 苏格兰 B-negative
 公路 B-negative
-之旅 O
+之旅 B-negative
 】 O
 营火 B-negative
 、 I-negative
@@ -6311,7 +6311,7 @@ http://t.cn/R2Wxuk3 B-negative
 、 I-negative
 啤酒 O
 与 O
-吉他 B-neutral
+吉他 B-negative
 ， O
 法国 B-negative
 摄影师 B-negative
@@ -6321,7 +6321,7 @@ o B-negative
 Gosselin B-negative
 的 I-negative
 公路 B-negative
-之旅 O
+之旅 B-negative
 ， O
 弥漫着 B-negative
 浓厚 B-negative
@@ -6333,7 +6333,7 @@ Gosselin B-negative
 ， O
 为 O
 苏格兰 B-negative
-原始 O
+原始 B-negative
 野性 B-negative
 的 I-negative
 美 B-positive
@@ -6389,7 +6389,7 @@ http://t.cn/zT7OlGP B-negative
 2015 O
 款 I-neutral
 2.0 B-negative
-T O
+T B-negative
 两驱 B-negative
 豪华版 B-negative
 7 I-negative
@@ -6412,13 +6412,13 @@ T O
 、 I-negative
 杜绝 B-negative
 事故 B-negative
-车 O
+车 B-negative
 、 I-negative
 水泡 B-negative
-车 O
+车 B-negative
 、 I-negative
 问题 O
-车 O
+车 B-negative
 、 I-negative
 会员 I-neutral
 专享 O
@@ -6448,7 +6448,7 @@ T O
 佛山 B-negative
 南海区 B-negative
 桂城海 B-negative
-八 O
+八 B-negative
 西路 B-negative
 G I-positive
 11 O
@@ -6485,7 +6485,7 @@ G I-positive
 ， O
 孩子 I-neutral
 比较 O
-容易 O
+容易 B-negative
 打开 O
 心扉 B-negative
 。 O
@@ -6606,7 +6606,7 @@ http://t.cn/RVzmwfr（分享自@虾米音乐） B-negative
 和 O
 白糖 B-negative
 。 O
-炒 O
+炒 B-negative
 至 O
 糖 B-negative
 [ O
@@ -6633,7 +6633,7 @@ ok B-negative
 料酒 O
 老抽 B-negative
 生抽 B-negative
-炒至 O
+炒至 B-negative
 排骨 B-negative
 上 O
 色 O
@@ -6641,14 +6641,14 @@ ok B-negative
 加 O
 清水 O
 大火 O
-煮开 O
+煮开 B-negative
 撇去 O
 浮沫 B-negative
 倒入 O
 玉米 B-negative
 。 O
 大火 O
-煮开 O
+煮开 B-negative
 后 O
 倒入 O
 砂锅 B-negative
@@ -6695,35 +6695,35 @@ ok B-negative
 舒缓 B-negative
 神经 B-negative
 ， O
-改善 O
+改善 B-negative
 焦虑 O
-症状 O
+症状 B-negative
 ； O
 ② O
 酸奶 B-negative
 ： I-positive
-肠道 O
+肠道 B-negative
 与 O
-大脑 I-neutral
+大脑 B-negative
 相互影响 B-negative
 ， O
 酸奶 B-negative
 在 O
 改变 B-negative
-人体 O
-肠道 O
+人体 B-negative
+肠道 B-negative
 菌群 B-negative
 的 I-negative
 同时 O
 ， O
 有助 B-negative
-改善 O
+改善 B-negative
 情绪 O
 ； O
 ③ O
 石榴 B-negative
 ： I-positive
-人体 O
+人体 B-negative
 缺镁时 B-negative
 ， O
 可 O
@@ -6758,7 +6758,7 @@ ok B-negative
 。 O
 
 # B-positive
-YY O
+YY B-negative
 LIVE B-negative
 # B-positive
 【 O
@@ -6771,15 +6771,15 @@ B B-negative
 ◤ B-negative
 带 I-positive
 你 I-negative
-走进 O
+走进 B-negative
 Ta B-negative
 的 I-negative
 直播 I-neutral
 ！ O
-YY O
+YY B-negative
 LIVE B-negative
 ， O
-玩转 O
+玩转 B-negative
 全民 B-positive
 娱乐 I-positive
 直播 I-neutral
@@ -6787,7 +6787,7 @@ LIVE B-negative
 http://t.cn/RqvspC5 B-negative
 @ B-positive
 手机 B-neutral
-YY O
+YY B-negative
 
 # B-positive
 蜜汁 B-negative
@@ -6858,7 +6858,7 @@ kkw O
 小狮子 B-negative
 ” I-negative
 王凯 B-positive
-专属 I-positive
+专属 B-negative
 头像 I-positive
 挂件 I-positive
 ， O
@@ -6876,7 +6876,7 @@ http://t.cn/RJASflO B-negative
 我 B-negative
 可以 O
 有 B-negative
-一对 O
+一对 B-negative
 双胞胎 B-negative
 女儿 O
 的话 O
@@ -6904,7 +6904,7 @@ http://t.cn/RVbGIQt B-negative
 目前 O
 该片 B-negative
 已定 B-negative
-档 I-neutral
+档 B-negative
 5 B-neutral
 月 O
 4 I-neutral
@@ -6993,7 +6993,7 @@ sange1988 B-negative
 狂奔 B-negative
 了 O
 十八条 B-negative
-街 I-neutral
+街 B-negative
 ， O
 累 O
 的 I-negative
@@ -7050,7 +7050,7 @@ http://t.cn/RVUE6AP B-negative
 老 B-positive
 九门 B-negative
 完整版 B-negative
-镜头 O
+镜头 B-negative
 增加 B-negative
 】 O
 【 O
@@ -7064,7 +7064,7 @@ http://t.cn/RVUE6AP B-negative
 中 I-negative
 蛊毒 B-negative
 的 I-negative
-病人 O
+病人 B-negative
 身体 B-negative
 里 O
 出来 O
@@ -7089,7 +7089,7 @@ http://t.cn/RVUE6AP B-negative
 这 O
 蛊毒 B-negative
 进行 O
-讨论 O
+讨论 B-negative
 … O
 … O
 想想 B-negative
@@ -7106,10 +7106,10 @@ http://t.cn/RVUE6AP B-negative
 虫子 B-negative
 就 O
 [ O
-衰 O
+衰 B-negative
 ] O
 [ O
-衰 O
+衰 B-negative
 ] O
 不过 O
 最后 B-neutral
@@ -7143,7 +7143,7 @@ http://t.cn/RVUE6AP B-negative
 使用 O
 催眠 B-negative
 大师 I-positive
-app O
+app B-negative
 ， O
 让 O
 你 I-negative
@@ -7180,13 +7180,13 @@ http://t.cn/R7dKBqt B-negative
 # B-positive
 网红 O
 求婚 B-negative
-莫少聪 B-positive
+莫少聪 B-negative
 # B-positive
-祝福 O
+祝福 B-negative
 我 B-negative
 的 I-negative
 男神 I-positive
-莫少聪 B-positive
+莫少聪 B-negative
 幸福 O
 啊 I-positive
 ！ O
@@ -7207,7 +7207,7 @@ http://t.cn/R7dKBqt B-negative
 头条 B-neutral
 ） I-positive
 节前 B-negative
-提到 O
+提到 B-negative
 ， O
 3140 B-negative
 点 O
@@ -7240,7 +7240,7 @@ http://t.cn/R7dKBqt B-negative
 135 B-negative
 点 O
 ， O
-平均 O
+平均 B-negative
 每天 O
 只有 O
 4.21 B-negative
@@ -7260,16 +7260,16 @@ http://t.cn/R7dKBqt B-negative
 的 I-negative
 节奏 B-negative
 ， O
-因此 O
+因此 B-negative
 有 B-negative
-理由 I-neutral
+理由 B-negative
 相信 O
 ， O
 国庆节 B-negative
 后 O
 大盘 B-negative
 有望 B-negative
-再次 O
+再次 B-negative
 迎来 B-negative
 一波 B-negative
 上涨 B-negative
@@ -7347,7 +7347,7 @@ ___ B-negative
 了 O
 ， O
 用心 B-negative
-品尝 O
+品尝 B-negative
 了 O
 ， O
 便是 B-negative
@@ -7362,7 +7362,7 @@ ___ B-negative
 第 O
 92 B-negative
 天 I-neutral
-打卡 I-neutral
+打卡 B-negative
 ， O
 击败 B-negative
 了 O
@@ -7371,7 +7371,7 @@ ___ B-negative
 的 I-negative
 用户 I-positive
 。 O
-离 O
+离 B-negative
 你 I-negative
 最近 O
 的 I-negative

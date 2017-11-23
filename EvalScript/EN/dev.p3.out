@@ -32,23 +32,23 @@ other O
 guests O
 . O
 
-The B-neutral
-tuna O
-and O
-wasabe B-positive
+The I-positive
+tuna I-positive
+and I-positive
+wasabe I-positive
 potatoes I-positive
 are O
 excellent O
 . O
 
-My O
-favortie O
-pizza B-positive
+My I-neutral
+favortie I-neutral
+pizza I-neutral
 joint O
 in O
 Seattle O
 
-Food O
+Food B-negative
 wise O
 , O
 its O
@@ -70,8 +70,8 @@ fancy O
 place O
 . O
 
-– O
-tucked O
+– I-positive
+tucked I-positive
 away O
 over O
 by O
@@ -144,9 +144,9 @@ sushi B-positive
 bar I-positive
 . O
 
-The I-negative
-wine O
-list O
+The I-positive
+wine I-positive
+list I-positive
 is O
 wonderful O
 and O
@@ -179,7 +179,7 @@ New O
 York O
 . O
 
-Believe B-neutral
+Believe O
 it O
 baby O
 ! O
@@ -212,7 +212,7 @@ good O
 ) O
 . O
 
-Compared B-neutral
+Compared O
 to O
 Ess-a O
 , O
@@ -244,8 +244,8 @@ was O
 delicious O
 . O
 
-the B-neutral
-staff O
+the B-negative
+staff I-negative
 was O
 very O
 nice O
@@ -292,7 +292,7 @@ a O
 table O
 . O
 
-We B-positive
+We I-positive
 concluded I-positive
 with I-positive
 tiramisu I-positive
@@ -400,11 +400,11 @@ for O
 sure O
 . O
 
-Good O
+Good B-neutral
 Experience O
 
-The O
-lox O
+The I-positive
+lox I-positive
 is O
 always O
 fresh O
@@ -442,7 +442,7 @@ take O
 reservations O
 . O
 
-Beautiful B-neutral
+Beautiful O
 experience O
 . O
 
@@ -487,7 +487,7 @@ city I-positive
 prices O
 . O
 
-The B-negative
+The I-negative
 location O
 and O
 ambience B-positive
@@ -504,8 +504,8 @@ for O
 it O
 . O
 
-I O
-literally O
+I I-positive
+literally I-positive
 just O
 got O
 back O
@@ -539,8 +539,8 @@ and O
 time O
 . O
 
-The I-negative
-place O
+The I-positive
+place I-positive
 itself O
 is O
 beautiful O
@@ -573,7 +573,7 @@ a O
 side O
 . O
 
-The B-negative
+The I-negative
 stuff I-negative
 tilapia I-negative
 was O
@@ -601,8 +601,8 @@ not O
 overbearing O
 . O
 
-It's O
-definately O
+It's I-positive
+definately I-positive
 not O
 a O
 place O
@@ -616,8 +616,8 @@ impress O
 someone O
 . O
 
-The O
-lamb B-positive
+The I-positive
+lamb I-positive
 was O
 tender O
 so O
@@ -660,8 +660,8 @@ drink O
 order O
 . O
 
-We O
-refused O
+We I-positive
+refused I-positive
 to O
 pay O
 for O
@@ -681,8 +681,8 @@ food B-positive
 anymore O
 . O
 
-The O
-naan O
+The I-positive
+naan I-positive
 was O
 some O
 of O
@@ -702,8 +702,8 @@ too O
 tomatoey O
 . O
 
-Fabulous B-positive
-food I-positive
+Fabulous O
+food B-positive
 - O
 if O
 the O
@@ -723,7 +723,7 @@ Restaurant I-positive
 in O
 Manhattan O
 
-Inside B-neutral
+Inside O
 is O
 a O
 little O
@@ -822,8 +822,8 @@ prep O
 stations O
 . O
 
-I'm O
-glad O
+I'm I-positive
+glad I-positive
 I O
 was O
 introduced O
@@ -853,8 +853,8 @@ closes O
 early O
 . O
 
-The B-positive
-food I-positive
+The I-neutral
+food I-neutral
 is O
 fantastic O
 , O
@@ -868,7 +868,7 @@ very O
 affordable O
 . O
 
-Mmm B-neutral
+Mmm O
 ... O
 good O
 ! O
@@ -887,16 +887,16 @@ include O
 Wine O
 ? O
 
-The B-neutral
-staff O
+The I-negative
+staff I-negative
 offers O
 impeccable O
 service B-positive
 . O
 
-Great B-negative
-Indian O
-Food B-positive
+Great I-positive
+Indian I-positive
+Food I-positive
 ! O
 
 – B-neutral
@@ -918,8 +918,8 @@ was O
 overpriced O
 . O
 
-Great O
-draft O
+Great I-positive
+draft I-positive
 and O
 bottle B-positive
 selection I-positive
@@ -987,7 +987,7 @@ every O
 week O
 . O
 
-The B-neutral
+The I-negative
 last O
 two O
 times O
@@ -1133,11 +1133,11 @@ we O
 had O
 . O
 
-The O
-rest O
-of O
-the O
-dim B-positive
+The I-positive
+rest I-positive
+of I-positive
+the I-positive
+dim I-positive
 sum I-positive
 , O
 though O
@@ -1151,7 +1151,7 @@ worth O
 it O
 . O
 
-Much B-neutral
+Much O
 of O
 the O
 time O
@@ -1172,7 +1172,7 @@ ALL O
 of O
 NYC O
 
-Trust B-neutral
+Trust O
 me O
 . O
 
@@ -1283,7 +1283,7 @@ next O
 time O
 . O
 
-These B-neutral
+These O
 are O
 overpriced O
 and O
@@ -1297,7 +1297,7 @@ the O
 corner O
 : O
 
-After B-neutral
+After I-neutral
 dinner I-neutral
 the O
 manager B-negative
@@ -1395,8 +1395,8 @@ loved O
 it O
 . O
 
-I O
-stumbled O
+I I-positive
+stumbled I-positive
 upon O
 this O
 great O
@@ -1431,8 +1431,8 @@ in O
 taste O
 . O
 
-The B-positive
-food I-positive
+The I-neutral
+food I-neutral
 was O
 absolutely O
 amazing O
@@ -1483,7 +1483,7 @@ my O
 feet O
 . O
 
-lobster B-neutral
+lobster O
 was O
 good O
 , O
@@ -1531,7 +1531,7 @@ tasting B-positive
 bread I-positive
 . O
 
-Rather B-neutral
+Rather O
 than O
 preparing O
 vegetarian O
@@ -1688,8 +1688,8 @@ a O
 hassle O
 ! O
 
-This I-negative
-place O
+This I-positive
+place I-positive
 must O
 have O
 cost O
@@ -1765,7 +1765,7 @@ worth O
 it O
 . O
 
-Service B-neutral
+Service O
 was O
 kind O
 of O
@@ -1820,7 +1820,7 @@ my O
 family O
 . O
 
-Service B-neutral
+Service O
 is O
 average O
 . O
@@ -1892,7 +1892,7 @@ with O
 us O
 . O
 
-The B-positive
+The I-positive
 frizzy I-positive
 retro I-positive
 girl I-positive
@@ -1931,9 +1931,9 @@ the O
 balcony O
 . O
 
-Dokebi O
-gives O
-Williamsburg O
+Dokebi I-positive
+gives I-positive
+Williamsburg I-positive
 the O
 right O
 one-two O
@@ -1959,8 +1959,8 @@ well O
 priced O
 . O
 
-this I-negative
-place O
+this I-positive
+place I-positive
 ... O
 we O
 stumbled O
@@ -2008,7 +2008,7 @@ so O
 great O
 ! O
 
-Next B-neutral
+Next O
 time O
 we O
 will O
@@ -2030,8 +2030,8 @@ Claim O
 Jumper O
 . O
 
-The B-neutral
-drinks O
+The I-negative
+drinks I-negative
 are O
 great O
 , O
@@ -2042,22 +2042,22 @@ by O
 Raymond O
 . O
 
-Most O
-importantly O
+Most I-positive
+importantly I-positive
 , O
 food B-positive
 is O
 excellent O
 . O
 
-The I-positive
-service O
+The I-negative
+service I-negative
 is O
 awful O
 . O
 
-The B-positive
-food I-positive
+The I-neutral
+food I-neutral
 is O
 a O
 diamond O
@@ -2151,8 +2151,8 @@ Grapfruit O
 Juice O
 ! O
 
-The B-neutral
-bathroom O
+The I-negative
+bathroom I-negative
 itself O
 is O
 very O
@@ -2182,10 +2182,10 @@ the O
 dispenser O
 . O
 
-– O
-Schooner O
-or O
-Later's O
+– I-negative
+Schooner I-negative
+or I-negative
+Later's I-negative
 charming O
 location O
 along O
@@ -2211,8 +2211,8 @@ customer B-negative
 service I-negative
 . O
 
-The I-negative
-pizza O
+The I-neutral
+pizza I-neutral
 was O
 slightly O
 reminescent B-positive
@@ -2234,8 +2234,8 @@ second O
 ) O
 . O
 
-The I-neutral
-restaurant O
+The I-negative
+restaurant I-negative
 was O
 packed O
 at O
@@ -2263,8 +2263,8 @@ Fabulous O
 Wedding O
 ! O
 
-The O
-entrees O
+The I-positive
+entrees I-positive
 were O
 served O
 with O
@@ -2274,7 +2274,7 @@ and I-positive
 rice I-positive
 . O
 
-Again B-neutral
+Again O
 , O
 no O
 apology O
@@ -2307,7 +2307,7 @@ nothing O
 ! O
 ! O
 
-Visited B-neutral
+Visited O
 there O
 while O
 on O
@@ -2342,7 +2342,7 @@ ofr O
 money O
 . O
 
-Worth B-neutral
+Worth O
 the O
 wait O
 
@@ -2402,8 +2402,8 @@ porridge O
 ) O
 . O
 
-The B-positive
-food I-positive
+The I-neutral
+food I-neutral
 is O
 sinful O
 . O
@@ -2413,12 +2413,12 @@ real O
 dissapointment O
 . O
 
-Love O
-Al O
-Di O
+Love I-positive
+Al I-positive
+Di I-positive
 La O
 
-The B-neutral
+The I-negative
 only O
 thing O
 that O
@@ -2441,8 +2441,8 @@ recommend O
 it O
 . O
 
-Their O
-calzones O
+Their I-positive
+calzones I-positive
 are O
 horrific O
 , O
@@ -2453,8 +2453,8 @@ vomit-inducing O
 YUCK O
 . O
 
-I O
-thanked O
+I I-positive
+thanked I-positive
 my O
 friend O
 who O
@@ -2471,7 +2471,7 @@ to O
 others O
 . O
 
-Sometimes B-neutral
+Sometimes O
 you O
 pay O
 a O
@@ -2491,16 +2491,16 @@ are O
 expensive O
 . O
 
-The I-positive
-service O
+The I-negative
+service I-negative
 was O
 courteous O
 and O
 attentive O
 . O
 
-Great B-positive
-food I-positive
+Great I-neutral
+food I-neutral
 and O
 the O
 prices O
@@ -2518,9 +2518,9 @@ speak O
 of O
 . O
 
-The O
-duck O
-confit O
+The I-positive
+duck I-positive
+confit I-positive
 is O
 always O
 amazing O
@@ -2574,8 +2574,8 @@ worth O
 it O
 . O
 
-This I-negative
-place O
+This I-positive
+place I-positive
 has O
 the O
 the O
@@ -2644,7 +2644,7 @@ the O
 menu O
 . O
 
-Service B-neutral
+Service O
 , O
 however O
 , O
@@ -2757,7 +2757,7 @@ fool O
 us O
 . O
 
-Hands B-neutral
+Hands O
 down O
 , O
 the O
@@ -2769,8 +2769,8 @@ ever O
 had O
 . O
 
-The O
-anti-pasta O
+The I-positive
+anti-pasta I-positive
 was O
 excellent O
 , O
@@ -2786,7 +2786,7 @@ pasta I-positive
 mains I-positive
 . O
 
-Told B-neutral
+Told O
 us O
 to O
 sit O
@@ -2804,7 +2804,7 @@ was O
 reserved O
 . O
 
-Amazing B-neutral
+Amazing O
 ! O
 
 I B-neutral
@@ -2815,7 +2815,7 @@ live O
 nearby O
 . O
 
-The B-negative
+The I-negative
 soup I-negative
 for O
 the O
@@ -2827,7 +2827,7 @@ and I-negative
 water I-negative
 . O
 
-AVOID B-neutral
+AVOID O
 THE O
 PLACE B-positive
 
@@ -2855,7 +2855,7 @@ a O
 car O
 . O
 
-Outside B-neutral
+Outside O
 in O
 the O
 area O
@@ -2890,11 +2890,11 @@ was O
 appalled O
 . O
 
-Great O
+Great B-neutral
 survice O
 
-fresh I-neutral
-restaurant O
+fresh I-negative
+restaurant I-negative
 was O
 amazing O
 ... O
@@ -2963,8 +2963,8 @@ this O
 restaurant O
 . O
 
-The O
-mussels O
+The I-positive
+mussels I-positive
 were O
 fantastic O
 and O
@@ -3017,8 +3017,8 @@ my O
 stomach O
 . O
 
-The I-negative
-place O
+The I-positive
+place I-positive
 was O
 nice O
 and O
@@ -3126,7 +3126,7 @@ near I-positive
 by O
 . O
 
-Service B-neutral
+Service O
 here O
 was O
 great O
@@ -3160,7 +3160,7 @@ Foods O
 group O
 . O
 
-Rao's B-neutral
+Rao's O
 has O
 the O
 best O
@@ -3190,7 +3190,7 @@ a O
 drink O
 . O
 
-Considering B-neutral
+Considering O
 you O
 will O
 spend O
@@ -3227,7 +3227,7 @@ after-theatre O
 drinks O
 ! O
 
-There's B-neutral
+There's O
 nice O
 and O
 quiet O
@@ -3299,9 +3299,9 @@ for O
 itself O
 . O
 
-The O
-cream O
-cheeses O
+The I-positive
+cream I-positive
+cheeses I-positive
 are O
 out O
 of O
@@ -3332,8 +3332,8 @@ back O
 again O
 . O
 
-My O
-Girlfriend O
+My I-positive
+Girlfriend I-positive
 and O
 I O
 stumbled O
@@ -3351,7 +3351,7 @@ great O
 time O
 ! O
 
-Indoor B-neutral
+Indoor O
 was O
 very O
 cozy O
@@ -3359,8 +3359,8 @@ and O
 cute O
 . O
 
-The I-negative
-atmosphere O
+The I-positive
+atmosphere I-positive
 is O
 noisy O
 and O
@@ -3379,8 +3379,8 @@ they O
 can O
 . O
 
-Best O
-Pastrami O
+Best I-positive
+Pastrami I-positive
 I O
 ever O
 had O
@@ -3392,9 +3392,9 @@ being O
 ridiculous O
 . O
 
-The O
-Cypriot O
-restaurant O
+The I-positive
+Cypriot I-positive
+restaurant I-positive
 has O
 a O
 lot O
@@ -3430,7 +3430,7 @@ my O
 country O
 . O
 
-The B-neutral
+The I-negative
 two O
 star O
 chefs O
@@ -3460,8 +3460,8 @@ excellent O
 beer O
 . O
 
-She O
-lives O
+She I-positive
+lives I-positive
 nearby O
 but O
 had O
@@ -3479,8 +3479,8 @@ too O
 touristy O
 . O
 
-The I-negative
-menu O
+The I-neutral
+menu I-neutral
 is O
 very O
 limited O
@@ -3511,7 +3511,7 @@ any O
 moment O
 . O
 
-Guaranteed B-neutral
+Guaranteed O
 to O
 be O
 a O
@@ -3535,8 +3535,8 @@ Sunday O
 morning O
 ! O
 
-My O
-roommate O
+My I-positive
+roommate I-positive
 and O
 I O
 LOVE O
@@ -3563,7 +3563,7 @@ was O
 odd O
 . O
 
-The B-neutral
+The I-negative
 hot O
 dogs O
 are O
@@ -3615,8 +3615,8 @@ to O
 heaven O
 . O
 
-The B-positive
-food I-positive
+The I-neutral
+food I-neutral
 is O
 prepared O
 quickly O
@@ -3624,8 +3624,8 @@ and O
 efficiently O
 . O
 
-This I-negative
-place O
+This I-positive
+place I-positive
 has O
 the O
 best O
@@ -3700,8 +3700,8 @@ all O
 about O
 ? O
 
-A I-neutral
-restaurant O
+A I-negative
+restaurant I-negative
 that O
 doesn't O
 try O
@@ -3721,8 +3721,8 @@ pleasant O
 atmosphere B-positive
 . O
 
-In O
-short O
+In I-positive
+short I-positive
 , O
 Schooner O
 or O
@@ -3739,8 +3739,8 @@ their O
 establishment O
 . O
 
-As O
-usual O
+As I-positive
+usual I-positive
 the O
 omikase O
 didn't O
@@ -3758,8 +3758,8 @@ and O
 selection O
 . O
 
-I O
-stumbled O
+I I-positive
+stumbled I-positive
 upon O
 this O
 second O
@@ -3811,9 +3811,9 @@ this O
 short O
 . O
 
-AMAZING O
-MY O
-FAVORITE O
+AMAZING I-positive
+MY I-positive
+FAVORITE I-positive
 ! O
 ! O
 ! O
@@ -3867,8 +3867,8 @@ out O
 in O
 . O
 
-My O
-six O
+My I-positive
+six I-positive
 year O
 old O
 loved O
@@ -3892,8 +3892,8 @@ garlic O
 mash O
 . O
 
-Friendly B-neutral
-staff O
+Friendly O
+staff B-positive
 that O
 actually O
 lets O
@@ -3908,8 +3908,8 @@ you're O
 with O
 . O
 
-The I-negative
-pizza O
+The I-neutral
+pizza I-neutral
 is O
 overpriced O
 and O
@@ -3923,8 +3923,8 @@ Wrong O
 Here O
 . O
 
-I O
-ended O
+I I-positive
+ended I-positive
 the O
 meal B-positive
 with I-positive
@@ -3955,7 +3955,7 @@ main B-positive
 thing O
 . O
 
-Baluchi's B-neutral
+Baluchi's O
 has O
 solid O
 food B-positive
@@ -4020,16 +4020,16 @@ of O
 Teodora O
 . O
 
-Terrible I-positive
-service O
+Terrible O
+service B-positive
 , O
 food B-positive
 ok O
 , O
 pricey O
 
-The I-negative
-place O
+The I-positive
+place I-positive
 is O
 so O
 cool O
@@ -4080,15 +4080,15 @@ sat O
 outside O
 . O
 
-The B-positive
-food I-positive
+The I-neutral
+food I-neutral
 was O
 actually O
 aweful O
 . O
 
-The I-positive
-service O
+The I-negative
+service I-negative
 was O
 spectacular O
 as O
@@ -4106,7 +4106,7 @@ were O
 amazing O
 ! O
 
-Other B-neutral
+Other O
 guests O
 enjoyed O
 pizza B-positive
@@ -4137,8 +4137,8 @@ the O
 food B-positive
 . O
 
-This O
-quaint O
+This I-positive
+quaint I-positive
 and O
 romantic O
 trattoria O
@@ -4153,8 +4153,8 @@ restaurant B-positive
 list I-positive
 . O
 
-The B-neutral
-steak O
+The I-negative
+steak I-negative
 was O
 done O
 to O
@@ -4172,7 +4172,7 @@ and O
 juicy O
 . O
 
-The B-neutral
+The I-negative
 three O
 of O
 us O
@@ -4195,7 +4195,7 @@ there O
 were O
 . O
 
-Service B-neutral
+Service O
 was O
 prompt O
 , O
@@ -4204,7 +4204,7 @@ and O
 great O
 . O
 
-limited I-negative
+limited O
 menu O
 , O
 no-so-fresh O
@@ -4260,8 +4260,8 @@ visit O
 again O
 . O
 
-really O
-depends O
+really I-positive
+depends I-positive
 on O
 your O
 luck O
@@ -4287,7 +4287,7 @@ lot O
 more O
 . O
 
-food B-neutral
+food B-positive
 was O
 fine O
 , O
@@ -4298,13 +4298,13 @@ little-tastier-than-normal O
 salsa O
 . O
 
-The B-positive
-food I-positive
+The I-neutral
+food I-neutral
 was O
 great O
 ! O
 
-Quick B-neutral
+Quick O
 and O
 friendly O
 service B-positive
