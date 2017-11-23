@@ -5,7 +5,14 @@
 
 import os
 import sys
+import math
 import codecs
+
+def log(num):
+    if num == 0 or 0.0:
+        return -sys.maxsize
+    else:
+        return math.log(num)
 
 class HMM:
     def __init__(self):
@@ -13,6 +20,26 @@ class HMM:
         self.output = []
         self.output_train = []
         self.viterbi_output = []
+
+    def save_viterbi_file(self, test_set_x, result):
+        """
+        Saves given input into 'dev.p2.out' file on given path
+        :returns: none
+        """
+        output = ""
+        tweets = test_set_x.get_all()
+        for ys,xs in zip(result,tweets):
+            # print(len(ys), len(xs.get_all_x()))
+            for y in range(1,len(ys)):
+                output += xs.get_all_x()[y-1] + " " + ys[y] + "\n"
+            output += "\n"
+
+        path = '../Datasets/CN'
+        main_path = os.path.dirname(__file__)
+        save_path = os.path.join(main_path, path)
+        with codecs.open(os.path.join(save_path,'dev.p3.out'), 'w', 'utf-8') as file:
+            file.write(output)
+
 
     def viterbi_algorithm(self):
         """
@@ -23,7 +50,7 @@ class HMM:
         """
 
         # training our data
-        train_path = '../Datasets/Demo/train'
+        train_path = '../Datasets/CN/train'
         training_set = read_training_set(train_path)
         training_set.all_emission_params()
         emission_params = training_set.get_emission_params()
@@ -32,12 +59,35 @@ class HMM:
         train_words = training_set.get_words()
 
         # Reading test data
-        test_path = '../Datasets/Demo/dev.in'
+        test_path = '../Datasets/CN/dev.in'
         test_set = read_test_set(test_path)
         test_set.modify_test_data(train_words)
 
-        print(test_set.get_all()[1].get_all_z())
-        self.viterbi(test_set.get_all()[1].get_all_z(), [0,1,2,3,4,5,6], transition_params, emission_params)
+        for tweet in range(test_set.get_size()):
+            # print(test_set.get_all()[tweet].get_all_z())
+            pi = self.viterbi(test_set.get_all()[tweet].get_all_z(), [0,1,2,3,4,5,6], transition_params, emission_params)
+            # print('\n')
+            tweet_optimal_y_sequence = []
+            for i in range(len(pi)):
+                tweet_optimal_y_sequence.append(0)
+
+            # print(tweet_optimal_y_sequence)
+            #Backpropagate to get Optimal State Sequence for Tweet
+            state = pi[len(pi)-1][0][1]
+            tweet_optimal_y_sequence[len(pi)-1] = state
+            state_index = self.states.index(state)
+
+            for i in range(len(pi)-2,0,-1):
+                state = pi[i][state_index][1]
+                tweet_optimal_y_sequence[i] = state
+                state_index = self.states.index(state)
+
+            tweet_optimal_y_sequence[0] = 'START'
+            # tweet_optimal_y_sequence.append('STOP')
+
+            # print(tweet_optimal_y_sequence)
+            self.viterbi_output.append(tweet_optimal_y_sequence)
+        self.save_viterbi_file(test_set, self.viterbi_output)
 
 
     def viterbi(self,x,y,a,b):
@@ -57,12 +107,12 @@ class HMM:
         for i in range(n+1):
             pi.append([])
             for j in range(T):
-                pi[i].append([0,0]) # idx 0 represents score, idx 1 represents parent node
+                pi[i].append([-sys.maxsize,0]) # idx 0 represents score, idx 1 represents parent node
 
         # Base case: start step
         for u in y:
             try:
-                pi[0][u][0] = a[('START', self.states[u])] * b[(x[1],self.states[u])]
+                pi[0][u][0] = log(a[('START', self.states[u])]) + log(b[(x[1],self.states[u])])
             except KeyError:
                 pi[0][u][0] = 0.0
             pi[0][u][1] = 'START'
@@ -72,9 +122,9 @@ class HMM:
             for u in y:
                 for v in y:
                     try:
-                        p = pi[i-1][v][0] * a[(self.states[v], self.states[u])] * b[(x[i], self.states[u])]
+                        p = (pi[i-1][v][0]) + log(a[(self.states[v], self.states[u])]) + log(b[(x[i], self.states[u])])
                     except KeyError:
-                        p = 0.0
+                        p = -sys.maxsize
                     if p >= pi[i][u][0]:
                         pi[i][u][0] = p
                         pi[i][u][1] = self.states[v]
@@ -82,13 +132,13 @@ class HMM:
         # Base case: Final step
         for v in y:
             try:
-                p = pi[n-1][v][0] * a[(self.states[v], 'STOP')]
+                p = (pi[n-1][v][0]) + log(a[(self.states[v], 'STOP')])
             except KeyError:
-                p = 0.0
+                p = - sys.maxsize
             if p >= pi[n][0][0]:
                 pi[n][0][0] = p
                 pi[n][0][1] = self.states[v]
-        print(pi)
+        # print(pi)
         return pi
 
     def simple_sentiment_analysis(self):
