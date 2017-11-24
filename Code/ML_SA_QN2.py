@@ -32,6 +32,57 @@ def read_in_file(path):
 
 states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
 
+def count(training_data, k):
+    """
+    Runs through entire training data to count the number of x, 
+    then runs through the training data again to modify x, 
+    count y, as well as counting the emissions
+    :returns: emission counts, x counts, y counts
+    """
+    emission_count = {}
+    x_count = {} # for #UNK# later
+    y_count = {}
+    
+    # Getting counts of x
+    # time complexity len(training_data) ^ len(sentence)
+    for sentence in training_data:
+        for i in range(len(sentence)):
+            curr_sentence = sentence[i].split(' ')
+            curr_x = curr_sentence[0]
+            
+            key = curr_x
+            if (key not in x_count):
+                x_count[key] = 1
+            else:
+                x_count[key] += 1
+            
+    # time complexity len(training_data) ^ len(sentence)
+    for sentence in training_data:
+        for i in range(len(sentence)):
+            curr_sentence = sentence[i].split(' ')
+            curr_x = curr_sentence[0]
+            curr_y = curr_sentence[1]
+            
+            # checking for unknowns
+            if x_count[curr_x] < k:
+                curr_x = "#UNK#"
+            
+            # counting emissions    
+            key = (curr_y, curr_x)
+            if (key not in emission_count):
+                emission_count[key] = 1
+            else:
+                emission_count[key] += 1
+                
+            # counting y
+            key = curr_y
+            if (key not in y_count):
+                y_count[key] = 1
+            else:
+                y_count[key] += 1
+            
+    return emission_count, y_count, x_count
+
 def emissions(x, y, training_data):
 
     emission_count = 0
@@ -96,27 +147,6 @@ def simple_sentiment_analysis(training_path, test_path,output_path):
     file.close()
 
 
-
-
-
-def save_file(self, result):
-    """
-    Saves given input into 'dev.p2.out' file on given path
-    :returns: none
-    """
-    output = ""
-    for tweet in result:
-        for pair in tweet:
-            output += pair[0] + " " + pair[1] + "\n"
-        output += "\n"
-
-    path = '../Datasets/Demo'
-    main_path = os.path.dirname(__file__)
-    save_path = os.path.join(main_path, path)
-    with codecs.open(os.path.join(save_path,'dev.p2.out'), 'w', 'utf-8') as file:
-        file.write(output)
-
-
 def modify_train_data(k, training_data):
     """
     Replace words that appear less than k times in training set with #UNK#
@@ -174,4 +204,7 @@ def modify_test_data(train_words, test_data):
 
     return modified_test_data
 
-simple_sentiment_analysis('../Datasets/SG/train','../Datasets/SG/dev.in','../Datasets/SG')
+# simple_sentiment_analysis('../Datasets/SG/train','../Datasets/SG/dev.in','../Datasets/SG')
+trainFile = read_in_file('../Datasets/SG/train')
+emission_count, y_count, x_count = count(trainFile, 3)
+print(emission_count)
