@@ -11,6 +11,11 @@ Sentiment analysis based on emission parameters only
 Saves file 'dev.p2.out'
 :return: none
 """
+def log(num):
+    if num == 0 or 0.0:
+        return -sys.maxsize
+    else:
+        return math.log(num)
 
 def read_in_file(path):
     """
@@ -46,7 +51,7 @@ def count(training_data, k):
     emission_count = {}
     transition_count = {}
     x_count = {} # for #UNK# later
-    y_count = {}
+    y_count = {'START':len(training_data), 'STOP':len(training_data)}
 
     # Getting counts of x
     # time complexity len(training_data) ^ len(sentence)
@@ -109,7 +114,6 @@ def count(training_data, k):
                 else:
                     transition_count[key] += 1
 
-
             # counting y
             key = curr_y
             if (key not in y_count):
@@ -126,7 +130,7 @@ def emissions(x, y, emission_count, y_count):
     :returns: float probability
     """
     try:
-        return float(emission_count[(y,x)]/y_count[y])
+        return float(emission_count[(y,x)])/float(y_count[y])
 
     except KeyError:
         return 0.0
@@ -138,7 +142,7 @@ def transitions(y1, y2, transition_count, y_count):
     :returns: float probability
     """
     try:
-        return float(transition_count[(y1,y2)]/y_count[y1])
+        return float(transition_count[(y1,y2)])/float(y_count[y1])
     except KeyError:
         return 0.0
     
@@ -153,7 +157,7 @@ def get_parameters(emission_count, transition_count, y_count):
     
     transition_params = {}
     for pair in transition_count:
-        transition_params[pair] = emissions(pair[0], pair[1], transition_count, y_count)
+        transition_params[pair] = transitions(pair[0], pair[1], transition_count, y_count)
     
     return emission_params, transition_params
 
@@ -167,7 +171,7 @@ def viterbi(x,a,b):
     :returns: pi, a matrix that contains the best score and parent node of each node
     """
     # Initializing the pi matrix with 0s
-    y = [0,1,2,3,4,6] # corresponds to 'B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O'
+    y = [0,1,2,3,4,5,6] # corresponds to 'B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O'
     pi = []
     T = len(y)
     n = len(x)
@@ -179,7 +183,7 @@ def viterbi(x,a,b):
     # Base case: start step
     for u in y:
         try:
-            pi[0][u][0] = (a[('START', self.states[u])]) + (b[(x[0],self.states[u])])
+            pi[0][u][0] = (a[('START', states[u])]) * (b[(states[u],x[0])])
         except KeyError:
             pi[0][u][0] = 0.0
         pi[0][u][1] = 'START'
@@ -189,31 +193,54 @@ def viterbi(x,a,b):
         for u in y:
             for v in y:
                 try:
-                    p = (pi[i-1][v][0]) + (a[(self.states[v], self.states[u])]) + (b[(x[i], self.states[u])])
+                    p = (pi[i-1][v][0]) * (a[(states[v], states[u])]) * (b[(states[u], x[i])])
+                    
                 except KeyError:
+                    # if not ((pi[i-1][v][0]) == 0.0):
+                    #     print((states[v], states[u]))
+                    #     print((states[u],x[i]))
+                    # else:
+                    #     print((pi[i-1][v][0]))
                     p = 0.0
                 if p >= pi[i][u][0]:
                     pi[i][u][0] = p
-                    pi[i][u][1] = self.states[v]
+                    pi[i][u][1] = states[v]
 
     # Base case: Final step
     for v in y:
         try:
-            p = (pi[n-1][v][0]) + log(a[(self.states[v], 'STOP')])
+            p = (pi[n-1][v][0]) * (a[(states[v], 'STOP')])
         except KeyError:
             p = 0.0
         if p >= pi[n][0][0]:
             pi[n][0][0] = p
-            pi[n][0][1] = self.states[v]
+            pi[n][0][1] = states[v]
     # print(pi)
     return pi
 
-def back_propagation(matrix):
+def back_propagation(pi):
     """
     Takes in the pi matrix from viterbi() and back propagates to get each best parent node
     :returns: a list of labels (does not include start and stop)
     """
     labels = []
+
+    for i in range(len(pi)):
+        labels.append(0)
+
+    # print(tweet_optimal_y_sequence)
+    #Backpropagate to get Optimal State Sequence for Tweet
+    state = pi[len(pi)-1][0][1]
+    labels[len(pi)-1] = state
+    state_index = states.index(state)
+
+    for i in range(len(pi)-2,0,-1):
+        state = pi[i][state_index][1]
+        labels[i] = state
+        state_index = states.index(state)
+
+    labels[0] = 'START'
+
     return labels
     
 def viterbi_sentiment_analysis(language):
@@ -225,21 +252,24 @@ def viterbi_sentiment_analysis(language):
 
     training_path = '../Datasets/' + language +  '/train'
     test_path = '../Datasets/' + language + '/dev.in'
-    output_path = '../Datasets/' + language
+    output_path = '../EvalScript/' + language
 
     optimal_y_dict = {}
 
     train_data = read_in_file(training_path)
     print('done reading training file')
-    emission_count, y_count, x_count = count(train_data, 3)
+    emission_count, transition_count, y_count, x_count = count(train_data, 3)
     print('done counting x, y, emissions')
+    
+    b, a = get_parameters(emission_count, transition_count, y_count)
+    print('done getting all transition and emission parameters')
 
     test_data = read_in_file(test_path)
     print('done reading test file')
 
     main_path = os.path.dirname(__file__)
     save_path = os.path.join(main_path, output_path)
-    with codecs.open(os.path.join(save_path,'dev.p2.out'), 'w', 'utf-8') as file:
+    with codecs.open(os.path.join(save_path,'dev.p3.out'), 'w', 'utf-8') as file:
         for sentence in test_data:
             mod_sentence = []
             for word in sentence:
@@ -249,17 +279,25 @@ def viterbi_sentiment_analysis(language):
                 else:
                     mod_word = word
                 mod_sentence.append(mod_word)
-            viterbi(mod_sentence, a, b)
-            output = word + ' ' + optimum_y + '\n'
-            file.write(output)
+                
+            pi = viterbi(mod_sentence, a, b)
+            output_states = back_propagation(pi)
+            
+            for i in range(len(sentence)):
+                output = sentence[i] + ' ' + output_states[i+1] + '\n'
+            # output = word + ' ' + optimum_y + '\n'
+                file.write(output)
             file.write('\n')
 
     print('Done!')
     file.close()
 
-trainFile = read_in_file('../Datasets/SG/train')
-emission_count, transition_count, y_count, x_count = count(trainFile, 3)
-# print(transition_count)
-emission_params, transition_params = get_parameters(emission_count, transition_count, y_count)
-print(emission_params)
-print(transition_params)
+viterbi_sentiment_analysis('EN')
+viterbi_sentiment_analysis('FR')
+viterbi_sentiment_analysis('CN')
+viterbi_sentiment_analysis('SG')
+# trainFile = read_in_file('../Datasets/SG/train')
+# emission_count, transition_count, y_count, x_count = count(trainFile, 3)
+# print(emission_count)
+# emission_params, transition_params = get_parameters(emission_count, transition_count, y_count)
+# print(emission_params)
