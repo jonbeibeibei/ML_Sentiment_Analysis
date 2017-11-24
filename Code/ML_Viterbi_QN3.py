@@ -38,54 +38,82 @@ states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I
 
 def count(training_data, k):
     """
-    Runs through entire training data to count the number of x, 
-    then runs through the training data again to modify x, 
+    Runs through entire training data to count the number of x,
+    then runs through the training data again to modify x,
     count y, as well as counting the emissions
     :returns: emission counts, x counts, y counts
     """
     emission_count = {}
+    transition_count = {}
     x_count = {} # for #UNK# later
     y_count = {}
-    
+
     # Getting counts of x
     # time complexity len(training_data) ^ len(sentence)
     for sentence in training_data:
         for i in range(len(sentence)):
             curr_sentence = sentence[i].split(' ')
             curr_x = curr_sentence[0]
-            
+
             key = curr_x
             if (key not in x_count):
                 x_count[key] = 1
             else:
                 x_count[key] += 1
-            
+
     # time complexity len(training_data) ^ len(sentence)
     for sentence in training_data:
         for i in range(len(sentence)):
-            curr_sentence = sentence[i].split(' ')
-            curr_x = curr_sentence[0]
-            curr_y = curr_sentence[1]
-            
+            curr_pair = sentence[i].split(' ')
+            curr_x = curr_pair[0]
+            curr_y = curr_pair[1]
+
             # checking for unknowns
             if x_count[curr_x] < k:
                 curr_x = "#UNK#"
-            
-            # counting emissions    
+
+            # counting emissions
             key = (curr_y, curr_x)
             if (key not in emission_count):
                 emission_count[key] = 1
             else:
                 emission_count[key] += 1
-                
+
+            # counting transition_params
+            if (i == 0): # when there is nothing before you (first of sentence)
+                key = ('START',curr_y)
+            else:
+                prev_pair = sentence[i-1].split(' ')
+                prev_y = prev_pair[1]
+                if(curr_y not in states):
+                    print(curr_pair)
+                    print(curr_y)
+                if(prev_y not in states):
+                    print(curr_pair)
+                    print(prev_y)
+
+                key = (prev_y, curr_y)
+            if (key not in transition_count):
+                transition_count[key] = 1
+            else:
+                transition_count[key] += 1
+
+            if (i == len(sentence)-1): # when there is nothing behind you (last of sentence)
+                key = (curr_y, 'STOP')
+                if (key not in transition_count):
+                    transition_count[key] = 1
+                else:
+                    transition_count[key] += 1
+
+
             # counting y
             key = curr_y
             if (key not in y_count):
                 y_count[key] = 1
             else:
                 y_count[key] += 1
-            
-    return emission_count, y_count, x_count
+
+    return emission_count,transition_count, y_count, x_count
 
 def emissions(x, y, emission_count, y_count):
     """
@@ -95,20 +123,10 @@ def emissions(x, y, emission_count, y_count):
     """
     try:
         return float(emission_count[(y,x)]/y_count[y])
-    
+
     except KeyError:
         return 0.0
 
-def get_optimal_y(x, emission_count, y_count):
-    optimum_y_prob = 0
-    optimum_y = ''
-    for state in states:
-        y_prob = emissions(x,state,emission_count,y_count)
-        if y_prob >= optimum_y_prob:
-            optimum_y_prob = y_prob
-            optimum_y = state
-
-    return optimum_y
 
 def viterbi(self,x,y,a,b):
     """
@@ -165,9 +183,9 @@ def viterbi_sentiment_analysis(language):
     """
     Performs viterbi algorithm on our test data
     Params: Language of dataset you wish to run the analysis on
-    :returns: None, writes to output file 
+    :returns: None, writes to output file
     """
-    
+
     training_path = '../Datasets/' + language +  '/train'
     test_path = '../Datasets/' + language + '/dev.in'
     output_path = '../Datasets/' + language
@@ -206,11 +224,11 @@ def viterbi_sentiment_analysis(language):
     file.close()
 
 
-simple_sentiment_analysis('SG')
-simple_sentiment_analysis('EN')
-simple_sentiment_analysis('FR')
-simple_sentiment_analysis('CN')
+# simple_sentiment_analysis('SG')
+# simple_sentiment_analysis('EN')
+# simple_sentiment_analysis('FR')
+# simple_sentiment_analysis('CN')
 
-# trainFile = read_in_file('../Datasets/SG/train')
-# emission_count, y_count, x_count = count(trainFile, 3)
-# print(x_count)
+trainFile = read_in_file('../Datasets/EN/train')
+emission_count, transition_count, y_count, x_count = count(trainFile, 3)
+print(transition_count)
