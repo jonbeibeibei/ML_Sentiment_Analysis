@@ -100,13 +100,17 @@ def get_optimal_y(x, emission_count, y_count):
     optimum_y = ''
     for state in states:
         y_prob = emissions(x,state,emission_count,y_count)
-        if y_prob > optimum_y_prob:
+        if y_prob >= optimum_y_prob:
             optimum_y_prob = y_prob
             optimum_y = state
 
     return optimum_y
 
-def simple_sentiment_analysis(training_path, test_path, output_path):
+def simple_sentiment_analysis(language):
+    
+    training_path = '../Datasets/' + language +  '/train'
+    test_path = '../Datasets/' + language + '/dev.in'
+    output_path = '../Datasets/' + language
 
     optimal_y_dict = {}
 
@@ -141,7 +145,12 @@ def simple_sentiment_analysis(training_path, test_path, output_path):
     print('Done!')
     file.close()
 
-simple_sentiment_analysis('../Datasets/SG/train','../Datasets/SG/dev.in','../Datasets/SG')
+
+simple_sentiment_analysis('SG')
+simple_sentiment_analysis('EN')
+simple_sentiment_analysis('FR')
+simple_sentiment_analysis('CN')
+
 # trainFile = read_in_file('../Datasets/SG/train')
 # emission_count, y_count, x_count = count(trainFile, 3)
 # print(x_count)

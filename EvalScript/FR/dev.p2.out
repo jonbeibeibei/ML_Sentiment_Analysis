@@ -7,13 +7,13 @@ horrible O
 Assiettes I-negative
 de I-negative
 tapas I-positive
-ridicules I-negative
+ridicules O
 . O
 
 Nous O
 avons O
 été O
-attiré I-negative
+attiré O
 comme O
 les O
 autres O
@@ -40,7 +40,7 @@ plutôt O
 un O
 gage I-negative
 de I-negative
-fraicheur I-negative
+fraicheur O
 et O
 qualité O
 ; O
@@ -74,7 +74,7 @@ bistrot B-neutral
 
 Des O
 pizzas B-neutral
-locales I-negative
+locales O
 que O
 vous O
 ne O
@@ -97,9 +97,9 @@ pas O
 de I-negative
 doutes I-negative
 la I-positive
-spécialité I-negative
+spécialité O
 très O
-maîtrisé I-negative
+maîtrisé O
 est O
 le O
 burger B-negative
@@ -121,7 +121,7 @@ ne O
 suffit I-negative
 pas O
 à I-positive
-relever I-negative
+relever O
 l'absence I-negative
 de I-negative
 qualité O
@@ -143,7 +143,7 @@ bistrot B-neutral
 parisien O
 . O
 
-Du I-negative
+Du O
 jamais O
 vu O
 et O
@@ -158,7 +158,7 @@ qui O
 se O
 suffit I-negative
 sans I-positive
-artifice I-negative
+artifice O
 ... O
 
 Portions I-negative
@@ -191,7 +191,7 @@ d'une I-negative
 chose O
 pâteuse I-negative
 trop O
-sucré I-negative
+sucré O
 . O
 
 Le O
@@ -225,24 +225,24 @@ contraste I-negative
 avec I-negative
 le O
 peu O
-d'amabilité I-negative
+d'amabilité O
 d'une I-negative
 des I-positive
 serveuses B-negative
 assez O
 désagréable O
 et O
-passée I-negative
+passée O
 maître B-negative
 dans O
 l'art I-negative
 de I-negative
 faire O
 des I-positive
-réflexions I-negative
+réflexions O
 à I-positive
 la I-positive
-clientèle I-negative
+clientèle O
 . O
 
 accueil B-positive
@@ -256,7 +256,7 @@ qualité O
 mais O
 parfois O
 la I-positive
-main I-negative
+main O
 est O
 un O
 peu O
@@ -272,7 +272,7 @@ depuis O
 . O
 
 La O
-prochaine I-negative
+prochaine O
 fois O
 , O
 eh I-negative
@@ -280,7 +280,7 @@ bien O
 il O
 n'y O
 en I-neutral
-aura I-negative
+aura O
 pas O
 ici O
 en I-neutral
@@ -289,19 +289,19 @@ cas O
 ! O
 
 Je O
-n'avais I-negative
+n'avais O
 qu'une O
 hâte I-negative
 : O
 partir O
 ! O
 
-Avec I-negative
+Avec O
 mon O
-conjoint I-negative
+conjoint O
 , O
-grands I-negative
-amateurs I-negative
+grands O
+amateurs O
 de I-negative
 restaurants B-negative
 asiatiques I-negative
@@ -322,7 +322,7 @@ accompagnements B-negative
 cela O
 est O
 même O
-compté I-negative
+compté O
 en I-neutral
 supplément B-negative
 ! O
@@ -346,7 +346,7 @@ si O
 fréquent I-negative
 . O
 
-unique I-negative
+unique O
 à I-positive
 Besançon I-negative
 . O
@@ -357,11 +357,11 @@ avons O
 demandé O
 a I-positive
 être O
-débarrassé I-negative
+débarrassé O
 , O
 elle O
 ne O
-l'a I-negative
+l'a O
 pas O
 fait O
 mais O
@@ -373,7 +373,7 @@ devant O
 nous O
 les O
 mains O
-vides I-negative
+vides O
 ... O
 c'est O
 très O
@@ -401,7 +401,7 @@ qualité O
 prix O
 est O
 totalement O
-ahurissant I-negative
+ahurissant O
 . O
 
 Des O
@@ -410,7 +410,7 @@ de I-negative
 saveur O
 et O
 des I-positive
-cuissons I-negative
+cuissons O
 impeccables I-negative
 . O
 
@@ -420,9 +420,9 @@ nous O
 rattrapera I-negative
 à I-positive
 la I-positive
-sortie I-negative
+sortie O
 pour I-neutral
-s'excuser I-negative
+s'excuser O
 et O
 nous O
 dire O
@@ -430,7 +430,7 @@ que O
 nos O
 plats B-neutral
 sont O
-entrain I-negative
+entrain O
 d'arriver I-negative
 : O
 " I-neutral
@@ -439,7 +439,7 @@ tard O
 je O
 reprends I-negative
 le O
-travail I-negative
+travail O
 dans O
 15min I-negative
 ! O
@@ -452,15 +452,15 @@ s O
 ’ O
 ébouriffe I-negative
 les O
-cheveux I-negative
-derrière I-negative
+cheveux O
+derrière O
 le O
 bar B-neutral
 ... O
 Et O
 la I-positive
 petite O
-touche I-negative
+touche O
 qui O
 va O
 bien O
@@ -471,7 +471,7 @@ imprégnés I-negative
 d'une I-negative
 odeur I-negative
 de I-negative
-friture I-negative
+friture O
 ... O
 
 mérite I-negative
@@ -480,7 +480,7 @@ détour O
 ... O
 attention O
 : O
-réservez I-negative
+réservez O
 ! O
 
 Que O
@@ -492,12 +492,12 @@ entrées B-neutral
 un O
 prix O
 très O
-abordable I-negative
+abordable O
 ( O
 entre B-negative
 5 O
 et O
-7 I-negative
+7 O
 euros I-neutral
 ) O
 pour I-neutral
@@ -533,7 +533,7 @@ Le O
 personnel B-positive
 est O
 très O
-prévenant I-negative
+prévenant O
 . O
 
 On O
@@ -549,19 +549,19 @@ restaurant B-neutral
 . O
 
 De O
-beaux I-negative
-verres I-negative
+beaux O
+verres O
 auraient I-negative
 été O
 appréciés I-negative
 pour I-neutral
-boire I-negative
+boire O
 un O
 bon O
 vin I-negative
 . O
 
-Jamais I-negative
+Jamais O
 nous O
 ne O
 retournerons O
@@ -572,7 +572,7 @@ restaurant B-neutral
 
 Le O
 rapport O
-qualité-prix I-negative
+qualité-prix O
 reste O
 tendu I-negative
 , O
@@ -587,16 +587,16 @@ même O
 si O
 l O
 ' O
-espace I-negative
+espace O
 est O
-intéressant I-negative
+intéressant O
 , O
 entre B-negative
 les O
-arbres I-negative
+arbres O
 . O
 
-Situé I-negative
+Situé O
 dans O
 une O
 petite O
@@ -605,7 +605,7 @@ du I-neutral
 vieux O
 centre O
 de I-negative
-Gap I-negative
+Gap O
 , O
 ce O
 restaurant B-neutral
@@ -627,7 +627,7 @@ là O
 il O
 a I-positive
 beaucoup O
-baissé I-negative
+baissé O
 ... O
 
 Je O
@@ -666,17 +666,17 @@ Vraiment O
 une O
 adresse B-positive
 à I-positive
-retenir I-negative
+retenir O
 pour I-neutral
 les O
-amateurs I-negative
+amateurs O
 de I-negative
 viande B-negative
 , O
 une O
 entrecôte B-negative
 qui O
-fond I-negative
+fond O
 dans O
 la I-positive
 bouche O
@@ -700,7 +700,7 @@ Après O
 minuit I-negative
 les O
 habitués O
-fument I-negative
+fument O
 leurs O
 cigarettes I-negative
 en I-neutral
@@ -729,7 +729,7 @@ monopole I-negative
 
 Pour O
 la I-positive
-plupart I-negative
+plupart O
 d'entre O
 nous O
 , O
@@ -744,8 +744,8 @@ de I-negative
 seine I-negative
 ! O
 
-Ces I-negative
-pauvres I-negative
+Ces O
+pauvres O
 poulpes I-negative
 auraient I-negative
 pu O
@@ -754,13 +754,13 @@ d'un O
 excès I-negative
 de I-negative
 cholestérol I-negative
-s'ils I-negative
-n'avaient I-negative
+s'ils O
+n'avaient O
 pas O
 fini O
 sur O
 la I-positive
-plancha I-negative
+plancha O
 . O
 
 La O
@@ -768,7 +768,7 @@ musique B-neutral
 était O
 vraiment O
 très O
-forte I-negative
+forte O
 . O
 
 seul O
@@ -814,11 +814,11 @@ du I-neutral
 service B-negative
 est O
 un O
-comble I-negative
+comble O
 pour I-neutral
 un O
 établissement B-negative
-mettant I-negative
+mettant O
 en I-neutral
 avant O
 ses B-positive
@@ -832,7 +832,7 @@ qui O
 sut I-negative
 de I-negative
 l'eau O
-= I-negative
+= O
 micro I-negative
 onde I-negative
 . O
@@ -859,7 +859,7 @@ bouteille I-negative
 de I-negative
 sucre I-negative
 canne I-negative
-liquide I-negative
+liquide O
 . O
 
 Un O
@@ -868,15 +868,15 @@ simple O
 mais O
 pourtant O
 très O
-authentique I-negative
+authentique O
 et O
 étudié I-negative
 ... O
 un O
 style I-negative
-américain I-negative
+américain O
 années O
-70 I-negative
+70 O
 tout O
 en I-neutral
 simplicité I-negative
@@ -886,7 +886,7 @@ goût O
 
 Une O
 bière B-negative
-pression I-negative
+pression O
 à I-positive
 3,7 I-negative
 euros I-neutral
@@ -908,7 +908,7 @@ l'eau O
 Ce O
 sera I-negative
 notre O
-incontournable I-negative
+incontournable O
 à I-positive
 Cassis I-negative
 ! O
@@ -932,7 +932,7 @@ adresse B-positive
 à I-positive
 garder I-negative
 pour I-neutral
-soi I-negative
+soi O
 vue B-positive
 imprenable I-negative
 sur O
@@ -941,12 +941,12 @@ hippodrome I-negative
 et O
 le O
 golf I-negative
-pensez I-negative
+pensez O
 à I-positive
 réserver O
 en I-neutral
 bas O
-près I-negative
+près O
 des I-positive
 baies I-negative
 vitrées I-negative
@@ -970,8 +970,8 @@ un O
 serveur B-negative
 nous O
 a I-positive
-littéralement I-negative
-sauté I-negative
+littéralement O
+sauté O
 dessus O
 lorsque O
 nous O
@@ -985,7 +985,7 @@ méthode I-negative
 plutôt O
 brutale I-negative
 le O
-contenu I-negative
+contenu O
 de I-negative
 la I-positive
 carte B-neutral
@@ -997,10 +997,10 @@ mal O
 nous O
 avons O
 donc O
-décidés I-negative
+décidés O
 d O
 ’ O
-accepter I-negative
+accepter O
 , O
 ensuite O
 après O
@@ -1016,7 +1016,7 @@ a I-positive
 été O
 longue O
 , O
-heureusement I-negative
+heureusement O
 l'égarement I-negative
 d'une I-negative
 serveuse B-negative
@@ -1047,7 +1047,7 @@ saison O
 . O
 
 Service B-positive
-gentil I-negative
+gentil O
 . O
 
 Ah O
@@ -1126,7 +1126,7 @@ la I-positive
 limite O
 pas O
 trop O
-grave I-negative
+grave O
 ville O
 touristique O
 et O
@@ -1146,7 +1146,7 @@ suis O
 allé O
 à I-positive
 plusieurs O
-reprises I-negative
+reprises O
 lors O
 de I-negative
 mes O
@@ -1163,7 +1163,7 @@ situé O
 
 Les O
 prix O
-pratiqués I-negative
+pratiqués O
 sont O
 corrects O
 . O
@@ -1176,11 +1176,11 @@ cherche I-negative
 réiventer I-negative
 les O
 classiques O
-lyonnais I-negative
+lyonnais O
 , O
-pourquoi I-negative
+pourquoi O
 pas O
-s'il I-negative
+s'il O
 le O
 faisait O
 avec I-negative
@@ -1188,9 +1188,9 @@ talent I-negative
 . O
 
 Digestion I-negative
-compliqué I-negative
+compliqué O
 le O
-lendemain I-negative
+lendemain O
 tous O
 mes O
 amis O
@@ -1207,7 +1207,7 @@ remerciement I-negative
 pour I-neutral
 cette O
 cuisine B-neutral
-riche I-negative
+riche O
 moderne I-negative
 et O
 pleine O
@@ -1241,8 +1241,8 @@ plat B-negative
 fut O
 correct O
 ( O
-saint I-negative
-jacques I-negative
+saint O
+jacques O
 - I-positive
 risotto B-negative
 ) O
@@ -1257,8 +1257,8 @@ faim O
 ... O
 seulement O
 trois O
-saint I-negative
-jacques I-negative
+saint O
+jacques O
 le O
 tout O
 à I-positive
@@ -1277,7 +1277,7 @@ en I-neutral
 cuise I-negative
 ! O
 
-Bien I-negative
+Bien O
 situé O
 . O
 
@@ -1285,7 +1285,7 @@ repas B-neutral
 et O
 un O
 vin I-negative
-irréprochable I-negative
+irréprochable O
 , O
 service B-negative
 impeccable O
@@ -1299,7 +1299,7 @@ avec I-negative
 un O
 panneau I-negative
 de I-negative
-photos I-negative
+photos O
 de I-negative
 personnalités I-negative
 de I-negative
@@ -1338,10 +1338,10 @@ d'un O
 enfant I-negative
 de I-negative
 15ans I-negative
-;) I-negative
+;) O
 mais O
 très O
-dynamique I-negative
+dynamique O
 et O
 sympa O
 . O
@@ -1352,14 +1352,14 @@ aimable O
 , O
 de I-negative
 la I-positive
-vraie I-negative
+vraie O
 nourriture B-neutral
-traditionnelle I-negative
-française I-negative
+traditionnelle O
+française O
 , O
-fraîcheur I-negative
+fraîcheur O
 des I-positive
-aliments I-negative
+aliments O
 , O
 inventivité I-negative
 ( O
@@ -1372,7 +1372,7 @@ tester O
 ) O
 dans O
 les O
-recettes I-negative
+recettes O
 , O
 de I-negative
 bon O
@@ -1411,9 +1411,9 @@ frais O
 
 Nous O
 avons O
-testé I-negative
+testé O
 de I-negative
-nombreux I-negative
+nombreux O
 plats B-neutral
 différents O
 et O
@@ -1434,7 +1434,7 @@ belle O
 ambiance B-positive
 si O
 vous O
-aimez I-negative
+aimez O
 la I-positive
 lumière I-negative
 tamisée I-negative
@@ -1442,7 +1442,7 @@ tamisée I-negative
 êtes O
 étudiants I-negative
 ou O
-bobo I-negative
+bobo O
 / I-neutral
 hipster I-negative
 . O
@@ -1456,8 +1456,8 @@ accéléré I-negative
 par O
 un O
 serveur B-negative
-visiblement I-negative
-pressé I-negative
+visiblement O
+pressé O
 de I-negative
 finir O
 son O
@@ -1467,7 +1467,7 @@ qui O
 est O
 venu O
 nous O
-proposer I-negative
+proposer O
 de I-negative
 goûter O
 le O
@@ -1480,22 +1480,22 @@ seulement O
 à I-positive
 goûter O
 les O
-toast I-negative
+toast O
 de I-negative
 tapenade I-negative
 . O
 
 Les O
 desserts B-neutral
-maisons I-negative
-apparemment I-negative
+maisons O
+apparemment O
 sont O
 corrects O
 . O
 
 tous O
 les O
-ingrédients I-negative
+ingrédients O
 sont O
 réunis I-negative
 pour I-neutral
@@ -1506,22 +1506,22 @@ bonne O
 soirée O
 ! O
 
-Moi I-negative
+Moi O
 qui O
 n'écris I-negative
 jamais O
-d'avis I-negative
+d'avis O
 , O
 je O
 me O
-dis I-negative
+dis O
 ce O
 soir O
 qu'il O
-s'agissait I-negative
+s'agissait O
 peut-être O
 d'une I-negative
-faute I-negative
+faute O
 de I-negative
 goût O
 de I-negative
@@ -1565,7 +1565,7 @@ amère I-negative
 Nous O
 avons O
 été O
-attirés I-negative
+attirés O
 par O
 les O
 prix O
@@ -1577,7 +1577,7 @@ Nous O
 avons O
 pris O
 une O
-pierre I-negative
+pierre O
 chaude O
 pour I-neutral
 deux O
@@ -1613,7 +1613,7 @@ trop O
 d'oignons I-negative
 . O
 
-Vous I-negative
+Vous O
 regretterez I-negative
 moins O
 l'addition O
@@ -1622,7 +1622,7 @@ l'addition O
 Il O
 revient O
 après O
-vérification I-negative
+vérification O
 en I-neutral
 me O
 disant O
@@ -1633,7 +1633,7 @@ la I-positive
 recette I-negative
 des I-positive
 moules B-neutral
-marinières I-negative
+marinières O
 . O
 
 Accueil B-negative
@@ -1651,7 +1651,7 @@ mangé O
 avec I-negative
 des I-positive
 plats B-neutral
-traditionnels I-negative
+traditionnels O
 comme O
 à I-positive
 la I-positive
@@ -1677,7 +1677,7 @@ dans O
 le O
 restaurant B-neutral
 pour I-neutral
-répondre I-negative
+répondre O
 à I-positive
 nos O
 demandes I-negative
@@ -1686,7 +1686,7 @@ demandes I-negative
 Pour O
 avoir O
 été O
-testé I-negative
+testé O
 par O
 des I-positive
 membres I-negative
@@ -1698,15 +1698,15 @@ préalable I-negative
 , O
 nous O
 sommes O
-tombés I-negative
-d'accord I-negative
+tombés O
+d'accord O
 sur O
 le O
 fait O
 que O
 c'était O
 la I-positive
-première I-negative
+première O
 fois O
 pour I-neutral
 certains O
@@ -1744,11 +1744,11 @@ note O
 qui O
 nous O
 est O
-présentée I-negative
+présentée O
 est O
 défalquée I-negative
 d'une I-negative
-cocotte I-negative
+cocotte O
 alors O
 que O
 plus O
@@ -1762,7 +1762,7 @@ douteuses I-negative
 . O
 
 Service B-positive
-superbe I-negative
+superbe O
 et O
 très O
 accueillant O
@@ -1792,7 +1792,7 @@ aucune O
 cuisine B-neutral
 , O
 du I-neutral
-réchauffé I-negative
+réchauffé O
 industriel O
 comme O
 au I-positive
@@ -1816,7 +1816,7 @@ un O
 apéro I-negative
 qui O
 se O
-transforme I-negative
+transforme O
 en I-neutral
 dîner B-negative
 . O
@@ -1840,7 +1840,7 @@ poissons B-positive
 journalier I-negative
 , O
 donc O
-extra I-negative
+extra O
 frais O
 . O
 
@@ -1869,8 +1869,8 @@ plus O
 habitués O
 à I-positive
 ce O
-coté I-negative
-amical I-negative
+coté O
+amical O
 , O
 surtout O
 à I-positive
@@ -1899,7 +1899,7 @@ basse I-negative
 qualité O
 chez O
 " I-neutral
-métro I-negative
+métro O
 " I-neutral
 et O
 vous O
@@ -1935,7 +1935,7 @@ engloutis I-negative
 nous O
 avons O
 au I-positive
-final I-negative
+final O
 passé O
 une O
 excellente O
@@ -1952,7 +1952,7 @@ de I-negative
 service B-negative
 . O
 
-Salle I-negative
+Salle O
 déserte I-negative
 , O
 nous O
@@ -1974,7 +1974,7 @@ sans I-positive
 plus O
 . O
 
-Ça I-negative
+Ça O
 ne O
 vaut O
 certes O
@@ -1987,12 +1987,12 @@ Je O
 demande O
 au I-positive
 serveur B-negative
-s'il I-negative
+s'il O
 n'y O
 a I-positive
 pas O
 un O
-souci I-negative
+souci O
 . O
 
 Le O
@@ -2014,7 +2014,7 @@ c'est O
 le O
 seul O
 point O
-positif I-negative
+positif O
 . O
 
 une O
@@ -2042,17 +2042,17 @@ l'eau O
 l O
 ' O
 endroit B-positive
-semblait I-negative
+semblait O
 idéal O
 pour I-neutral
 cette O
-journée I-negative
-passée I-negative
+journée O
+passée O
 à I-positive
 Colmar I-negative
 . O
 
-Excellent I-negative
+Excellent O
 dîner B-negative
 , O
 serveuse B-negative
@@ -2065,7 +2065,7 @@ tamisée I-negative
 .. O
 Nous O
 avons O
-testé I-negative
+testé O
 plusieurs O
 entrées B-neutral
 et O
@@ -2082,7 +2082,7 @@ Très O
 beau O
 menu B-neutral
 à I-positive
-35 I-negative
+35 O
 euros I-neutral
 le O
 midi I-positive
@@ -2108,14 +2108,14 @@ moment O
 et O
 nous O
 vous O
-recommandons I-negative
+recommandons O
 l O
 ' O
 endroit B-positive
 . O
 
 Le O
-courant I-negative
+courant O
 est O
 très O
 bien O
@@ -2128,9 +2128,9 @@ nous O
 étions O
 une O
 grande B-positive
-tablée I-negative
+tablée O
 de I-negative
-12 I-negative
+12 O
 personnes O
 très O
 actives I-negative
@@ -2157,9 +2157,9 @@ tester O
 
 Personnel B-positive
 très O
-gentil I-negative
+gentil O
 et O
-serviable I-negative
+serviable O
 . O
 
 Première I-negative
@@ -2173,9 +2173,9 @@ l'ampoule I-negative
 au I-positive
 dessus O
 est O
-grillée I-negative
+grillée O
 , O
-demi I-negative
+demi O
 obscurité I-negative
 et O
 les O
@@ -2183,9 +2183,9 @@ bougies I-negative
 sur O
 le O
 côté I-negative
-semblent I-negative
+semblent O
 bien O
-couvertes I-negative
+couvertes O
 de I-negative
 poussière I-negative
 ... O
@@ -2195,7 +2195,7 @@ peu O
 vieillissant I-negative
 . O
 
-Sans I-negative
+Sans O
 parler O
 de I-negative
 l'huile I-positive
@@ -2216,7 +2216,7 @@ dommage O
 c'est O
 vraiment O
 du I-neutral
-gâchis I-negative
+gâchis O
 ! O
 ! O
 
@@ -2231,8 +2231,8 @@ dessert B-negative
 . O
 
 Pas O
-besoin I-negative
-d'en I-negative
+besoin O
+d'en O
 dire O
 plus O
 , O
@@ -2250,8 +2250,8 @@ bonnes O
 surprises O
 . O
 
-Serveurs I-negative
-désagréables I-negative
+Serveurs O
+désagréables O
 , O
 vous O
 etes I-negative
@@ -2269,7 +2269,7 @@ chance O
 
 aucun O
 geste O
-commercial I-negative
+commercial O
 au I-positive
 paiement I-negative
 , O
@@ -2288,23 +2288,23 @@ déco B-positive
 est O
 bas O
 de I-negative
-gamme I-negative
+gamme O
 et O
 clinquante I-negative
 . O
 
-Lorsque I-negative
+Lorsque O
 le O
 serveur B-negative
 nous O
 demande O
 si O
 ça O
-allait I-negative
+allait O
 , O
 je O
 lui O
-dis I-negative
+dis O
 que O
 la I-positive
 viande B-negative
@@ -2316,7 +2316,7 @@ la I-positive
 cuisson O
 n'était O
 pas O
-celle I-negative
+celle O
 que O
 j'avais O
 demandé O
@@ -2326,7 +2326,7 @@ Si O
 vous O
 avez O
 la I-positive
-santé I-negative
+santé O
 fragile I-negative
 passez O
 votre O
@@ -2338,18 +2338,18 @@ au I-positive
 chèvre I-neutral
 chaud I-positive
 , O
-suivi I-negative
+suivi O
 d'un O
 magret B-positive
 de I-negative
 canard I-positive
-miel I-negative
+miel O
 / I-neutral
 citron I-positive
 accompagné I-negative
 de I-negative
 pommes B-negative
-sautées I-negative
+sautées O
 , O
 un O
 vrai O
@@ -2374,7 +2374,7 @@ lent O
 , O
 et O
 mal O
-organisé I-negative
+organisé O
 ) O
 . O
 
@@ -2384,7 +2384,7 @@ la I-positive
 commande O
 sur O
 un O
-ton I-negative
+ton O
 excédé I-negative
 en I-neutral
 se O
@@ -2404,10 +2404,10 @@ sont O
 servis O
 en I-neutral
 quantité B-neutral
-suffisante I-negative
+suffisante O
 et O
 bien O
-chauds I-negative
+chauds O
 . O
 
 Des O
@@ -2432,7 +2432,7 @@ Après O
 ça O
 mais O
 une O
-certaine I-negative
+certaine O
 ambiance B-positive
 dans O
 la I-positive
@@ -2469,7 +2469,7 @@ rien O
 demander O
 . O
 
-Burger I-negative
+Burger O
 hyper O
 sec O
 , O
@@ -2481,7 +2481,7 @@ sans I-positive
 goût O
 à I-positive
 part B-positive
-celui I-negative
+celui O
 de I-negative
 l'huile I-positive
 , O
@@ -2493,7 +2493,7 @@ assez O
 sympathique O
 et O
 qui O
-semblait I-negative
+semblait O
 presque O
 plus O
 navré I-negative
@@ -2517,14 +2517,14 @@ de I-negative
 surprise O
 , O
 de I-negative
-découverte I-negative
+découverte O
 ou O
 d'audace I-negative
 ... O
 
 Une O
 agression I-negative
-inutile I-negative
+inutile O
 qui O
 nous O
 a I-positive
@@ -2533,11 +2533,11 @@ la I-positive
 soirée O
 . O
 
-Choix I-negative
+Choix O
 du I-neutral
 buffet B-negative
 très O
-restreint I-negative
+restreint O
 . O
 
 Nous O
@@ -2552,7 +2552,7 @@ a I-positive
 servi O
 du I-neutral
 soda I-negative
-discount I-negative
+discount O
 sans I-positive
 nous O
 en I-neutral
@@ -2604,7 +2604,7 @@ délicieux O
 ) O
 et O
 une O
-sorte I-negative
+sorte O
 de I-negative
 canard I-positive
 confis I-negative
@@ -2613,7 +2613,7 @@ gelée I-negative
 avec I-negative
 noix I-positive
 et O
-poires I-negative
+poires O
 ( O
 très O
 bon O
@@ -2623,7 +2623,7 @@ bon O
 Dans O
 ce O
 quartier B-neutral
-tranquille I-negative
+tranquille O
 , O
 un O
 restaurant B-neutral
@@ -2636,7 +2636,7 @@ sous O
 les O
 arcades I-negative
 en I-neutral
-dégustant I-negative
+dégustant O
 une O
 très O
 bonne O
@@ -2665,7 +2665,7 @@ Les O
 serveurs B-negative
 sont O
 très O
-souriants I-negative
+souriants O
 et O
 patients I-negative
 . O
@@ -2730,7 +2730,7 @@ le O
 poisson I-positive
 . O
 
-1ère I-negative
+1ère O
 fois O
 que O
 le O
@@ -2745,7 +2745,7 @@ la I-positive
 cuisine B-neutral
 dans O
 les O
-restos I-negative
+restos O
 que O
 je O
 fréquente I-negative
@@ -2765,15 +2765,15 @@ agréable O
 soirée O
 ! O
 
-Attente I-negative
-interminable I-negative
+Attente O
+interminable O
 ! O
 
 Service B-positive
 aimable O
 . O
 
-Choix I-negative
+Choix O
 de I-negative
 plats B-neutral
 très O
@@ -2789,7 +2789,7 @@ médiocre O
 Bons I-negative
 cocktails B-positive
 et O
-barman I-negative
+barman O
 très O
 sympa O
 . O
@@ -2797,19 +2797,19 @@ sympa O
 Pour O
 finir O
 le O
-fraisier I-negative
+fraisier O
 ( O
-plutot I-negative
+plutot O
 une O
 mousse B-negative
 décoré I-negative
 de I-negative
 quelques O
-fraises I-negative
+fraises O
 ) O
 commandé O
 pour I-neutral
-l'anniversaire I-negative
+l'anniversaire O
 nous O
 est O
 arrivé O
@@ -2818,7 +2818,7 @@ la I-positive
 table B-positive
 comme O
 un O
-cheveu I-negative
+cheveu O
 sur O
 la I-positive
 soupe B-neutral
@@ -2831,7 +2831,7 @@ excellente O
 dans O
 un O
 cadre B-positive
-original I-negative
+original O
 dans O
 lequel I-negative
 on O
@@ -2853,8 +2853,8 @@ Champs I-negative
 Elysée I-negative
 ! O
 
-Comment I-negative
-peut-on I-negative
+Comment O
+peut-on O
 dire O
 cuisine B-neutral
 maison I-positive
@@ -2862,23 +2862,23 @@ avec I-negative
 ces O
 asperges I-negative
 en I-neutral
-boite I-negative
+boite O
 , O
 son O
 boeuf I-negative
-bourguignon I-negative
-rempli I-negative
+bourguignon O
+rempli O
 de I-negative
 bas O
 morceaux O
 ... O
 ces O
-escargots I-negative
+escargots O
 decongeles I-negative
-etc I-negative
+etc O
 ... O
 cuisine B-neutral
-française I-negative
+française O
 vraiment O
 ? O
 
@@ -2905,7 +2905,7 @@ A O
 tester O
 absolument O
 et O
-venez I-negative
+venez O
 en I-neutral
 ayant O
 très O
@@ -2917,7 +2917,7 @@ Les O
 entrées B-neutral
 sont O
 à I-positive
-7 I-negative
+7 O
 euros I-neutral
 et O
 copieuses O
@@ -2926,8 +2926,8 @@ copieuses O
 La O
 cuisine B-neutral
 qui O
-mériterait I-negative
-largement I-negative
+mériterait O
+largement O
 une O
 étoile I-negative
 au I-positive
@@ -2965,7 +2965,7 @@ efficaces I-negative
 Finalement I-negative
 nous O
 avons O
-gagné I-negative
+gagné O
 . O
 
 Un O
@@ -2984,7 +2984,7 @@ cet O
 établissement B-negative
 . O
 
-Ca I-negative
+Ca O
 a I-positive
 beaucoup O
 changé O
@@ -3012,7 +3012,7 @@ la I-positive
 hauteur O
 . O
 
-Café I-negative
+Café O
 gourmand I-positive
 : O
 café B-negative
@@ -3045,11 +3045,11 @@ long O
 Assis I-negative
 sur O
 des I-positive
-chaises I-negative
+chaises O
 de I-negative
-jardin I-negative
+jardin O
 peu O
-confortable I-negative
+confortable O
 nous O
 attendons I-negative
 l O
@@ -3060,20 +3060,20 @@ très O
 rapidement O
 le O
 seul O
-hic I-negative
+hic O
 c O
 est O
 la I-positive
-différence I-negative
+différence O
 entre B-negative
 nos O
 deux O
-verres I-negative
+verres O
 pour I-neutral
 le O
 même O
-alcool I-negative
-1/4 I-negative
+alcool O
+1/4 O
 de I-negative
 quantité B-neutral
 différente I-negative
@@ -3086,7 +3086,7 @@ n'est O
 pas O
 de I-negative
 la I-positive
-gastronomie I-negative
+gastronomie O
 , O
 mais O
 on O
@@ -3110,7 +3110,7 @@ servis O
 un O
 pavé B-negative
 de I-negative
-turbot I-negative
+turbot O
 excellent O
 et O
 des I-positive
@@ -3122,7 +3122,7 @@ quartier B-neutral
 . O
 
 Service B-positive
-lamentable I-negative
+lamentable O
 , O
 viandes B-negative
 médiocres O
@@ -3145,19 +3145,19 @@ resto B-neutral
 , O
 comme O
 les O
-1er I-negative
+1er O
 fois O
 une O
 Virgin I-negative
 Colada I-negative
 à I-positive
 6.50 I-negative
-e I-negative
+e O
 pour I-neutral
 se O
 mettre O
 en I-neutral
-appétit I-negative
+appétit O
 et O
 un O
 accueil B-positive
@@ -3172,11 +3172,11 @@ sa I-negative
 femme I-negative
 . O
 
-Superbe I-negative
+Superbe O
 accueil B-positive
 . O
 
-Oui I-negative
+Oui O
 c'est O
 frais O
 , O
@@ -3210,9 +3210,9 @@ nous O
 étions O
 trop O
 nous O
-nombreux I-negative
+nombreux O
 ( O
-13 I-negative
+13 O
 personnes O
 ) O
 , O
@@ -3221,11 +3221,11 @@ avons O
 été O
 installé I-negative
 à I-positive
-l'étage I-negative
+l'étage O
 ( O
 en I-neutral
 nous O
-faisant I-negative
+faisant O
 bien O
 précisé I-negative
 que O
@@ -3253,14 +3253,14 @@ commander O
 ) O
 dans O
 un O
-espace I-negative
+espace O
 Iounge I-negative
 à I-positive
 peine O
 éclairé I-negative
 pour I-neutral
 pouvoir O
-lire I-negative
+lire O
 le O
 menu B-neutral
 ( O
@@ -3284,7 +3284,7 @@ se O
 déclinant I-negative
 comme O
 plutôt O
-chic I-negative
+chic O
 , O
 certes O
 le O
@@ -3298,7 +3298,7 @@ n'inspirait I-negative
 pas O
 une O
 cuisine B-neutral
-raffinée I-negative
+raffinée O
 ... O
 mais O
 là O
@@ -3317,7 +3317,7 @@ américaines I-negative
 et O
 savoir O
 faire O
-français I-negative
+français O
 de I-negative
 l'entrée O
 jusqu'au I-negative
@@ -3351,7 +3351,7 @@ serveuses B-negative
 / I-neutral
 serveurs B-negative
 sous O
-pression I-negative
+pression O
 ( O
 y O
 compris O
@@ -3361,14 +3361,14 @@ début O
 de I-negative
 service B-negative
 lorsque O
-l'endroit I-negative
+l'endroit O
 est O
 quasi-vide I-negative
 ) O
 et O
 d'une I-negative
 impolitesse I-negative
-rare I-negative
+rare O
 
 On O
 reste O
@@ -3384,7 +3384,7 @@ mais O
 y'a I-negative
 pas O
 de I-negative
-rab I-negative
+rab O
 . O
 
 J'y O
@@ -3395,7 +3395,7 @@ manger O
 un O
 plat B-negative
 qui O
-sort I-negative
+sort O
 de I-negative
 ce O
 qui O
@@ -3405,9 +3405,9 @@ faire O
 dans O
 le O
 vieux O
-lille I-negative
+lille O
 pour I-neutral
-attraper I-negative
+attraper O
 le O
 touriste O
 , O
@@ -3428,7 +3428,7 @@ venus O
 avec I-negative
 un O
 coupon I-negative
-Groupon I-negative
+Groupon O
 . O
 
 A O
@@ -3461,19 +3461,19 @@ manque O
 Paris O
 . O
 
-Sans I-negative
+Sans O
 parler O
 de I-negative
 la I-positive
-sangria I-negative
+sangria O
 tout O
 simplement O
 délicieuse O
 ! O
 
 Je O
-connais I-negative
-l'adresse I-negative
+connais O
+l'adresse O
 depuis O
 longtemps O
 
@@ -3518,7 +3518,7 @@ repas B-neutral
 assez O
 cher O
 pour I-neutral
-Castelnaudary I-negative
+Castelnaudary O
 ( O
 92 I-negative
 € O
@@ -3563,12 +3563,12 @@ nous O
 avions O
 fêté I-negative
 les O
-70 I-negative
+70 O
 ans O
 de I-negative
 mon O
 beau O
-père I-negative
+père O
 il O
 y O
 a I-positive
@@ -3585,13 +3585,13 @@ satisfait I-negative
 
 Une O
 cuisine B-neutral
-savoureuse I-negative
-faite I-negative
+savoureuse O
+faite O
 avec I-negative
-amour I-negative
+amour O
 , O
 j'y O
-retourne I-negative
+retourne O
 dés I-negative
 que O
 je O
@@ -3615,7 +3615,7 @@ correct O
 poli I-negative
 mais O
 sans I-positive
-entrain I-negative
+entrain O
 . O
 
 Un O
@@ -3633,28 +3633,28 @@ qu'ils O
 sont O
 dedans I-negative
 et O
-prévenu I-negative
+prévenu O
 à I-positive
 la I-positive
-réservation I-negative
+réservation O
 et O
 en I-neutral
-arrivant I-negative
+arrivant O
 . O
 
 Une O
-vraie I-negative
+vraie O
 déception I-negative
 ! O
 
 Le O
-contenu I-negative
+contenu O
 des I-positive
 assiettes B-positive
 est O
 tout O
 aussi O
-réussi I-negative
+réussi O
 : O
 copieux O
 et O
@@ -3680,7 +3680,7 @@ avec I-negative
 un O
 prix O
 qui O
-l'est I-negative
+l'est O
 aussi.Vient I-negative
 ensuite O
 l O
@@ -3701,7 +3701,7 @@ endroits I-negative
 . O
 
 Le O
-moelleux I-negative
+moelleux O
 speculos I-negative
 / I-neutral
 chocolat I-positive
@@ -3714,16 +3714,16 @@ terre I-negative
 . O
 
 Très O
-déçue I-negative
+déçue O
 par O
 ce O
 restaurant B-neutral
 
-Manifestement I-negative
+Manifestement O
 ce O
 restaurant B-neutral
 a I-positive
-préféré I-negative
+préféré O
 tout O
 miser I-negative
 sur O
@@ -3743,7 +3743,7 @@ deux O
 fois O
 avant O
 de I-negative
-l'avoir I-negative
+l'avoir O
 . O
 
 Je O
@@ -3769,6 +3769,6 @@ l O
 ' O
 équipe B-positive
 est O
-adorable I-negative
+adorable O
 ! O
 
