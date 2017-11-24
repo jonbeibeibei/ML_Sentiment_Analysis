@@ -13,6 +13,10 @@ Saves file 'dev.p2.out'
 """
 
 def read_in_file(path):
+    """
+    Reads in test/training file
+    :returns: data_array
+    """
     main_path = os.path.dirname(__file__)
     input_path = os.path.join(main_path, path)
     output = []
@@ -107,6 +111,11 @@ def get_optimal_y(x, emission_count, y_count):
     return optimum_y
 
 def simple_sentiment_analysis(language):
+    """
+    Performs simple sentiment analysis only using emission parameters.
+    Params: Language of dataset you wish to run the analysis on
+    :returns: None, writes to output file 
+    """
     
     training_path = '../Datasets/' + language +  '/train'
     test_path = '../Datasets/' + language + '/dev.in'
