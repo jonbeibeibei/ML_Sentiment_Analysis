@@ -37,14 +37,14 @@ def viterbi(x,a,b):
     for i in range(n+1):
         pi.append([])
         for j in range(T):
-            pi[i].append([-sys.maxsize,'']) # idx 0 represents score, idx 1 represents parent node
+            pi[i].append([-1000000000,'O']) # idx 0 represents score, idx 1 represents parent node
 
     # Base case: start step
     for u in y:
         try:
             pi[0][u][0] = log(a[('START', states[u])]) + log(b[(states[u],x[0])])
         except KeyError:
-            pi[0][u][0] = -sys.maxsize
+            pi[0][u][0] = -1000000000
         pi[0][u][1] = 'START'
         
     # Recursive case
@@ -54,8 +54,8 @@ def viterbi(x,a,b):
                 try:
                     p = (pi[i-1][v][0]) + log(a[(states[v], states[u])]) + log(b[(states[u], x[i])])
                 except KeyError:
-                    p = -sys.maxsize
-                if p >= pi[i][u][0]:
+                    p = -1000000000
+                if p >= pi[i][u][0]: # if it doesn't satisfy this condition for all nodes u, then the word would not be identified as an Entity
                     pi[i][u][0] = p
                     pi[i][u][1] = states[v]
 
@@ -64,11 +64,11 @@ def viterbi(x,a,b):
         try:
             p = (pi[n-1][v][0]) + log(a[(states[v], 'STOP')])
         except KeyError:
-            p = -sys.maxsize
+            p = -1000000000
         if p >= pi[n][0][0]:
             pi[n][0][0] = p
             pi[n][0][1] = states[v]
-            
+                
     return pi
 
 def back_propagation(pi):
@@ -90,10 +90,7 @@ def back_propagation(pi):
     for i in range(len(pi)-2,0,-1):
         state = pi[i][state_index][1]
         labels[i] = state
-        try:
-            state_index = states.index(state)
-        except ValueError:
-            print(pi[i])
+        state_index = states.index(state)
 
     labels[0] = 'START'
 
