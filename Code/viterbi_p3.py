@@ -1,8 +1,8 @@
-import os
-import math
+import os, sys, math
 import codecs
 import copy
 from module import read_in_file, count, emissions, transitions, get_parameters
+import numpy as np
 
 
 """
@@ -21,7 +21,7 @@ states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I
 
 def viterbi(x,a,b):
     """
-    :params x: list -- sequence of modified words
+    :params x: list -- sequence of modified words/observations
     :params a: transition parameters from training set
     :params b: emission parameters from training set
 
@@ -33,33 +33,28 @@ def viterbi(x,a,b):
     pi = []
     T = len(y)
     n = len(x)
+    
     for i in range(n+1):
         pi.append([])
         for j in range(T):
-            pi[i].append([0,0]) # idx 0 represents score, idx 1 represents parent node
+            pi[i].append([-sys.maxsize,'']) # idx 0 represents score, idx 1 represents parent node
 
     # Base case: start step
     for u in y:
         try:
-            pi[0][u][0] = (a[('START', states[u])]) * (b[(states[u],x[0])])
+            pi[0][u][0] = log(a[('START', states[u])]) + log(b[(states[u],x[0])])
         except KeyError:
-            pi[0][u][0] = 0.0
+            pi[0][u][0] = -sys.maxsize
         pi[0][u][1] = 'START'
-
+        
     # Recursive case
     for i in range(1,n):
         for u in y:
             for v in y:
                 try:
-                    p = (pi[i-1][v][0]) * (a[(states[v], states[u])]) * (b[(states[u], x[i])])
-                    
+                    p = (pi[i-1][v][0]) + log(a[(states[v], states[u])]) + log(b[(states[u], x[i])])
                 except KeyError:
-                    # if not ((pi[i-1][v][0]) == 0.0):
-                    #     print((states[v], states[u]))
-                    #     print((states[u],x[i]))
-                    # else:
-                    #     print((pi[i-1][v][0]))
-                    p = 0.0
+                    p = -sys.maxsize
                 if p >= pi[i][u][0]:
                     pi[i][u][0] = p
                     pi[i][u][1] = states[v]
@@ -67,13 +62,13 @@ def viterbi(x,a,b):
     # Base case: Final step
     for v in y:
         try:
-            p = (pi[n-1][v][0]) * (a[(states[v], 'STOP')])
+            p = (pi[n-1][v][0]) + log(a[(states[v], 'STOP')])
         except KeyError:
-            p = 0.0
+            p = -sys.maxsize
         if p >= pi[n][0][0]:
             pi[n][0][0] = p
             pi[n][0][1] = states[v]
-    # print(pi)
+            
     return pi
 
 def back_propagation(pi):
@@ -95,7 +90,10 @@ def back_propagation(pi):
     for i in range(len(pi)-2,0,-1):
         state = pi[i][state_index][1]
         labels[i] = state
-        state_index = states.index(state)
+        try:
+            state_index = states.index(state)
+        except ValueError:
+            print(pi[i])
 
     labels[0] = 'START'
 
@@ -137,7 +135,7 @@ def viterbi_sentiment_analysis(language):
                 else:
                     mod_word = word
                 mod_sentence.append(mod_word)
-                
+            
             pi = viterbi(mod_sentence, a, b)
             output_states = back_propagation(pi)
             
@@ -150,12 +148,11 @@ def viterbi_sentiment_analysis(language):
     print('Done!')
     file.close()
 
-viterbi_sentiment_analysis('EN')
-viterbi_sentiment_analysis('FR')
-viterbi_sentiment_analysis('CN')
+# viterbi_sentiment_analysis('EN')
+# viterbi_sentiment_analysis('FR')
+# viterbi_sentiment_analysis('CN')
 viterbi_sentiment_analysis('SG')
+
 # trainFile = read_in_file('../Datasets/SG/train')
 # emission_count, transition_count, y_count, x_count = count(trainFile, 3)
-# print(emission_count)
 # emission_params, transition_params = get_parameters(emission_count, transition_count, y_count)
-# print(emission_params)
