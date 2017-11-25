@@ -68,7 +68,6 @@ def maximum_marginal_sentence(mod_sentence, a, b):
         for u in y:
             p = alpha[i][u] * beta[i][u]
             if p >= max_p:
-                print('entered')
                 max_p = p
                 output_states[i] = states[u]
 
@@ -116,11 +115,10 @@ def maximum_marginal_analysis(language):
                 mod_sentence.append(mod_word)
 
             output_states = maximum_marginal_sentence(mod_sentence, a, b)
-            print(output_states)
 
             for i in range(len(sentence)):
                 output = sentence[i] + ' ' + output_states[i] + '\n'
-            
+
                 file.write(output)
             file.write('\n')
 
