@@ -8,7 +8,7 @@ import numpy as np
 """
 PAAAAAAAAAAAAAAAAAAAAAART THREEEEEEEEEEEEEEEEEEEEEEE
 Sentiment analysis based on emission parameters only
-Saves file 'dev.p2.out'
+Saves file 'dev.p3.out'
 :return: none
 """
 def log(num):
@@ -18,6 +18,7 @@ def log(num):
         return math.log(num)
 
 states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
+
 
 def viterbi(x,a,b):
     """
@@ -33,28 +34,28 @@ def viterbi(x,a,b):
     pi = []
     T = len(y)
     n = len(x)
-    
+
     for i in range(n+1):
         pi.append([])
         for j in range(T):
-            pi[i].append([-1000000000,'O']) # idx 0 represents score, idx 1 represents parent node
+            pi[i].append([0,'O']) # idx 0 represents score, idx 1 represents parent node
 
     # Base case: start step
     for u in y:
         try:
-            pi[0][u][0] = log(a[('START', states[u])]) + log(b[(states[u],x[0])])
+            pi[0][u][0] = (a[('START', states[u])]) * (b[(states[u],x[0])])
         except KeyError:
-            pi[0][u][0] = -1000000000
+            pi[0][u][0] = 0.0
         pi[0][u][1] = 'START'
-        
+
     # Recursive case
     for i in range(1,n):
         for u in y:
             for v in y:
                 try:
-                    p = (pi[i-1][v][0]) + log(a[(states[v], states[u])]) + log(b[(states[u], x[i])])
+                    p = (pi[i-1][v][0]) * (a[(states[v], states[u])]) * (b[(states[u], x[i])])
                 except KeyError:
-                    p = -1000000000
+                    p = 0.0
                 if p >= pi[i][u][0]: # if it doesn't satisfy this condition for all nodes u, then the word would not be identified as an Entity
                     pi[i][u][0] = p
                     pi[i][u][1] = states[v]
@@ -62,13 +63,13 @@ def viterbi(x,a,b):
     # Base case: Final step
     for v in y:
         try:
-            p = (pi[n-1][v][0]) + log(a[(states[v], 'STOP')])
+            p = (pi[n-1][v][0]) * (a[(states[v], 'STOP')])
         except KeyError:
-            p = -1000000000
+            p = 0.0
         if p >= pi[n][0][0]:
             pi[n][0][0] = p
             pi[n][0][1] = states[v]
-                
+
     return pi
 
 def back_propagation(pi):
@@ -95,7 +96,7 @@ def back_propagation(pi):
     labels[0] = 'START'
 
     return labels
-    
+
 def viterbi_sentiment_analysis(language):
     """
     Performs viterbi algorithm on our test data
@@ -113,7 +114,7 @@ def viterbi_sentiment_analysis(language):
     print('done reading training file')
     emission_count, transition_count, y_count, x_count = count(train_data, 3)
     print('done counting x, y, emissions')
-    
+
     b, a = get_parameters(emission_count, transition_count, y_count)
     print('done getting all transition and emission parameters')
 
@@ -132,10 +133,10 @@ def viterbi_sentiment_analysis(language):
                 else:
                     mod_word = word
                 mod_sentence.append(mod_word)
-            
+
             pi = viterbi(mod_sentence, a, b)
             output_states = back_propagation(pi)
-            
+
             for i in range(len(sentence)):
                 output = sentence[i] + ' ' + output_states[i+1] + '\n'
             # output = word + ' ' + optimum_y + '\n'
@@ -145,9 +146,9 @@ def viterbi_sentiment_analysis(language):
     print('Done!')
     file.close()
 
-# viterbi_sentiment_analysis('EN')
-# viterbi_sentiment_analysis('FR')
-# viterbi_sentiment_analysis('CN')
+viterbi_sentiment_analysis('EN')
+viterbi_sentiment_analysis('FR')
+viterbi_sentiment_analysis('CN')
 viterbi_sentiment_analysis('SG')
 
 # trainFile = read_in_file('../Datasets/SG/train')

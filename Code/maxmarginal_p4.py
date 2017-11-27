@@ -10,10 +10,15 @@ Saves file 'dev.p4.out'
 :return: none
 """
 
-states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
+# states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
+states = ['O','B-positive', 'B-negative', 'I-positive', 'I-negative','I-neutral', 'B-neutral']
+# states = ['O','B-neutral','B-positive', 'B-negative', 'I-positive', 'I-negative','I-neutral']
 
-
-
+def log(num):
+    if num == 0 or 0.0:
+        return -sys.maxsize
+    else:
+        return math.log(num)
 
 def maximum_marginal_sentence(mod_sentence, a, b):
     output_states = []
@@ -30,8 +35,8 @@ def maximum_marginal_sentence(mod_sentence, a, b):
         beta.append([])
         output_states.append(0)
         for j in range(T):
-            alpha[i].append(0) # idx 0 represents score, idx 1 represents parent node
-            beta[i].append(0)
+            alpha[i].append(-9999999999) # idx 0 represents score, idx 1 represents parent node
+            beta[i].append(-9999999999)
 
 
     #Populating alpha and beta values
@@ -39,10 +44,10 @@ def maximum_marginal_sentence(mod_sentence, a, b):
     #Base case:
     for u in y:
         try:
-            alpha[0][u] = a['START',states[u]]
-            beta[n-1][u] = a[states[u],'STOP'] * b[states[u],mod_sentence[n-1]]
+            alpha[0][u] = log(a['START',states[u]])
+            beta[n-1][u] = log(a[states[u],'STOP']) + log(b[states[u],mod_sentence[n-1]])
         except KeyError:
-            alpha[0][u] = 0.0
+            alpha[0][u] = -9999999999
 
     #Recursive cases:
         #Alpha values
@@ -50,17 +55,17 @@ def maximum_marginal_sentence(mod_sentence, a, b):
         for u in y:
             for v in y:
                 try:
-                    alpha[i][u] += alpha[i-1][v] * a[states[v],states[u]] * b[states[v],mod_sentence[i-1]]
+                    alpha[i][u] += alpha[i-1][v] + log(a[states[v],states[u]]) + log(b[states[v],mod_sentence[i-1]])
                 except KeyError:
-                    alpha[i][u] += 0
+                    alpha[i][u] += -9999999999
         #Beta values
     for i in reversed(range(1,n)):
         for u in y:
             for v in y:
                 try:
-                    beta[i][u] += beta[i-1][v] * a[states[u],states[v]] * b[states[u],mod_sentence[i-1]]
+                    beta[i][u] += beta[i-1][v] + log(a[states[u],states[v]]) + log(b[states[u],mod_sentence[i-1]])
                 except KeyError:
-                    beta[i][u] += 0
+                    beta[i][u] += -9999999999
 
     #Find the max marginal
     for i in range(n):
