@@ -128,7 +128,7 @@ def viterbi_sentiment_analysis(language):
             mod_sentence = []
             for word in sentence:
                 # To check if word in test data appears in training data
-                if word not in x_count:
+                if word not in x_count or x_count[word] < 3:
                     mod_word = '#UNK#'
                 else:
                     mod_word = word

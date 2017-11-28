@@ -24,7 +24,7 @@ def read_in_file(path):
 
     return output
     inputFile.close()
-    
+
 def count(training_data, k):
     """
     Runs through entire training data to count the number of x,
@@ -43,7 +43,7 @@ def count(training_data, k):
         for i in range(len(sentence)):
             curr_pair = sentence[i].split(' ')
             curr_x = curr_pair[0]
-            
+
             if (len(curr_pair) > 2):
                 for j in range(1, len(curr_pair) - 1):
                     curr_x += curr_pair[j]
@@ -59,12 +59,12 @@ def count(training_data, k):
         for i in range(len(sentence)):
             curr_pair = sentence[i].split(' ')
             curr_x = curr_pair[0]
-            
+
             if (len(curr_pair) > 2):
                 for j in range(1, len(curr_pair) - 1):
                     curr_x += curr_pair[j]
                 curr_y = curr_pair[len(curr_pair) - 1]
-            else:            
+            else:
                 curr_y = curr_pair[1]
 
             # checking for unknowns
@@ -118,7 +118,7 @@ def emissions(x, y, emission_count, y_count):
 
     except KeyError:
         return 0.0
-    
+
 def transitions(y1, y2, transition_count, y_count):
     """
     Getting transition parameters of y1 and y2
@@ -129,7 +129,7 @@ def transitions(y1, y2, transition_count, y_count):
         return float(transition_count[(y1,y2)])/float(y_count[y1])
     except KeyError:
         return 0.0
-    
+
 def get_parameters(emission_count, transition_count, y_count):
     """
     Gets both the transition and emission parameters from the counts
@@ -138,9 +138,9 @@ def get_parameters(emission_count, transition_count, y_count):
     emission_params = {}
     for pair in emission_count:
         emission_params[pair] = emissions(pair[1], pair[0], emission_count, y_count)
-    
+
     transition_params = {}
     for pair in transition_count:
         transition_params[pair] = transitions(pair[0], pair[1], transition_count, y_count)
-    
+
     return emission_params, transition_params

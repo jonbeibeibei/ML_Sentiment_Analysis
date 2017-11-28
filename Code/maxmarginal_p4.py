@@ -10,8 +10,8 @@ Saves file 'dev.p4.out'
 :return: none
 """
 
-# states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
-states = ['O','B-positive', 'B-negative', 'I-positive', 'I-negative','I-neutral', 'B-neutral']
+states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
+# states = ['O','B-positive', 'B-negative', 'I-positive', 'I-negative','I-neutral', 'B-neutral']
 # states = ['O','B-neutral','B-positive', 'B-negative', 'I-positive', 'I-negative','I-neutral']
 
 def log(num):
@@ -112,7 +112,7 @@ def maximum_marginal_analysis(language):
             mod_sentence = []
             for word in sentence:
                 # To check if word in test data appears in training data
-                if word not in x_count:
+                if word not in x_count or x_count[word]:
                     mod_word = '#UNK#'
                 else:
                     mod_word = word

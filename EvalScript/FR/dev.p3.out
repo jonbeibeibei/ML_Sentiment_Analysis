@@ -6,7 +6,7 @@ horrible O
 
 Assiettes O
 de O
-tapas O
+tapas B-positive
 ridicules O
 . O
 
@@ -20,7 +20,7 @@ autres O
 personnes O
 par O
 la O
-terrasse O
+terrasse B-positive
 et O
 les O
 prix O
@@ -61,7 +61,7 @@ limite O
 à O
 savoir O
 des O
-pâtes O
+pâtes B-negative
 desséchées O
 et O
 froides O
@@ -73,7 +73,7 @@ bistrot O
 . O
 
 Des O
-pizzas O
+pizzas B-positive
 locales O
 que O
 vous O
@@ -228,7 +228,7 @@ peu O
 d'amabilité O
 d'une O
 des O
-serveuses O
+serveuses B-negative
 assez O
 désagréable O
 et O
@@ -671,10 +671,10 @@ pour O
 les O
 amateurs O
 de O
-viande O
+viande B-negative
 , O
 une O
-entrecôte O
+entrecôte B-negative
 qui O
 fond O
 dans O
@@ -682,16 +682,16 @@ la O
 bouche O
 , O
 une O
-sauce O
+sauce B-negative
 simple O
 mais O
 goûteuses O
 et O
 un O
-verre O
-de O
-vin O
-de O
+verre B-negative
+de I-negative
+vin I-negative
+de I-negative
 bonne O
 qualité O
 . O
@@ -817,7 +817,7 @@ un O
 comble O
 pour O
 un O
-établissement O
+établissement B-positive
 mettant O
 en O
 avant O
@@ -885,7 +885,7 @@ goût O
 . O
 
 Une O
-bière O
+bière B-negative
 pression O
 à O
 3,7 O
@@ -899,7 +899,7 @@ d'eau O
 , O
 bref O
 une O
-bière O
+bière B-negative
 coupée O
 à O
 l'eau O
@@ -951,14 +951,14 @@ des O
 baies O
 vitrées O
 la O
-cuisine O
+cuisine B-positive
 et O
 bonne O
 et O
 en O
 plus O
 le O
-service O
+service B-negative
 est O
 avec O
 le O
@@ -977,7 +977,7 @@ lorsque O
 nous O
 lisions O
 la O
-carte O
+carte B-positive
 , O
 malgré O
 cette O
@@ -988,7 +988,7 @@ le O
 contenu O
 de O
 la O
-carte O
+carte B-positive
 avait O
 l'air O
 pas O
@@ -1011,7 +1011,7 @@ choix O
 , O
 l O
 ' O
-attente O
+attente B-negative
 a O
 été O
 longue O
@@ -1019,7 +1019,7 @@ longue O
 heureusement O
 l'égarement O
 d'une O
-serveuse O
+serveuse B-negative
 avec O
 ses O
 assiettes O
@@ -1046,7 +1046,7 @@ de O
 saison O
 . O
 
-Service O
+Service B-positive
 gentil O
 . O
 
@@ -1137,7 +1137,7 @@ donc O
 je O
 pense O
 les O
-serveurs O
+serveurs B-negative
 fatigués O
 . O
 
@@ -1156,7 +1156,7 @@ parisiennes O
 dîner O
 dans O
 cet O
-établissement O
+établissement B-positive
 bien O
 situé O
 . O
@@ -1206,7 +1206,7 @@ grand O
 remerciement O
 pour O
 cette O
-cuisine O
+cuisine B-positive
 riche O
 moderne O
 et O
@@ -1219,9 +1219,9 @@ merci O
 à O
 l O
 ' O
-accueil O
+accueil B-positive
 au O
-service O
+service B-negative
 , O
 la O
 gentillesse O
@@ -1229,7 +1229,7 @@ et O
 le O
 professionnalisme O
 du O
-personnel O
+personnel B-positive
 merci O
 et O
 merci O
@@ -1287,7 +1287,7 @@ un O
 vin O
 irréprochable O
 , O
-service O
+service B-negative
 impeccable O
 . O
 
@@ -1353,7 +1353,7 @@ aimable O
 de O
 la O
 vraie O
-nourriture O
+nourriture B-negative
 traditionnelle O
 française O
 , O
@@ -1377,7 +1377,7 @@ recettes O
 de O
 bon O
 petits O
-vins O
+vins B-positive
 , O
 franchement O
 , O
@@ -1455,13 +1455,13 @@ peu O
 accéléré O
 par O
 un O
-serveur O
+serveur B-negative
 visiblement O
 pressé O
 de O
 finir O
 son O
-service O
+service B-negative
 et O
 qui O
 est O
@@ -1632,7 +1632,7 @@ de O
 la O
 recette O
 des O
-moules O
+moules B-negative
 marinières O
 . O
 
@@ -1757,11 +1757,11 @@ ne O
 souhaite O
 manger O
 ces O
-moules O
+moules B-negative
 douteuses O
 . O
 
-Service O
+Service B-positive
 superbe O
 et O
 très O
@@ -1986,7 +1986,7 @@ prix O
 Je O
 demande O
 au O
-serveur O
+serveur B-negative
 s'il O
 n'y O
 a O
@@ -2041,7 +2041,7 @@ l'eau O
 , O
 l O
 ' O
-endroit O
+endroit B-positive
 semblait O
 idéal O
 pour O
@@ -2055,12 +2055,12 @@ Colmar O
 Excellent O
 dîner O
 , O
-serveuse O
+serveuse B-negative
 très O
 aimable O
 , O
 et O
-ambiance O
+ambiance B-positive
 tamisée O
 .. O
 Nous O
@@ -2111,7 +2111,7 @@ vous O
 recommandons O
 l O
 ' O
-endroit O
+endroit B-positive
 . O
 
 Le O
@@ -2295,7 +2295,7 @@ clinquante O
 
 Lorsque O
 le O
-serveur O
+serveur B-negative
 nous O
 demande O
 si O
@@ -2307,7 +2307,7 @@ lui O
 dis O
 que O
 la O
-viande O
+viande B-negative
 était O
 bonne O
 mais O
@@ -2340,15 +2340,15 @@ chaud I-negative
 , O
 suivi O
 d'un O
-magret O
-de O
-canard O
-miel O
+magret B-positive
+de I-positive
+canard I-positive
+miel I-positive
 / O
 citron O
 accompagné O
 de O
-pommes O
+pommes B-negative
 sautées O
 , O
 un O
@@ -2395,7 +2395,7 @@ des O
 ordres O
 aux O
 autres O
-serveurs O
+serveurs B-negative
 . O
 
 Les O
@@ -2433,7 +2433,7 @@ Après O
 mais O
 une O
 certaine O
-ambiance O
+ambiance B-positive
 dans O
 la O
 salle O
@@ -2485,10 +2485,10 @@ celui O
 de O
 l'huile O
 , O
-bière O
+bière B-negative
 chaude O
 ... O
-service O
+service B-negative
 assez O
 sympathique O
 et O
@@ -2604,14 +2604,14 @@ délicieux O
 ) O
 et O
 une O
-sorte O
-de O
-canard O
-confis O
+sorte B-negative
+de I-negative
+canard I-negative
+confis I-negative
 en O
 gelée O
 avec O
-noix O
+noix B-positive
 et O
 poires O
 ( O
@@ -2640,7 +2640,7 @@ dégustant O
 une O
 très O
 bonne O
-cuisine O
+cuisine B-positive
 de O
 saison O
 . O
@@ -2734,7 +2734,7 @@ poisson O
 fois O
 que O
 le O
-service O
+service B-negative
 n'est O
 pas O
 à O
@@ -2742,7 +2742,7 @@ la O
 hauteur O
 de O
 la O
-cuisine O
+cuisine B-positive
 dans O
 les O
 restos O
@@ -2821,7 +2821,7 @@ un O
 cheveu O
 sur O
 la O
-soupe O
+soupe B-positive
 ! O
 
 La O
@@ -2830,7 +2830,7 @@ est O
 excellente O
 dans O
 un O
-cadre O
+cadre B-positive
 original O
 dans O
 lequel O
@@ -2856,7 +2856,7 @@ Elysée O
 Comment O
 peut-on O
 dire O
-cuisine O
+cuisine B-positive
 maison O
 avec O
 ces O
@@ -2877,7 +2877,7 @@ escargots O
 decongeles O
 etc O
 ... O
-cuisine O
+cuisine B-positive
 française O
 vraiment O
 ? O
@@ -3020,8 +3020,8 @@ et O
 une O
 part O
 de O
-tarte O
-aux O
+tarte B-positive
+aux I-positive
 pommes O
 surgelée O
 ( O
@@ -3030,7 +3030,7 @@ fait O
 maison O
 sur O
 la O
-carte O
+carte B-positive
 ) O
 
 Bon O
@@ -3121,10 +3121,10 @@ le O
 quartier O
 . O
 
-Service O
+Service B-positive
 lamentable O
 , O
-viandes O
+viandes B-negative
 médiocres O
 et O
 note O
@@ -3160,20 +3160,20 @@ en O
 appétit O
 et O
 un O
-accueil O
+accueil B-positive
 toujours O
 très O
 chaleureux O
 du O
-patron O
-et O
-de O
-sa O
-femme O
+patron B-negative
+et I-negative
+de I-negative
+sa I-negative
+femme I-negative
 . O
 
 Superbe O
-accueil O
+accueil B-positive
 . O
 
 Oui O
@@ -3297,7 +3297,7 @@ menu O
 n'inspirait O
 pas O
 une O
-cuisine O
+cuisine B-positive
 raffinée O
 ... O
 mais O
@@ -3359,7 +3359,7 @@ en O
 tout O
 début O
 de O
-service O
+service B-negative
 lorsque O
 l'endroit O
 est O
@@ -3584,7 +3584,7 @@ satisfait O
 . O
 
 Une O
-cuisine O
+cuisine B-positive
 savoureuse O
 faite O
 avec O
@@ -3685,7 +3685,7 @@ aussi.Vient O
 ensuite O
 l O
 ' O
-ambiance O
+ambiance B-positive
 musicale O
 qui O
 correspond O
@@ -3728,12 +3728,12 @@ tout O
 miser O
 sur O
 le O
-cadre O
-au O
-détriment O
-de O
+cadre B-positive
+au I-positive
+détriment I-positive
+de I-positive
 la O
-cuisine O
+cuisine B-positive
 ! O
 
 Carafe O
