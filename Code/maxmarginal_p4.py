@@ -35,8 +35,8 @@ def maximum_marginal_sentence(mod_sentence, a, b):
         beta.append([])
         output_states.append(0)
         for j in range(T):
-            alpha[i].append(-9999999999) # idx 0 represents score, idx 1 represents parent node
-            beta[i].append(-9999999999)
+            alpha[i].append(0) # idx 0 represents score, idx 1 represents parent node
+            beta[i].append(0)
 
 
     #Populating alpha and beta values
@@ -44,10 +44,12 @@ def maximum_marginal_sentence(mod_sentence, a, b):
     #Base case:
     for u in y:
         try:
-            alpha[0][u] = log(a['START',states[u]])
-            beta[n-1][u] = log(a[states[u],'STOP']) + log(b[states[u],mod_sentence[n-1]])
+            alpha[0][u] = (a['START',states[u]])
+            beta[n-1][u] = (a[states[u],'STOP']) * (b[states[u],mod_sentence[n-1]])
+
         except KeyError:
-            alpha[0][u] = -9999999999
+            alpha[0][u] = 0
+            # beta[n-1][u] = 0
 
     #Recursive cases:
         #Alpha values
@@ -55,17 +57,17 @@ def maximum_marginal_sentence(mod_sentence, a, b):
         for u in y:
             for v in y:
                 try:
-                    alpha[i][u] += alpha[i-1][v] + log(a[states[v],states[u]]) + log(b[states[v],mod_sentence[i-1]])
+                    alpha[i][u] += alpha[i-1][v] * (a[states[v],states[u]]) * (b[states[v],mod_sentence[i-1]])
                 except KeyError:
-                    alpha[i][u] += -9999999999
+                    alpha[i][u] += 0
         #Beta values
-    for i in reversed(range(1,n)):
+    for i in reversed(range(1,n-1)):
         for u in y:
             for v in y:
                 try:
-                    beta[i][u] += beta[i-1][v] + log(a[states[u],states[v]]) + log(b[states[u],mod_sentence[i-1]])
+                    beta[i][u] += beta[i+1][v] * (a[states[u],states[v]]) * (b[states[u],mod_sentence[i-1]])
                 except KeyError:
-                    beta[i][u] += -9999999999
+                    beta[i][u] += 0
 
     #Find the max marginal
     for i in range(n):
@@ -112,7 +114,7 @@ def maximum_marginal_analysis(language):
             mod_sentence = []
             for word in sentence:
                 # To check if word in test data appears in training data
-                if word not in x_count or x_count[word]:
+                if word not in x_count or x_count[word] < 3:
                     mod_word = '#UNK#'
                 else:
                     mod_word = word
