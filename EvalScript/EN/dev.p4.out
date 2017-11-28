@@ -33,23 +33,23 @@ guests O
 . O
 
 The O
-tuna O
-and I-positive
-wasabe O
+tuna B-positive
+and O
+wasabe I-positive
 potatoes I-positive
-are I-positive
+are O
 excellent O
 . O
 
 My O
 favortie O
-pizza O
-joint I-positive
+pizza I-positive
+joint O
 in O
 Seattle O
 
 Food O
-wise B-positive
+wise O
 , O
 its O
 ok O
@@ -140,19 +140,19 @@ a O
 seat O
 at O
 the O
-sushi O
+sushi I-positive
 bar O
 . O
 
 The O
-wine O
-list I-positive
-is I-positive
+wine B-positive
+list O
+is O
 wonderful O
 and O
 the O
-food O
-reminds I-positive
+food I-positive
+reminds O
 me O
 of O
 my O
@@ -172,8 +172,8 @@ one O
 of O
 the O
 best O
-seafood O
-restaurants I-positive
+seafood I-positive
+restaurants O
 in O
 New O
 York O
@@ -204,8 +204,8 @@ a O
 variety O
 of O
 the O
-beer O
-( I-positive
+beer I-positive
+( O
 cold O
 and O
 good O
@@ -245,8 +245,8 @@ delicious O
 . O
 
 the O
-staff O
-was I-negative
+staff B-positive
+was O
 very O
 nice O
 and O
@@ -293,12 +293,12 @@ table O
 . O
 
 We O
-concluded O
-with I-positive
+concluded B-positive
+with O
 tiramisu I-positive
 chocolate I-positive
 cake I-positive
-, I-positive
+, O
 both O
 were O
 delicious O
@@ -308,11 +308,11 @@ Not O
 much O
 of O
 a O
-selection O
+selection I-positive
 of I-positive
 bottled I-positive
 beer I-positive
-either I-positive
+either O
 , O
 we O
 went O
@@ -370,10 +370,10 @@ overpriced O
 restaurant O
 with O
 mediocre O
-food O
-and I-positive
-service O
-, I-negative
+food I-positive
+and O
+service I-negative
+, O
 so O
 this O
 review O
@@ -422,8 +422,8 @@ and O
 some O
 walnuts O
 the O
-salads O
-we I-negative
+salads I-negative
+we O
 got O
 were O
 great O
@@ -480,23 +480,23 @@ has O
 a O
 cute O
 interior O
-decor O
-and I-positive
-affordable O
+decor I-positive
+and O
+affordable I-positive
 city I-positive
-prices I-positive
+prices O
 . O
 
 The O
-location O
+location B-positive
 and O
-ambience O
-is I-positive
+ambience I-positive
+is O
 Ok O
 but O
 the O
-food O
-is I-positive
+food I-positive
+is O
 what O
 makes O
 up O
@@ -513,9 +513,9 @@ home O
 after O
 visiting O
 Casa O
-La O
+La I-negative
 Femme I-negative
-and I-negative
+and O
 was O
 so O
 offended O
@@ -618,7 +618,7 @@ someone O
 
 The O
 lamb O
-was I-positive
+was O
 tender O
 so O
 full O
@@ -627,7 +627,7 @@ flavor O
 , O
 the O
 dessert O
-was I-positive
+was O
 divine O
 ! O
 ! O
@@ -677,8 +677,8 @@ to O
 do O
 with O
 the O
-food O
-anymore I-positive
+food I-positive
+anymore O
 . O
 
 The O
@@ -703,15 +703,15 @@ tomatoey O
 . O
 
 Fabulous O
-food O
-- I-positive
+food B-positive
+- O
 if O
 the O
-front O
-of B-negative
+front B-negative
+of I-negative
 house I-negative
 staff I-negative
-don't I-negative
+don't O
 put O
 you O
 off O
@@ -720,7 +720,7 @@ off O
 Single O
 Worst O
 Restaurant I-positive
-in I-positive
+in O
 Manhattan O
 
 Inside O
@@ -854,8 +854,8 @@ early O
 . O
 
 The O
-food O
-is I-positive
+food B-positive
+is O
 fantastic O
 , O
 authentic O
@@ -888,15 +888,15 @@ Wine O
 ? O
 
 The O
-staff O
-offers I-negative
+staff B-positive
+offers O
 impeccable O
-service O
+service I-negative
 . O
 
 Great O
 Indian O
-Food O
+Food I-positive
 ! O
 
 – O
@@ -908,25 +908,25 @@ in O
 Seattle O
 , O
 Mioposto's O
-service O
-was I-negative
+service I-negative
+was O
 bad O
 and O
 the O
-food O
-was I-positive
+food I-positive
+was O
 overpriced O
 . O
 
 Great O
 draft O
 and O
-bottle O
-selection B-positive
-and I-positive
+bottle B-positive
+selection I-positive
+and O
 the O
-pizza O
-rocks I-positive
+pizza I-positive
+rocks O
 . O
 
 We O
@@ -939,8 +939,8 @@ Valentines O
 
 The O
 wait O
-staff O
-is I-negative
+staff I-negative
+is O
 pleasant O
 , O
 fun O
@@ -976,8 +976,8 @@ is O
 something O
 about O
 their O
-atmosphere O
-that I-positive
+atmosphere I-positive
+that O
 makes O
 me O
 come O
@@ -996,11 +996,11 @@ ordered O
 from O
 here O
 my O
-food O
-was I-positive
+food I-positive
+was O
 soo O
-spicy O
-that I-positive
+spicy I-positive
+that O
 I O
 could O
 barely O
@@ -1089,9 +1089,9 @@ the O
 exception O
 of O
 our O
-lemon O
+lemon I-positive
 salad I-positive
-that I-positive
+that O
 had O
 so O
 much O
@@ -1105,8 +1105,8 @@ started O
 watering O
 , O
 the O
-food O
-here I-positive
+food I-positive
+here O
 was O
 decent O
 , O
@@ -1137,9 +1137,9 @@ The O
 rest O
 of O
 the O
-dim O
-sum I-positive
-, I-neutral
+dim I-positive
+sum I-neutral
+, O
 though O
 pricey O
 by O
@@ -1192,17 +1192,17 @@ is O
 undoubtedly O
 my O
 favorite O
-modern O
-Japanese B-positive
+modern B-positive
+Japanese I-positive
 brasserie I-positive
-( I-positive
+( O
 that O
 don O
-’ O
-t I-neutral
+’ I-neutral
+t O
 serve O
-sushi O
-) I-positive
+sushi I-positive
+) O
 , O
 and O
 in O
@@ -1385,9 +1385,9 @@ My O
 wife O
 had O
 the O
-fried O
-shrimp I-positive
-which I-neutral
+fried I-positive
+shrimp I-neutral
+which O
 are O
 huge O
 and O
@@ -1417,11 +1417,11 @@ with O
 either O
 a O
 peppercorn O
-sauce O
-or I-negative
+sauce I-negative
+or O
 red O
-wine O
-reduction I-positive
+wine I-positive
+reduction O
 , O
 though O
 both O
@@ -1432,8 +1432,8 @@ taste O
 . O
 
 The O
-food O
-was I-positive
+food B-positive
+was O
 absolutely O
 amazing O
 ! O
@@ -1515,8 +1515,8 @@ the O
 donut O
 like O
 deep O
-fried O
-dough I-positive
+fried I-positive
+dough O
 they O
 call O
 Ow O
@@ -1527,8 +1527,8 @@ a O
 delicious O
 and O
 sweet O
-tasting O
-bread O
+tasting I-positive
+bread I-negative
 . O
 
 Rather O
@@ -1538,19 +1538,19 @@ vegetarian O
 dish O
 , O
 the O
-chef O
-presented I-negative
+chef I-negative
+presented O
 me O
 with O
 a O
 plate O
 of O
 steamed O
-vegetables O
+vegetables I-positive
 ( I-positive
 minus I-positive
 sauce I-positive
-, I-positive
+, O
 seasoning O
 , O
 or O
@@ -1620,14 +1620,14 @@ a O
 lot O
 of O
 good O
-dishes O
-since I-positive
+dishes I-positive
+since O
 we O
 knew O
 nothing O
 about O
 Indian O
-food O
+food I-positive
 . O
 
 Went O
@@ -1647,15 +1647,15 @@ their O
 favorite O
 types O
 of O
-pizza O
-and I-positive
-pizza O
-places I-positive
+pizza I-positive
+and O
+pizza I-positive
+places O
 , O
 but O
 Mioposto's O
-pizza O
-lacks I-positive
+pizza I-positive
+lacks O
 quality O
 and O
 good O
@@ -1725,7 +1725,7 @@ being O
 that O
 the O
 food O
-was I-positive
+was O
 so O
 good O
 makes O
@@ -1746,7 +1746,7 @@ it O
 Love O
 their O
 drink O
-menu O
+menu I-positive
 . O
 
 If O
@@ -1755,8 +1755,8 @@ are O
 going O
 for O
 the O
-food O
-, I-positive
+food I-positive
+, O
 it O
 will O
 not O
@@ -1901,7 +1901,7 @@ with I-positive
 winged I-positive
 / I-positive
 Dame I-positive
-Edna I-positive
+Edna O
 glasses O
 ) O
 will O
@@ -1941,14 +1941,14 @@ punch O
 of O
 classic O
 Korean O
-food O
-and I-positive
+food I-positive
+and O
 fusion O
 twists O
 like O
-pork O
+pork I-negative
 belly I-negative
-tacos I-negative
+tacos O
 . O
 
 It O
@@ -2045,20 +2045,20 @@ Raymond O
 Most O
 importantly O
 , O
-food O
-is I-positive
+food I-positive
+is O
 excellent O
 . O
 
 The O
-service O
-is I-negative
+service B-positive
+is O
 awful O
 . O
 
 The O
-food O
-is I-positive
+food B-positive
+is O
 a O
 diamond O
 in O
@@ -2066,8 +2066,8 @@ rough O
 - O
 - O
 the O
-food O
-is I-positive
+food I-positive
+is O
 delicious O
 and O
 homemade O
@@ -2087,15 +2087,15 @@ last O
 night O
 - O
 nice O
-decor O
-, I-positive
+decor I-positive
+, O
 good O
-service O
-, I-negative
+service I-negative
+, O
 but O
 the O
-food O
-was I-positive
+food I-positive
+was O
 surprisingly O
 excellent O
 . O
@@ -2132,8 +2132,8 @@ generally O
 happy O
 with O
 their O
-food O
-, I-positive
+food I-positive
+, O
 except O
 my O
 brother O
@@ -2152,8 +2152,8 @@ Juice O
 ! O
 
 The O
-bathroom O
-itself I-negative
+bathroom B-negative
+itself O
 is O
 very O
 small O
@@ -2196,8 +2196,8 @@ Long O
 Beach O
 and O
 average O
-food O
-does I-positive
+food I-positive
+does O
 not O
 , O
 unfortunately O
@@ -2207,25 +2207,25 @@ for O
 its O
 very O
 poor O
-customer O
-service O
+customer B-negative
+service I-negative
 . O
 
 The O
-pizza O
-was I-positive
+pizza B-positive
+was O
 slightly O
 reminescent O
 of O
 Baker's O
-Beach O
+Beach I-positive
 pizza I-positive
-which I-positive
+which O
 occupied O
 the O
 the O
-space O
-years I-negative
+space I-negative
+years O
 ago O
 ( O
 a O
@@ -2268,9 +2268,9 @@ entrees O
 were O
 served O
 with O
-miso O
+miso I-positive
 soup I-positive
-and I-positive
+and O
 rice O
 . O
 
@@ -2375,9 +2375,9 @@ fast O
 to O
 order O
 the O
-appetizer O
+appetizer I-positive
 platter I-positive
-since I-positive
+since O
 we O
 were O
 very O
@@ -2388,23 +2388,23 @@ I O
 also O
 recommend O
 the O
-rice O
-dishes B-negative
+rice B-negative
+dishes I-negative
 or I-negative
-the I-negative
+the O
 different O
 varieties O
 of O
-congee O
+congee I-positive
 ( O
-rice O
-porridge I-positive
+rice I-positive
+porridge O
 ) O
 . O
 
 The O
-food O
-is I-positive
+food B-positive
+is O
 sinful O
 . O
 
@@ -2426,8 +2426,8 @@ strikes O
 you O
 is O
 the O
-decor O
-? I-positive
+decor I-positive
+? O
 ( O
 not O
 very O
@@ -2492,16 +2492,16 @@ expensive O
 . O
 
 The O
-service O
-was I-negative
+service B-positive
+was O
 courteous O
 and O
 attentive O
 . O
 
 Great O
-food O
-and I-positive
+food B-positive
+and O
 the O
 prices O
 are O
@@ -2580,12 +2580,12 @@ has O
 the O
 the O
 correct O
-ambience O
-and I-positive
+ambience I-positive
+and O
 an O
 excellent O
-staff O
-to I-negative
+staff I-negative
+to O
 make O
 you O
 feel O
@@ -2626,8 +2626,8 @@ can O
 probably O
 order O
 more O
-food O
-than I-positive
+food I-positive
+than O
 you O
 can O
 eat O
@@ -2641,7 +2641,7 @@ just O
 going O
 off O
 the O
-menu O
+menu I-positive
 . O
 
 Service O
@@ -2655,9 +2655,9 @@ and O
 I O
 liked O
 the O
-setting O
-/ O
-atmosphere O
+setting I-positive
+/ I-positive
+atmosphere I-positive
 a O
 lot O
 . O
@@ -2738,11 +2738,11 @@ people O
 who O
 want O
 great O
-food O
-plus I-positive
+food I-positive
+plus O
 great O
-service O
-, I-negative
+service I-negative
+, O
 Roxy O
 is O
 a O
@@ -2762,8 +2762,8 @@ down O
 , O
 the O
 best O
-tuna O
-I I-positive
+tuna I-positive
+I O
 have O
 ever O
 had O
@@ -2781,9 +2781,9 @@ calamari O
 as O
 were O
 the O
-filling O
-pasta O
-mains I-positive
+filling I-positive
+pasta I-positive
+mains O
 . O
 
 Told O
@@ -2816,7 +2816,7 @@ nearby O
 . O
 
 The O
-soup B-negative
+soup O
 for O
 the O
 udon O
@@ -2829,7 +2829,7 @@ water O
 
 AVOID O
 THE O
-PLACE B-positive
+PLACE O
 
 It O
 was O
@@ -2874,7 +2874,7 @@ while O
 their O
 parents O
 sipped O
-wine O
+wine I-positive
 . O
 
 I O
@@ -2883,8 +2883,8 @@ one O
 look O
 at O
 the O
-chicken O
-and I-positive
+chicken I-positive
+and O
 I O
 was O
 appalled O
@@ -2898,8 +2898,8 @@ restaurant O
 was O
 amazing O
 ... O
-food O
-was I-positive
+food I-positive
+was O
 delicious O
 and O
 of O
@@ -2971,8 +2971,8 @@ and O
 so O
 was O
 the O
-dessert O
-... I-positive
+dessert I-positive
+... O
 definitely O
 going O
 to O
@@ -2987,8 +2987,8 @@ Yes O
 I O
 ate O
 the O
-food O
-, I-positive
+food I-positive
+, O
 but O
 I O
 certainly O
@@ -3039,9 +3039,9 @@ the O
 price O
 ( O
 just O
-chicken O
+chicken I-positive
 tikka I-positive
-masala I-positive
+masala O
 - O
 no O
 bread O
@@ -3084,9 +3084,9 @@ friendly O
 But O
 for O
 the O
-Shabu O
 Shabu I-positive
-, I-positive
+Shabu I-positive
+, O
 you O
 won't O
 find O
@@ -3120,8 +3120,8 @@ just O
 go O
 to O
 any O
-indian O
-restraunt B-positive
+indian B-positive
+restraunt I-positive
 near O
 by O
 . O
@@ -3131,7 +3131,7 @@ here O
 was O
 great O
 , O
-food O
+food I-positive
 was O
 fantastic O
 . O
@@ -3164,10 +3164,10 @@ Rao's O
 has O
 the O
 best O
-service O
-and I-negative
-atmosphere O
-in I-positive
+service I-negative
+and O
+atmosphere I-positive
+in O
 NYC O
 . O
 
@@ -3204,15 +3204,15 @@ head O
 I O
 expect O
 better O
-service O
+service I-negative
 . O
 
 This O
 is O
 the O
 perfect O
-spot O
-for I-positive
+spot I-positive
+for O
 meeting O
 friends O
 , O
@@ -3224,7 +3224,7 @@ dinner O
 pre-theatre O
 or O
 after-theatre O
-drinks O
+drinks I-negative
 ! O
 
 There's O
@@ -3254,8 +3254,8 @@ to O
 this O
 somewhat O
 hidden O
-spot O
-, I-positive
+spot I-positive
+, O
 once O
 you O
 enter O
@@ -3293,8 +3293,8 @@ not O
 beautiful O
 , O
 the O
-food O
-speaks I-positive
+food I-positive
+speaks O
 for O
 itself O
 . O
@@ -3360,8 +3360,8 @@ cute O
 . O
 
 The O
-atmosphere O
-is I-positive
+atmosphere B-positive
+is O
 noisy O
 and O
 the O
@@ -3451,13 +3451,13 @@ cool O
 bar O
 with O
 great O
-food O
-, I-positive
+food I-positive
+, O
 and O
 tons O
 of O
 excellent O
-beer O
+beer I-positive
 . O
 
 She O
@@ -3481,7 +3481,7 @@ touristy O
 
 The O
 menu O
-is I-positive
+is O
 very O
 limited O
 - O
@@ -3528,8 +3528,8 @@ it O
 really O
 hits O
 the O
-spot O
-on I-positive
+spot I-positive
+on O
 a O
 Sunday O
 morning O
@@ -3553,8 +3553,8 @@ here O
 there O
 was O
 a O
-bathroom O
-attendant I-negative
+bathroom I-negative
+attendant O
 in O
 the O
 restroom O
@@ -3564,9 +3564,9 @@ odd O
 . O
 
 The O
-hot O
-dogs B-positive
-are I-positive
+hot B-positive
+dogs I-positive
+are O
 good O
 , O
 yes O
@@ -3581,10 +3581,10 @@ here O
 is O
 the O
 fantastic O
-pork O
-croquette I-negative
-sandwich O
-, I-positive
+pork I-negative
+croquette O
+sandwich I-positive
+, O
 perfect O
 on O
 its O
@@ -3598,8 +3598,8 @@ was O
 clear O
 he O
 didn O
-’ O
-t I-neutral
+’ I-neutral
+t O
 really O
 care O
 . O
@@ -3616,8 +3616,8 @@ heaven O
 . O
 
 The O
-food O
-is I-positive
+food B-positive
+is O
 prepared O
 quickly O
 and O
@@ -3629,10 +3629,10 @@ place O
 has O
 the O
 best O
-Chinese O
+Chinese I-positive
 style I-positive
 BBQ I-positive
-ribs I-positive
+ribs O
 in O
 the O
 city O
@@ -3685,8 +3685,8 @@ little O
 tipsy O
 from O
 the O
-sake O
-but I-positive
+sake I-positive
+but O
 isn't O
 that O
 what O
@@ -3711,14 +3711,14 @@ anything O
 except O
 serve O
 great O
-food O
-with I-positive
+food I-positive
+with O
 great O
-service O
-in I-negative
+service I-negative
+in O
 a O
 pleasant O
-atmosphere O
+atmosphere I-positive
 . O
 
 In O
@@ -3755,7 +3755,7 @@ low O
 on O
 creativity O
 and O
-selection O
+selection I-positive
 . O
 
 I O
@@ -3800,9 +3800,9 @@ minnow O
 – O
 Great O
 financial O
-district O
-mexican O
-spot O
+district I-positive
+mexican I-positive
+spot I-positive
 . O
 
 I'll O
@@ -3846,15 +3846,15 @@ got O
 hair O
 in O
 my O
-food O
-2 I-positive
+food I-positive
+2 O
 times O
 of O
 then O
 ! O
 
 Great O
-bagels O
+bagels B-positive
 , O
 spreads O
 and O
@@ -3877,8 +3877,8 @@ it O
 
 It's O
 very O
-spicy O
-but I-positive
+spicy I-positive
+but O
 not O
 offensive O
 . O
@@ -3893,8 +3893,8 @@ mash O
 . O
 
 Friendly O
-staff O
-that I-negative
+staff B-positive
+that O
 actually O
 lets O
 you O
@@ -3909,8 +3909,8 @@ with O
 . O
 
 The O
-pizza O
-is I-positive
+pizza B-positive
+is O
 overpriced O
 and O
 soggy O
@@ -3926,17 +3926,17 @@ Here O
 I O
 ended O
 the O
-meal O
-with B-positive
+meal B-positive
+with O
 the O
 unusual O
-dessert O
-of I-positive
+dessert I-positive
+of O
 a O
 port O
 and O
-chocolate O
-tasting I-positive
+chocolate I-positive
+tasting O
 ... O
 yummy O
 ! O
@@ -3944,8 +3944,8 @@ yummy O
 But O
 the O
 best O
-pork O
-souvlaki I-negative
+pork I-negative
+souvlaki O
 I O
 ever O
 had O
@@ -3958,12 +3958,12 @@ thing O
 Baluchi's O
 has O
 solid O
-food O
-and I-positive
+food I-positive
+and O
 a O
 nice O
-decor O
-at I-positive
+decor I-positive
+at O
 reasonable O
 prices O
 . O
@@ -3982,8 +3982,8 @@ my O
 jem O
 of O
 a O
-pizza O
-place I-positive
+pizza I-positive
+place O
 to O
 become O
 overcrowded O
@@ -4000,8 +4000,8 @@ redeeming O
 factor O
 was O
 the O
-food O
-, I-positive
+food I-positive
+, O
 which O
 was O
 above O
@@ -4021,10 +4021,10 @@ Teodora O
 . O
 
 Terrible O
-service O
-, I-negative
-food O
-ok I-positive
+service B-positive
+, O
+food I-positive
+ok O
 , O
 pricey O
 
@@ -4035,8 +4035,8 @@ so O
 cool O
 and O
 the O
-service O
-is I-negative
+service I-negative
+is O
 prompt O
 and O
 curtious O
@@ -4081,15 +4081,15 @@ outside O
 . O
 
 The O
-food O
-was I-positive
+food B-positive
+was O
 actually O
 aweful O
 . O
 
 The O
-service O
-was I-negative
+service B-positive
+was O
 spectacular O
 as O
 the O
@@ -4098,8 +4098,8 @@ knew O
 everything O
 about O
 the O
-menu O
-and I-positive
+menu I-positive
+and O
 his O
 recommendations O
 were O
@@ -4109,15 +4109,15 @@ amazing O
 Other O
 guests O
 enjoyed O
-pizza O
-, I-positive
-santa O
+pizza I-positive
+, O
+santa I-positive
 fe I-positive
 chopped I-positive
 salad I-positive
-and I-positive
-fish O
-and I-positive
+and O
+fish I-positive
+and O
 chips O
 . O
 
@@ -4125,8 +4125,8 @@ I O
 had O
 the O
 kafta O
-plate O
-and I-positive
+plate I-positive
+and O
 I O
 enjoyed O
 it O
@@ -4134,7 +4134,7 @@ it O
 
 love O
 the O
-food O
+food I-positive
 . O
 
 This O
@@ -4149,21 +4149,21 @@ top O
 of O
 my O
 Manhattan O
-restaurant O
-list O
+restaurant I-positive
+list I-positive
 . O
 
 The O
 steak O
-was I-negative
+was O
 done O
 to O
 my O
 exact O
-liking O
-( I-positive
-medium O
-rare I-positive
+liking I-positive
+( O
+medium I-positive
+rare O
 ) O
 and O
 was O
@@ -4206,13 +4206,13 @@ great O
 
 limited O
 menu O
-, I-positive
+, O
 no-so-fresh O
 ingredients O
 , O
 thinly-sliced O
-fish O
-, I-positive
+fish I-positive
+, O
 fall-apart O
 rice O
 . O
@@ -4288,7 +4288,7 @@ more O
 . O
 
 food O
-was B-positive
+was O
 fine O
 , O
 with O
@@ -4299,14 +4299,14 @@ salsa O
 . O
 
 The O
-food O
-was I-positive
+food B-positive
+was O
 great O
 ! O
 
 Quick O
 and O
 friendly O
-service O
+service I-negative
 . O
 

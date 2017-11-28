@@ -57,7 +57,7 @@ def maximum_marginal_sentence(mod_sentence, a, b):
         for u in y:
             for v in y:
                 try:
-                    alpha[i][u] += alpha[i-1][v] * (a[states[v],states[u]]) * (b[states[v],mod_sentence[i-1]])
+                    alpha[i][u] += alpha[i-1][v] * (a[states[v],states[u]]) * (b[states[v],mod_sentence[i]])
                 except KeyError:
                     alpha[i][u] += 0
         #Beta values
@@ -65,7 +65,7 @@ def maximum_marginal_sentence(mod_sentence, a, b):
         for u in y:
             for v in y:
                 try:
-                    beta[i][u] += beta[i+1][v] * (a[states[u],states[v]]) * (b[states[u],mod_sentence[i-1]])
+                    beta[i][u] += beta[i+1][v] * (a[states[u],states[v]]) * (b[states[u],mod_sentence[i]])
                 except KeyError:
                     beta[i][u] += 0
 
