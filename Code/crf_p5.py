@@ -35,26 +35,37 @@ def viterbi(x,a,b):
     pi = []
     T = len(y)
     n = len(x)
-    
+
     perm = list(cr(states, n))
     Zx = 0.0
     p = []
     print('len', n)
-    print("perm", perm)
-    for i in range(len(perm)): 
-        p.append(a[('START', curr_state)] * b[(curr_state,x[0])])
+    # print("perm", perm)
+    for i in range(len(perm)):
+        curr_state = perm[i][0]
+        try:
+            p.append(a[('START', curr_state)] * b[(curr_state,x[0])])
+        except KeyError:
+            p.append(0.0)
         Zx += math.exp(p[0])
-        
+
         for j in range(1,n):
             curr_state = perm[i][j]
             prev_state = perm[i][j-1]
-            p.append(a[(prev_state, curr_state)] * b[(curr_state,x[0])] * p[j-1])
+            try:
+                p.append(a[(prev_state, curr_state)] * b[(curr_state,x[0])] * p[j-1])
+            except KeyError:
+                p.append(0.0)
             Zx += math.exp(p[j])
-            
-        p.append(a[(curr_state, 'STOP')] * p[n-1])
+
+        curr_state = perm[i][n-1]
+        try:
+            p.append(a[(curr_state, 'STOP')] * p[n-1])
+        except KeyError:
+            p.append(0.0)
         Zx += math.exp(p[n])
-        print(Zx)
         
+
     for i in range(n+1):
         pi.append([])
         for j in range(T):
@@ -169,7 +180,7 @@ def viterbi_sentiment_analysis(language):
     print('Done!')
     file.close()
 
-# viterbi_sentiment_analysis('EN')
+viterbi_sentiment_analysis('EN')
 # viterbi_sentiment_analysis('FR')
 # viterbi_sentiment_analysis('CN')
 # viterbi_sentiment_analysis('SG')
