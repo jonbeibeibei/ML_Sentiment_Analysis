@@ -253,7 +253,7 @@ and O
 courteous O
 and O
 obviously O
-chinese O
+chinese B-positive
 . O
 
 This O
@@ -809,7 +809,7 @@ heads O
 up O
 that O
 their O
-kitchen O
+kitchen B-positive
 might O
 want O
 to O
@@ -884,7 +884,7 @@ two O
 that O
 didn't O
 include O
-Wine O
+Wine B-positive
 ? O
 
 The O
@@ -1089,8 +1089,8 @@ the O
 exception O
 of O
 our O
-lemon B-positive
-salad I-positive
+lemon B-negative
+salad I-negative
 that O
 had O
 so O
@@ -1137,8 +1137,8 @@ The O
 rest O
 of O
 the O
-dim O
-sum O
+dim B-neutral
+sum I-neutral
 , O
 though O
 pricey O
@@ -1364,7 +1364,7 @@ to O
 go O
 to O
 the O
-Jekyll O
+Jekyll B-positive
 and O
 Hyde O
 Pub O
@@ -1941,9 +1941,9 @@ punch O
 of O
 classic O
 Korean O
-food B-positive
-and O
-fusion O
+food B-negative
+and I-negative
+fusion I-negative
 twists O
 like O
 pork B-negative
@@ -2140,7 +2140,7 @@ brother O
 who O
 had O
 the O
-grilled O
+grilled B-positive
 Mahi O
 Mahi O
 , O
@@ -2776,7 +2776,7 @@ excellent O
 , O
 especially O
 the O
-calamari O
+calamari B-positive
 , O
 as O
 were O
@@ -3039,9 +3039,9 @@ the O
 price O
 ( O
 just O
-chicken O
-tikka O
-masala O
+chicken B-positive
+tikka I-positive
+masala I-positive
 - O
 no O
 bread O
@@ -3311,7 +3311,7 @@ and O
 I O
 love O
 that O
-coffee O
+coffee B-positive
 ! O
 ! O
 

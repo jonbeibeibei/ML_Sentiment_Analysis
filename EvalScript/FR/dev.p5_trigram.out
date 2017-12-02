@@ -1241,9 +1241,9 @@ plat O
 fut O
 correct O
 ( O
-saint O
-jacques O
-- O
+saint B-positive
+jacques I-positive
+- I-positive
 risotto O
 ) O
 ... O
@@ -1257,8 +1257,8 @@ faim O
 ... O
 seulement O
 trois O
-saint O
-jacques O
+saint B-negative
+jacques I-negative
 le O
 tout O
 à O
@@ -1353,13 +1353,13 @@ aimable O
 de O
 la O
 vraie O
-nourriture B-negative
-traditionnelle O
-française O
+nourriture B-positive
+traditionnelle I-positive
+française I-positive
 , O
 fraîcheur O
 des O
-aliments O
+aliments B-negative
 , O
 inventivité O
 ( O
@@ -1372,7 +1372,7 @@ tester O
 ) O
 dans O
 les O
-recettes O
+recettes B-positive
 , O
 de O
 bon O
@@ -1633,7 +1633,7 @@ la O
 recette O
 des O
 moules B-negative
-marinières O
+marinières I-negative
 . O
 
 Accueil B-negative
@@ -2250,7 +2250,7 @@ bonnes O
 surprises O
 . O
 
-Serveurs O
+Serveurs B-negative
 désagréables O
 , O
 vous O
@@ -2343,7 +2343,7 @@ d'un O
 magret B-positive
 de I-positive
 canard I-positive
-miel O
+miel I-positive
 / O
 citron O
 accompagné O
@@ -2533,7 +2533,7 @@ la O
 soirée O
 . O
 
-Choix O
+Choix B-negative
 du O
 buffet O
 très O
@@ -2773,7 +2773,7 @@ Service B-positive
 aimable O
 . O
 
-Choix O
+Choix B-negative
 de O
 plats O
 très O
@@ -2865,20 +2865,20 @@ en O
 boite O
 , O
 son O
-boeuf O
-bourguignon O
+boeuf B-negative
+bourguignon I-negative
 rempli O
 de O
 bas O
 morceaux O
 ... O
 ces O
-escargots O
+escargots B-positive
 decongeles O
 etc O
 ... O
 cuisine B-positive
-française O
+française I-positive
 vraiment O
 ? O
 
@@ -3368,7 +3368,7 @@ quasi-vide O
 et O
 d'une O
 impolitesse O
-rare O
+rare B-positive
 
 On O
 reste O

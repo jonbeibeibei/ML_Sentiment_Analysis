@@ -215,7 +215,7 @@ def viterbi(x,a,b,c):
             for v in y:
                 for t in y:
                     try:
-                        p = (pi[i-1][v][0]) + log(0.9*a[(states[v], states[u])]) + log(b[(states[u], x[i])]) + log(0.1*c[(states[v], states[u], states[t])])
+                        p = (pi[i-1][v][0]) + log(0.1*a[(states[v], states[u])]) + log(b[(states[u], x[i])]) + log(0.9*c[(states[v], states[u], states[t])])
                     except KeyError:
                         p = -1000
                     if p >= pi[i][u][0]: # if it doesn't satisfy this condition for all nodes u, then the word would not be identified as an Entity
@@ -227,7 +227,7 @@ def viterbi(x,a,b,c):
     for u in y:
         for v in y:
             try:
-                p = (pi[n-2][v][0]) + log(0.9*a[(states[v], 'STOP')]) + log(0.1*c[(states[u], states[v], 'STOP')])
+                p = (pi[n-2][v][0]) + log(0.1*a[(states[v], 'STOP')]) + log(0.9*c[(states[u], states[v], 'STOP')])
             except KeyError:
                 p = -1000
             if p >= pi[n-1][0][0]:
@@ -286,7 +286,7 @@ def viterbi_sentiment_analysis(language):
 
     train_data = read_in_file(training_path)
     print('done reading training file')
-    emission_count, transition_count, transition_ABC_count, y_count, x_count = new_count(train_data, 3)
+    emission_count, transition_count, transition_ABC_count, y_count, x_count = new_count(train_data, 2)
     print('done counting x, y, emissions')
 
     b, a, c = get_parameters(emission_count, transition_count, transition_ABC_count, y_count)
@@ -302,7 +302,7 @@ def viterbi_sentiment_analysis(language):
             mod_sentence = []
             for word in sentence:
                 # To check if word in test data appears in training data
-                if word not in x_count or x_count[word] < 3:
+                if word not in x_count or x_count[word] < 2:
                     mod_word = '#UNK#'
                 else:
                     mod_word = word
