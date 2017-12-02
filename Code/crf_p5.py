@@ -36,12 +36,11 @@ def viterbi(x,a,b):
     T = len(y)
     n = len(x)
 
-    perm = cr(states, n)
     Zx = 0.0
     p = []
     print('len', n)
     
-    for item in perm:
+    for item in cr(states, n):
         curr_state = item[0]
         try:
             p.append(a[('START', curr_state)] * b[(curr_state,x[0])])
