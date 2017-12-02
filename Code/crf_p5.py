@@ -2,6 +2,7 @@ import os, sys, math
 import codecs
 import copy
 from module import read_in_file, count, emissions, transitions, get_parameters
+from itertools import combinations_with_replacement as cr
 import numpy as np
 
 
@@ -34,7 +35,26 @@ def viterbi(x,a,b):
     pi = []
     T = len(y)
     n = len(x)
-
+    
+    perm = list(cr(states, n))
+    Zx = 0.0
+    p = []
+    print('len', n)
+    print("perm", perm)
+    for i in range(len(perm)): 
+        p.append(a[('START', curr_state)] * b[(curr_state,x[0])])
+        Zx += math.exp(p[0])
+        
+        for j in range(1,n):
+            curr_state = perm[i][j]
+            prev_state = perm[i][j-1]
+            p.append(a[(prev_state, curr_state)] * b[(curr_state,x[0])] * p[j-1])
+            Zx += math.exp(p[j])
+            
+        p.append(a[(curr_state, 'STOP')] * p[n-1])
+        Zx += math.exp(p[n])
+        print(Zx)
+        
     for i in range(n+1):
         pi.append([])
         for j in range(T):
@@ -44,7 +64,7 @@ def viterbi(x,a,b):
     for u in y:
         try:
             fx = (a[('START', states[u])]) * (b[(states[u],x[0])])
-            pi[0][u][0] = 
+            pi[0][u][0] = math.exp(fx) / Zx
         except KeyError:
             pi[0][u][0] = 0.0
         pi[0][u][1] = 'START'
@@ -54,7 +74,8 @@ def viterbi(x,a,b):
         for u in y:
             for v in y:
                 try:
-                    p = (pi[i-1][v][0]) * (a[(states[v], states[u])]) * (b[(states[u], x[i])])
+                    fx = (pi[i-1][v][0]) * (a[(states[v], states[u])]) * (b[(states[u], x[i])])
+                    p = math.exp(fx) / Zx
                 except KeyError:
                     p = 0.0
                 if p >= pi[i][u][0]: # if it doesn't satisfy this condition for all nodes u, then the word would not be identified as an Entity
@@ -64,7 +85,8 @@ def viterbi(x,a,b):
     # Base case: Final step
     for v in y:
         try:
-            p = (pi[n-1][v][0]) * (a[(states[v], 'STOP')])
+            fx = (pi[n-1][v][0]) * (a[(states[v], 'STOP')])
+            p = math.exp(fx) / Zx
         except KeyError:
             p = 0.0
         if p >= pi[n][0][0]:
@@ -147,10 +169,10 @@ def viterbi_sentiment_analysis(language):
     print('Done!')
     file.close()
 
-viterbi_sentiment_analysis('EN')
-viterbi_sentiment_analysis('FR')
-viterbi_sentiment_analysis('CN')
-viterbi_sentiment_analysis('SG')
+# viterbi_sentiment_analysis('EN')
+# viterbi_sentiment_analysis('FR')
+# viterbi_sentiment_analysis('CN')
+# viterbi_sentiment_analysis('SG')
 
 # trainFile = read_in_file('../Datasets/SG/train')
 # emission_count, transition_count, y_count, x_count = count(trainFile, 3)
