@@ -103,6 +103,7 @@ def viterbi_sentiment_analysis(language):
     Params: Language of dataset you wish to run the analysis on
     :returns: None, writes to output file
     """
+    k = 3
 
     training_path = '../Datasets/' + language +  '/train'
     test_path = '../Datasets/' + language + '/dev.in'
@@ -112,7 +113,7 @@ def viterbi_sentiment_analysis(language):
 
     train_data = read_in_file(training_path)
     print('done reading training file')
-    emission_count, transition_count, y_count, x_count = count(train_data, 3)
+    emission_count, transition_count, y_count, x_count = count(train_data, k)
     print('done counting x, y, emissions')
 
     b, a = get_parameters(emission_count, transition_count, y_count)
@@ -128,7 +129,7 @@ def viterbi_sentiment_analysis(language):
             mod_sentence = []
             for word in sentence:
                 # To check if word in test data appears in training data
-                if word not in x_count or x_count[word] < 3:
+                if word not in x_count or x_count[word] < k:
                     mod_word = '#UNK#'
                 else:
                     mod_word = word
