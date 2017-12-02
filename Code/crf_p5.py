@@ -36,13 +36,13 @@ def viterbi(x,a,b):
     T = len(y)
     n = len(x)
 
-    perm = list(cr(states, n))
+    perm = cr(states, n)
     Zx = 0.0
     p = []
     print('len', n)
-    # print("perm", perm)
-    for i in range(len(perm)):
-        curr_state = perm[i][0]
+    
+    for item in perm:
+        curr_state = item[0]
         try:
             p.append(a[('START', curr_state)] * b[(curr_state,x[0])])
         except KeyError:
@@ -50,15 +50,15 @@ def viterbi(x,a,b):
         Zx += math.exp(p[0])
 
         for j in range(1,n):
-            curr_state = perm[i][j]
-            prev_state = perm[i][j-1]
+            curr_state = item[j]
+            prev_state = item[j-1]
             try:
                 p.append(a[(prev_state, curr_state)] * b[(curr_state,x[0])] * p[j-1])
             except KeyError:
                 p.append(0.0)
             Zx += math.exp(p[j])
 
-        curr_state = perm[i][n-1]
+        curr_state = item[n-1]
         try:
             p.append(a[(curr_state, 'STOP')] * p[n-1])
         except KeyError:
