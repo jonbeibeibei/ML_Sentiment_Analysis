@@ -28,12 +28,12 @@ def simple_sentiment_analysis(language):
     """
     Performs simple sentiment analysis only using emission parameters.
     Params: Language of dataset you wish to run the analysis on
-    :returns: None, writes to output file 
+    :returns: None, writes to output file
     """
-    
+
     training_path = '../Datasets/' + language +  '/train'
     test_path = '../Datasets/' + language + '/dev.in'
-    output_path = '../Datasets/' + language
+    output_path = '../EvalScript/' + language
 
     optimal_y_dict = {}
 
