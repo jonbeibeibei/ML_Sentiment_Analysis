@@ -4,6 +4,7 @@ import copy
 from module import read_in_file, count, emissions, transitions, get_parameters
 from itertools import combinations_with_replacement as cr
 import numpy as np
+from viterbi_p3 import viterbi
 
 
 """
@@ -21,7 +22,7 @@ def log(num):
 states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
 
 
-def viterbi(x,a,b):
+def viterbi_CRF(x,a,b):
     """
     :params x: list -- sequence of modified words/observations
     :params a: transition parameters from training set
@@ -39,7 +40,7 @@ def viterbi(x,a,b):
     Zx = 0.0
     p = []
     print('len', n)
-    
+
     for item in cr(states, n):
         curr_state = item[0]
         try:
@@ -63,7 +64,7 @@ def viterbi(x,a,b):
         except KeyError:
             p.append(0.0)
         Zx += math.exp(p[n])
-        
+
 
     for i in range(n+1):
         pi.append([])
@@ -167,8 +168,13 @@ def viterbi_sentiment_analysis(language):
                     mod_word = word
                 mod_sentence.append(mod_word)
 
-            pi = viterbi(mod_sentence, a, b)
-            output_states = back_propagation(pi)
+            if(len(mod_sentence) < 20):
+                pi = viterbi_CRF(mod_sentence, a, b)
+                output_states = back_propagation(pi)
+
+            else:
+                pi = viterbi(mod_sentence, a, b)
+                output_states = back_propagation(pi)
 
             for i in range(len(sentence)):
                 output = sentence[i] + ' ' + output_states[i+1] + '\n'

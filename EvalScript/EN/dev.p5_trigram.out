@@ -46,7 +46,7 @@ favortie O
 pizza B-positive
 joint O
 in O
-Seattle B-positive
+Seattle O
 
 Food B-neutral
 wise O
@@ -140,8 +140,8 @@ a O
 seat O
 at O
 the O
-sushi O
-bar O
+sushi B-positive
+bar I-positive
 . O
 
 The O
@@ -204,7 +204,7 @@ a O
 variety O
 of O
 the O
-beer O
+beer I-positive
 ( O
 cold O
 and O
@@ -252,8 +252,8 @@ nice O
 and O
 courteous O
 and O
-obviously O
-chinese B-positive
+obviously B-positive
+chinese I-positive
 . O
 
 This O
@@ -293,9 +293,9 @@ table O
 . O
 
 We O
-concluded O
-with O
-tiramisu B-positive
+concluded B-positive
+with I-positive
+tiramisu I-positive
 chocolate I-positive
 cake I-positive
 , O
@@ -626,7 +626,7 @@ of O
 flavor O
 , O
 the O
-dessert O
+dessert B-negative
 was O
 divine O
 ! O
@@ -717,11 +717,11 @@ you O
 off O
 – O
 
-Single O
-Worst O
-Restaurant B-positive
+Single B-positive
+Worst I-positive
+Restaurant I-positive
 in O
-Manhattan B-positive
+Manhattan O
 
 Inside O
 is O
@@ -764,9 +764,9 @@ cellphone O
 
 Go O
 to O
-japanese O
-sushi O
-place O
+japanese B-positive
+sushi I-positive
+place I-positive
 or O
 Spanish O
 tapas O
@@ -1170,7 +1170,7 @@ Best O
 In O
 ALL O
 of O
-NYC B-positive
+NYC O
 
 Trust O
 me O
@@ -1194,8 +1194,8 @@ my O
 favorite O
 modern B-positive
 Japanese I-positive
-brasserie O
-( O
+brasserie I-positive
+( I-positive
 that O
 don O
 ’ O
@@ -1295,7 +1295,7 @@ just O
 around O
 the O
 corner O
-: B-positive
+: O
 
 After O
 dinner O
@@ -1416,8 +1416,8 @@ served O
 with O
 either O
 a O
-peppercorn O
-sauce O
+peppercorn B-positive
+sauce I-positive
 or O
 red O
 wine B-positive
@@ -1527,8 +1527,8 @@ a O
 delicious O
 and O
 sweet O
-tasting O
-bread O
+tasting B-positive
+bread I-positive
 . O
 
 Rather O
@@ -1538,7 +1538,7 @@ vegetarian O
 dish O
 , O
 the O
-chef O
+chef B-negative
 presented O
 me O
 with O
@@ -1546,10 +1546,10 @@ a O
 plate O
 of O
 steamed O
-vegetables O
-( O
-minus O
-sauce O
+vegetables B-positive
+( I-positive
+minus I-positive
+sauce I-positive
 , O
 seasoning O
 , O
@@ -1620,14 +1620,14 @@ a O
 lot O
 of O
 good O
-dishes O
+dishes I-positive
 since O
 we O
 knew O
 nothing O
 about O
-Indian O
-food B-positive
+Indian B-positive
+food I-positive
 . O
 
 Went O
@@ -1653,9 +1653,9 @@ pizza I-positive
 places O
 , O
 but O
-Mioposto's O
-pizza B-positive
-lacks O
+Mioposto's B-positive
+pizza I-positive
+lacks I-positive
 quality O
 and O
 good O
@@ -1746,7 +1746,7 @@ it O
 Love O
 their O
 drink O
-menu O
+menu I-positive
 . O
 
 If O
@@ -1893,15 +1893,15 @@ us O
 . O
 
 The O
-frizzy O
-retro O
-girl O
-( O
-with O
-winged O
-/ O
-Dame O
-Edna O
+frizzy B-positive
+retro I-positive
+girl I-positive
+( I-positive
+with I-positive
+winged I-positive
+/ I-positive
+Dame I-positive
+Edna I-positive
 glasses O
 ) O
 will O
@@ -2141,8 +2141,8 @@ who O
 had O
 the O
 grilled B-positive
-Mahi O
-Mahi O
+Mahi I-positive
+Mahi I-positive
 , O
 seemingly O
 drenched O
@@ -2152,7 +2152,7 @@ Juice O
 ! O
 
 The O
-bathroom O
+bathroom B-negative
 itself O
 is O
 very O
@@ -2416,7 +2416,7 @@ dissapointment O
 Love O
 Al O
 Di O
-La B-positive
+La O
 
 The O
 only O
@@ -2762,7 +2762,7 @@ down O
 , O
 the O
 best O
-tuna O
+tuna B-negative
 I O
 have O
 ever O
@@ -2821,10 +2821,10 @@ for O
 the O
 udon O
 was O
-soy O
-sauce O
-and O
-water O
+soy B-negative
+sauce I-negative
+and I-negative
+water I-negative
 . O
 
 AVOID O
@@ -2883,7 +2883,7 @@ one O
 look O
 at O
 the O
-chicken O
+chicken B-positive
 and O
 I O
 was O
@@ -2971,7 +2971,7 @@ and O
 so O
 was O
 the O
-dessert O
+dessert B-negative
 ... O
 definitely O
 going O
@@ -3120,9 +3120,9 @@ just O
 go O
 to O
 any O
-indian O
-restraunt O
-near O
+indian B-positive
+restraunt I-positive
+near I-positive
 by O
 . O
 
@@ -3553,7 +3553,7 @@ here O
 there O
 was O
 a O
-bathroom O
+bathroom B-negative
 attendant O
 in O
 the O
@@ -3598,7 +3598,7 @@ was O
 clear O
 he O
 didn O
-’ O
+’ I-neutral
 t O
 really O
 care O
@@ -3685,7 +3685,7 @@ little O
 tipsy O
 from O
 the O
-sake O
+sake B-positive
 but O
 isn't O
 that O
@@ -3755,7 +3755,7 @@ low O
 on O
 creativity O
 and O
-selection O
+selection I-positive
 . O
 
 I O
@@ -3877,7 +3877,7 @@ it O
 
 It's O
 very O
-spicy O
+spicy I-positive
 but O
 not O
 offensive O
@@ -3930,7 +3930,7 @@ meal B-positive
 with O
 the O
 unusual O
-dessert O
+dessert B-negative
 of O
 a O
 port O
@@ -3951,7 +3951,7 @@ ever O
 had O
 is O
 the O
-main O
+main B-positive
 thing O
 . O
 
@@ -3983,7 +3983,7 @@ jem O
 of O
 a O
 pizza B-positive
-place O
+place I-positive
 to O
 become O
 overcrowded O
@@ -4026,7 +4026,7 @@ service B-positive
 food B-positive
 ok O
 , O
-pricey B-positive
+pricey O
 
 The O
 place O
@@ -4110,10 +4110,10 @@ Other O
 guests O
 enjoyed O
 pizza B-positive
-, O
-santa O
-fe O
-chopped B-positive
+, I-positive
+santa I-positive
+fe I-positive
+chopped I-positive
 salad I-positive
 and I-positive
 fish I-positive
@@ -4125,7 +4125,7 @@ I O
 had O
 the O
 kafta O
-plate O
+plate I-positive
 and O
 I O
 enjoyed O

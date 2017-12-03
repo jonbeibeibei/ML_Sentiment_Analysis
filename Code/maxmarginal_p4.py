@@ -132,5 +132,6 @@ def maximum_marginal_analysis(language):
     print('Done!')
     file.close()
 
-maximum_marginal_analysis('EN')
-maximum_marginal_analysis('FR')
+if __name__ == '__main__':
+    maximum_marginal_analysis('EN')
+    maximum_marginal_analysis('FR')

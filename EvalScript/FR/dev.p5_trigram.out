@@ -199,8 +199,8 @@ restaurant O
 se O
 trouvant O
 au-dessus O
-du O
-marché O
+du I-positive
+marché I-positive
 , O
 l O
 ' O
@@ -682,7 +682,7 @@ la O
 bouche O
 , O
 une O
-sauce O
+sauce B-negative
 simple O
 mais O
 goûteuses O
@@ -847,7 +847,7 @@ on O
 vous O
 sert O
 une O
-bouteille O
+bouteille I-negative
 de O
 1 O
 litre O
@@ -1170,7 +1170,7 @@ corrects O
 
 Que O
 le O
-chef O
+chef I-neutral
 cherche O
 à O
 réiventer O
@@ -1284,7 +1284,7 @@ situé O
 repas O
 et O
 un O
-vin O
+vin I-negative
 irréprochable O
 , O
 service B-negative
@@ -1377,7 +1377,7 @@ recettes B-positive
 de O
 bon O
 petits O
-vins O
+vins B-positive
 , O
 franchement O
 , O
@@ -1558,7 +1558,7 @@ de I-negative
 terre I-negative
 comme O
 une O
-soupe O
+soupe B-positive
 amère O
 . O
 
@@ -1599,8 +1599,8 @@ sympathique O
 
 Des O
 serveurs B-negative
-antipathiques O
-au O
+antipathiques I-negative
+au I-negative
 possible O
 . O
 
@@ -1746,9 +1746,9 @@ nous O
 est O
 présentée O
 est O
-défalquée O
-d'une O
-cocotte O
+défalquée B-negative
+d'une I-negative
+cocotte I-negative
 alors O
 que O
 plus O
@@ -1836,7 +1836,7 @@ jour I-neutral
 
 Arrivages O
 de O
-poissons O
+poissons B-positive
 journalier O
 , O
 donc O
@@ -2034,7 +2034,7 @@ petite O
 Venise O
 avec O
 terrasse B-positive
-au O
+au I-positive
 bord O
 de O
 l'eau O
@@ -2083,7 +2083,7 @@ beau O
 menu O
 à O
 35 O
-euros O
+euros I-neutral
 le O
 midi O
 qui O
@@ -2393,7 +2393,7 @@ pour O
 donner O
 des O
 ordres O
-aux O
+aux I-positive
 autres O
 serveurs B-negative
 . O
@@ -2604,10 +2604,10 @@ délicieux O
 ) O
 et O
 une O
-sorte O
-de O
-canard B-negative
-confis O
+sorte B-negative
+de I-negative
+canard I-negative
+confis I-negative
 en O
 gelée O
 avec O
@@ -2707,7 +2707,7 @@ très O
 sec O
 , O
 sans O
-sauce O
+sauce B-negative
 , O
 gambas O
 pas O
@@ -2724,7 +2724,7 @@ goût O
 . O
 
 La O
-sauce O
+sauce B-negative
 envahissait O
 le O
 poisson O
@@ -2821,7 +2821,7 @@ un O
 cheveu O
 sur O
 la O
-soupe O
+soupe B-positive
 ! O
 
 La O
@@ -3165,11 +3165,11 @@ toujours O
 très O
 chaleureux O
 du O
-patron O
-et O
-de O
-sa O
-femme O
+patron B-negative
+et I-negative
+de I-negative
+sa I-negative
+femme I-negative
 . O
 
 Superbe O
@@ -3233,7 +3233,7 @@ le O
 rez-de-chaussée O
 était O
 destiné O
-aux O
+aux I-positive
 habitués O
 et O
 amateur O
@@ -3368,7 +3368,7 @@ quasi-vide O
 et O
 d'une O
 impolitesse O
-rare B-positive
+rare O
 
 On O
 reste O
@@ -3475,7 +3475,7 @@ Je O
 connais O
 l'adresse O
 depuis O
-longtemps B-positive
+longtemps O
 
 Le O
 cadre B-positive
@@ -3501,7 +3501,7 @@ deux O
 plats O
 et O
 deux O
-desserts O
+desserts I-positive
 à O
 la O
 carte B-positive
@@ -3606,7 +3606,7 @@ restaurant O
 La O
 nourriture B-negative
 est O
-moyenne B-positive
+moyenne O
 
 Le O
 service B-negative
@@ -3704,7 +3704,7 @@ Le O
 moelleux O
 speculos O
 / O
-chocolat O
+chocolat I-positive
 était O
 a O
 tom O
@@ -3729,9 +3729,9 @@ miser O
 sur O
 le O
 cadre B-positive
-au O
-détriment O
-de O
+au I-positive
+détriment I-positive
+de I-positive
 la O
 cuisine B-positive
 ! O

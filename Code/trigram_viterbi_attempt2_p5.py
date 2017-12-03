@@ -2,6 +2,8 @@ import os, sys, math
 import codecs
 import copy
 from module import read_in_file
+from viterbi_p3 import viterbi
+from maxmarginal_p4 import maximum_marginal_sentence
 import numpy as np
 
 
@@ -110,7 +112,7 @@ def new_count(training_data, k):
             else:
                 transition_ABC_count[key] += 1
 
-            if (i == len(sentence)-2):  # when there is nothing behind you (last of sentence)
+            if (i == len(sentence)-1):  # when there is nothing behind you (last of sentence)
                 key = (prev_y,curr_y,'STOP')
                 if(key not in transition_ABC_count):
                     transition_ABC_count[key] = 1
@@ -181,7 +183,7 @@ def get_parameters(emission_count, transition_count, transition_ABC_count, y_cou
     return emission_params, transition_params, transition_ABC_params
 
 
-def viterbi(x,a,b,c):
+def viterbi_trigram(x,a,b,c):
     """
     :params x: list -- sequence of modified words/observations
     :params a: transition parameters from training set
@@ -199,14 +201,14 @@ def viterbi(x,a,b,c):
     for i in range(n+1):
         pi.append([])
         for j in range(T):
-            pi[i].append([-1000,'O']) # idx 0 represents score, idx 1 represents parent node
+            pi[i].append([0,'O']) # idx 0 represents score, idx 1 represents parent node
 
     # Base case: start step
     for u in y:
         try:
-            pi[0][u][0] = log(a[('START', states[u])]) + log(b[(states[u],x[0])])
+            pi[0][u][0] = (a[('START', states[u])]) * (b[(states[u],x[0])])
         except KeyError:
-            pi[0][u][0] = -1000
+            pi[0][u][0] = 0
         pi[0][u][1] = 'START'
 
     # Recursive case
@@ -215,9 +217,9 @@ def viterbi(x,a,b,c):
             for v in y:
                 for t in y:
                     try:
-                        p = (pi[i-1][v][0]) + log(0.1*a[(states[v], states[u])]) + log(b[(states[u], x[i])]) + log(0.9*c[(states[v], states[u], states[t])])
+                        p = (pi[i-1][v][0]) * (0.8*a[(states[v], states[u])]) * (b[(states[u], x[i])]) * (0.1*c[(states[v], states[u], states[t])])
                     except KeyError:
-                        p = -1000
+                        p = 0
                     if p >= pi[i][u][0]: # if it doesn't satisfy this condition for all nodes u, then the word would not be identified as an Entity
                         pi[i][u][0] = p
                         pi[i][u][1] = states[v]
@@ -227,9 +229,9 @@ def viterbi(x,a,b,c):
     for u in y:
         for v in y:
             try:
-                p = (pi[n-2][v][0]) + log(0.1*a[(states[v], 'STOP')]) + log(0.9*c[(states[u], states[v], 'STOP')])
+                p = (pi[n-2][v][0]) * (0.9*a[(states[v], 'STOP')]) * (0.1*c[(states[u], states[v], 'STOP')])
             except KeyError:
-                p = -1000
+                p = 0
             if p >= pi[n-1][0][0]:
                 pi[n-1][0][0] = p
                 pi[n-1][0][1] = states[v]
@@ -237,9 +239,9 @@ def viterbi(x,a,b,c):
     # Base case: Final step
     for v in y:
         try:
-            p = (pi[n-1][v][0]) + log(a[(states[v], 'STOP')])
+            p = (pi[n-1][v][0]) * (a[(states[v], 'STOP')])
         except KeyError:
-            p = -1000
+            p = 0
         if p >= pi[n][0][0]:
             pi[n][0][0] = p
             pi[n][0][1] = states[v]
@@ -308,11 +310,45 @@ def viterbi_sentiment_analysis(language):
                     mod_word = word
                 mod_sentence.append(mod_word)
 
-            pi = viterbi(mod_sentence, a, b, c)
-            output_states = back_propagation(pi)
+            pi = viterbi(mod_sentence, a, b)
+            viterbi_output_states = back_propagation(pi)
+
+            max_marginal_output_states = maximum_marginal_sentence(mod_sentence, a, b)
+
+            trigram_pi = viterbi_trigram(mod_sentence, a, b, c)
+            trigram_output_states = back_propagation(trigram_pi)
+
+
+            fixed_output_states = viterbi_output_states
 
             for i in range(len(sentence)):
-                output = sentence[i] + ' ' + output_states[i+1] + '\n'
+                viterbi_label = viterbi_output_states[i+1]
+                max_marg_label = max_marginal_output_states[i]
+
+                #Check if viterbi label was O whilst maxmarg was not O
+                if viterbi_label == 'O' and max_marg_label != 'O':
+                    flag = False #this flag indicates whether or not we should use the max-marginal labels
+
+                    #Check if all previous viterbi entries are an O as well
+                    for check in range(1,i):
+                        if viterbi_output_states[check] != 'O':
+
+                            flag = False
+                            break
+                        #If there exist some entries that aren't Os
+                        flag = True
+                    if flag == True:
+                        # manually correct the data for Max-marginal as it isnt as sensitive to B or I changes
+                        # Because everything that preceded was an O, we can manually assert that the first I encountered needs to be replaced with B
+                        if max_marg_label[0] == 'I':
+                            max_marg_label.replace('I-','B-')
+                        #update the fixed labels output
+                        print('fixing')
+                        fixed_output_states[i+1] = max_marg_label
+                        # break
+
+            for i in range(len(sentence)):
+                output = sentence[i] + ' ' + fixed_output_states[i+1] + '\n'
             # output = word + ' ' + optimum_y + '\n'
                 file.write(output)
             file.write('\n')

@@ -147,10 +147,11 @@ def viterbi_sentiment_analysis(language):
     print('Done!')
     file.close()
 
-viterbi_sentiment_analysis('EN')
-viterbi_sentiment_analysis('FR')
-viterbi_sentiment_analysis('CN')
-viterbi_sentiment_analysis('SG')
+if __name__ == '__main__':
+    viterbi_sentiment_analysis('EN')
+    viterbi_sentiment_analysis('FR')
+    viterbi_sentiment_analysis('CN')
+    viterbi_sentiment_analysis('SG')
 
 # trainFile = read_in_file('../Datasets/SG/train')
 # emission_count, transition_count, y_count, x_count = count(trainFile, 3)
