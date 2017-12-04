@@ -6,8 +6,8 @@ import numpy as np
 
 
 """
-PAAAAAAAAAAAAAAAAAAAAAART THREEEEEEEEEEEEEEEEEEEEEEE
-Sentiment analysis based on emission parameters only
+Part 3
+Sentiment analysis based using the Viterbi Algorithm, providing Transition and Emission Params
 Saves file 'dev.p3.out'
 :return: none
 """

@@ -5,7 +5,7 @@ import copy
 from module import read_in_file, count, emissions, transitions, get_parameters
 
 """
-PAAAAAAAAAAAAAAAAAAAAAART TWOOOOOOOOOOOOOOOOOOOOOOOOO
+Part 2
 Sentiment analysis based on emission parameters only
 Saves file 'dev.p2.out'
 :return: none

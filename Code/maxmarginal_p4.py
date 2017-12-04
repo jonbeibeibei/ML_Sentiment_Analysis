@@ -4,8 +4,8 @@ import codecs
 from module import read_in_file, count, emissions, transitions, get_parameters
 
 """
-PAAAAAAAAAAAAAAAAAAAAAART FOURRRRRRRRRRRRRRRRRRRRRRR
-Sentiment analysis based on emission parameters only
+Part 4
+Sentiment analysis based on Max-Marginal Algorithm
 Saves file 'dev.p4.out'
 :return: none
 """
