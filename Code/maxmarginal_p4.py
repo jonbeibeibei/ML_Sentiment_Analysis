@@ -4,10 +4,13 @@ import codecs
 from module import read_in_file, count, emissions, transitions, get_parameters
 
 """
-Part 4
-Sentiment analysis based on Max-Marginal Algorithm
+-----------------------------------<<Part 4>>-----------------------------------
+Sentiment analysis based on Max-Marginal Algorithm, explanation of algorithm
+will come in our report
+
 Saves file 'dev.p4.out'
 :return: none
+--------------------------------------------------------------------------------
 """
 
 states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
@@ -22,8 +25,6 @@ def log(num):
 
 def maximum_marginal_sentence(mod_sentence, a, b):
     output_states = []
-
-
     # Initializing the pi matrix with 0s
     y = [0,1,2,3,4,5,6] # corresponds to 'B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O'
     alpha = []

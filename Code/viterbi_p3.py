@@ -6,10 +6,11 @@ import numpy as np
 
 
 """
-Part 3
+-----------------------------------<<Part 3>>-----------------------------------
 Sentiment analysis based using the Viterbi Algorithm, providing Transition and Emission Params
 Saves file 'dev.p3.out'
 :return: none
+--------------------------------------------------------------------------------
 """
 def log(num):
     if num == 0 or 0.0:

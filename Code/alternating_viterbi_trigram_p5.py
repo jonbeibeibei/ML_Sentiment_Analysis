@@ -3,15 +3,13 @@ import codecs
 import copy
 from module import read_in_file
 from viterbi_p3 import viterbi
-from maxmarginal_p4 import maximum_marginal_sentence
-import numpy as np
-
 
 """
-PAAAAAAAAAAAAAAAAAAAAAART FIVEEEEEEEEEEEEEEEEEEEEEEE
+-----------------------------------<<Part 5 - FR>>-----------------------------------
 Sentiment analysis based on emission parameters only
 Saves file 'dev.p5.out'
 :return: none
+-------------------------------------------------------------------------------------
 """
 def log(num):
     if num == 0 or 0.0:
@@ -185,9 +183,11 @@ def get_parameters(emission_count, transition_count, transition_ABC_count, y_cou
 
 def viterbi_trigram(x,a,b,c):
     """
+    Alternative Viterbi method that takes into 3 state transition parameters
     :params x: list -- sequence of modified words/observations
     :params a: transition parameters from training set
     :params b: emission parameters from training set
+    :params c: transition ABC parameters from training set
 
     Executes the Viterbi algorithm for each tweet
     :returns: pi, a matrix that contains the best score and parent node of each node
@@ -279,6 +279,7 @@ def viterbi_sentiment_analysis(language):
     Params: Language of dataset you wish to run the analysis on
     :returns: None, writes to output file
     """
+    k = 2
 
     training_path = '../Datasets/' + language +  '/train'
     test_path = '../Datasets/' + language + '/dev.in'
@@ -288,7 +289,7 @@ def viterbi_sentiment_analysis(language):
 
     train_data = read_in_file(training_path)
     print('done reading training file')
-    emission_count, transition_count, transition_ABC_count, y_count, x_count = new_count(train_data, 2)
+    emission_count, transition_count, transition_ABC_count, y_count, x_count = new_count(train_data, k)
     print('done counting x, y, emissions')
 
     b, a, c = get_parameters(emission_count, transition_count, transition_ABC_count, y_count)
@@ -299,12 +300,12 @@ def viterbi_sentiment_analysis(language):
 
     main_path = os.path.dirname(__file__)
     save_path = os.path.join(main_path, output_path)
-    with codecs.open(os.path.join(save_path,'dev.p5_trigram.out'), 'w', 'utf-8') as file:
+    with codecs.open(os.path.join(save_path,'dev.p5_alternating.out'), 'w', 'utf-8') as file:
         for sentence in test_data:
             mod_sentence = []
             for word in sentence:
                 # To check if word in test data appears in training data
-                if word not in x_count or x_count[word] < 2:
+                if word not in x_count or x_count[word] < k:
                     mod_word = '#UNK#'
                 else:
                     mod_word = word
@@ -313,7 +314,6 @@ def viterbi_sentiment_analysis(language):
             pi = viterbi(mod_sentence, a, b)
             viterbi_output_states = back_propagation(pi)
 
-            max_marginal_output_states = maximum_marginal_sentence(mod_sentence, a, b)
 
             trigram_pi = viterbi_trigram(mod_sentence, a, b, c)
             trigram_output_states = back_propagation(trigram_pi)
@@ -323,10 +323,10 @@ def viterbi_sentiment_analysis(language):
 
             for i in range(len(sentence)):
                 viterbi_label = viterbi_output_states[i+1]
-                max_marg_label = max_marginal_output_states[i]
+                trigram_label = trigram_output_states[i+1]
 
                 #Check if viterbi label was O whilst maxmarg was not O
-                if viterbi_label == 'O' and max_marg_label != 'O':
+                if viterbi_label == 'O' and trigram_label != 'O':
                     flag = False #this flag indicates whether or not we should use the max-marginal labels
 
                     #Check if all previous viterbi entries are an O as well
@@ -340,11 +340,11 @@ def viterbi_sentiment_analysis(language):
                     if flag == True:
                         # manually correct the data for Max-marginal as it isnt as sensitive to B or I changes
                         # Because everything that preceded was an O, we can manually assert that the first I encountered needs to be replaced with B
-                        if max_marg_label[0] == 'I':
-                            max_marg_label.replace('I-','B-')
+                        if 'I-' in trigram_label:
+                            trigram_label.replace('I-','B-')
                         #update the fixed labels output
-                        print('fixing')
-                        fixed_output_states[i+1] = max_marg_label
+
+                        fixed_output_states[i+1] = trigram_label
                         # break
 
             for i in range(len(sentence)):
@@ -358,8 +358,8 @@ def viterbi_sentiment_analysis(language):
 
 viterbi_sentiment_analysis('EN')
 viterbi_sentiment_analysis('FR')
-viterbi_sentiment_analysis('CN')
-viterbi_sentiment_analysis('SG')
+# viterbi_sentiment_analysis('CN')
+# viterbi_sentiment_analysis('SG')
 
 # trainFile = read_in_file('../Datasets/SG/train')
 # emission_count, transition_count, y_count, x_count = count(trainFile, 3)

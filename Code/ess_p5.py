@@ -6,14 +6,18 @@ from viterbi_p3 import viterbi
 from maxmarginal_p4 import maximum_marginal_sentence
 
 """
-Part 5
+-----------------------------------<<Part 5 - EN>>-----------------------------------
 Entity & Sentiment Separation Analysis
 Entity and Sentiment Prediction done via separation
+This algorithm divides the Viterbi process into 2, calculating emission and
+transition parameters by only considering Sentiment or Entity at once.
+
 Saves file 'dev.p5_ess.out'
 :return: none
+-------------------------------------------------------------------------------------
 """
 
-states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
+# states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
 sentiment_only_states = ['O', 'positive', 'negative', 'neutral']
 entity_only_states = ['O', 'B-', 'I-']
 

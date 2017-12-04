@@ -5,10 +5,11 @@ import copy
 from module import read_in_file, count, emissions, transitions, get_parameters
 
 """
-Part 2
+-----------------------------------<<Part 2>>-----------------------------------
 Sentiment analysis based on emission parameters only
 Saves file 'dev.p2.out'
 :return: none
+--------------------------------------------------------------------------------
 """
 
 states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
