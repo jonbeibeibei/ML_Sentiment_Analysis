@@ -135,3 +135,5 @@ def maximum_marginal_analysis(language):
 if __name__ == '__main__':
     maximum_marginal_analysis('EN')
     maximum_marginal_analysis('FR')
+    # maximum_marginal_analysis('CN')
+    # maximum_marginal_analysis('SG')
