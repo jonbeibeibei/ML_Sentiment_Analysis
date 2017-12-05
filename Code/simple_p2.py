@@ -74,7 +74,3 @@ simple_sentiment_analysis('SG')
 simple_sentiment_analysis('EN')
 simple_sentiment_analysis('FR')
 simple_sentiment_analysis('CN')
-
-# trainFile = read_in_file('../Datasets/SG/train')
-# emission_count, y_count, x_count = count(trainFile, 3)
-# print(x_count)

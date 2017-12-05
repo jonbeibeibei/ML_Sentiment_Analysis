@@ -6,7 +6,7 @@ from viterbi_p3 import viterbi
 from maxmarginal_p4 import maximum_marginal_sentence
 
 """
------------------------------------<<Part 5 - EN>>-----------------------------------
+-----------------------------------<<Part 5>>-----------------------------------
 Entity & Sentiment Separation Analysis
 Entity and Sentiment Prediction done via separation
 This algorithm divides the Viterbi process into 2, calculating emission and
@@ -14,7 +14,7 @@ transition parameters by only considering Sentiment or Entity at once.
 
 Saves file 'dev.p5_ess.out'
 :return: none
--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 """
 
 # states = ['B-positive', 'B-neutral', 'B-negative', 'I-positive', 'I-neutral', 'I-negative','O']
@@ -236,7 +236,7 @@ def viterbi_sentiment_only(x,a,b):
     for i in range(n+1):
         pi.append([])
         for j in range(T):
-            pi[i].append([0,'O']) # idx 0 represents score, idx 1 represents parent node
+            pi[i].append([0,'O',0,'O']) # idx 0 represents score, idx 1 represents parent node, idx 2 represents 2nd best score, and idx 3 represent the second best parent node
 
     # Base case: start step
     for u in y:
@@ -254,9 +254,13 @@ def viterbi_sentiment_only(x,a,b):
                     p = (pi[i-1][v][0]) * (a[(sentiment_only_states[v], sentiment_only_states[u])]) * (b[(sentiment_only_states[u], x[i])])
                 except KeyError:
                     p = 0.0
-                if p >= pi[i][u][0]: # if it doesn't satisfy this condition for all nodes u, then the word would not be identified as an Entity
-                    pi[i][u][0] = p
-                    pi[i][u][1] = sentiment_only_states[v]
+                if p >= pi[i][u][2]: # if it doesn't satisfy this condition for all nodes u, then the word would not be identified as an Entity
+                    if p >= pi[i][u][0]:
+                        pi[i][u][0], pi[i][u][2], pi[i][u][3] = p, pi[i][u][0], pi[i][u][1]
+                        pi[i][u][1] = sentiment_only_states[v]
+                    else:
+                        pi[i][u][2] = p
+                        pi[i][u][3] = sentiment_only_states[v]
 
     # Base case: Final step
     for v in y:
@@ -279,20 +283,25 @@ def back_propagation_sentiment_only(pi):
     labels = []
 
     for i in range(len(pi)):
-        labels.append(0)
+        labels.append([0,0])
 
     # print(tweet_optimal_y_sequence)
     #Backpropagate to get Optimal State Sequence for Tweet
-    state = pi[len(pi)-1][0][1]
-    labels[len(pi)-1] = state
-    state_index = sentiment_only_states.index(state)
+    best_state = pi[len(pi)-1][0][1]
+    second_best_state = pi[len(pi)-1][0][3]
+    labels[len(pi)-1] = [best_state, second_best_state]
+    best_state_index = sentiment_only_states.index(best_state)
+    second_best_state_index = sentiment_only_states.index(second_best_state)
 
     for i in range(len(pi)-2,0,-1):
-        state = pi[i][state_index][1]
-        labels[i] = state
-        state_index = sentiment_only_states.index(state)
+        best_state = pi[i][best_state_index][1]
+        second_best_state = pi[i][second_best_state_index][3]
+        labels[i][0] = best_state
+        labels[i][1] = second_best_state
+        best_state_index = sentiment_only_states.index(best_state)
+        second_best_state_index = sentiment_only_states.index(second_best_state)
 
-    labels[0] = 'START'
+    labels[0] = ['START', 'START']
 
     return labels
 
@@ -412,7 +421,7 @@ def ess_analysis(language):
     #
     main_path = os.path.dirname(__file__)
     save_path = os.path.join(main_path, output_path)
-    with codecs.open(os.path.join(save_path,'dev.p5_ess.out'), 'w', 'utf-8') as file:
+    with codecs.open(os.path.join(save_path,'dev.p5.out'), 'w', 'utf-8') as file:
         for sentence in test_data:
             mod_sentence = []
             for word in sentence:
@@ -442,20 +451,19 @@ def ess_analysis(language):
                 sentiment_label = output_states_sentiment[i+1]
 
                 if(entity_label != 'O'):
-                    if(sentiment_label != 'O'):
-                        fixed_output_states[i+1] = entity_label + sentiment_label
+                    if(sentiment_label[0] != 'O'):
+                        fixed_output_states[i+1][0] = entity_label + sentiment_label[0]
 
                     else:
-                        fixed_output_states[i+1] = 'O'
+                        fixed_output_states[i+1][0] = entity_label + sentiment_label[1]
 
-
-
+            #Check if the beginning of the entity is a B-, not I-
             for j in range(len(sentence)):
-                curr_state = fixed_output_states[j+1]
+                curr_state = fixed_output_states[j+1][0]
                 #Check if all previous entries in the state sequence are Os
                 if(curr_state != 'O'):
                     for check in range(1,i):
-                        if(fixed_output_states[check] != 'O'):
+                        if(fixed_output_states[check][0] != 'O'):
                             flag = False # If not all Os before, then set flag to False
                             break
                         flag = True #If all Os before, set flag to True
@@ -463,14 +471,10 @@ def ess_analysis(language):
                     if(flag == True): #If flag == True, check if the first entity encountered is B-, if not make sure it is B-
                         if('I-' in curr_state):
                             curr_state.replace('I-','B-')
-                        fixed_output_states[j+1] = curr_state
-
-
-
-
+                        fixed_output_states[j+1][0] = curr_state
 
             for i in range(len(sentence)):
-                output = sentence[i] + ' ' + fixed_output_states[i+1] + '\n'
+                output = sentence[i] + ' ' + fixed_output_states[i+1][0] + '\n'
             # output = word + ' ' + optimum_y + '\n'
                 file.write(output)
             file.write('\n')
@@ -481,5 +485,5 @@ def ess_analysis(language):
 if __name__ == '__main__':
     ess_analysis('EN')
     ess_analysis('FR')
-    # ess_analysis('CN')
-    # ess_analysis('SG')
+    ess_analysis('EN_Test')
+    ess_analysis('FR_Test')
