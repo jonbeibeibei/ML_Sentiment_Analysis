@@ -28,9 +28,9 @@ bas O
 . O
 
 Le O
-plat B-neutral
-du I-neutral
-jour I-neutral
+plat B-O
+du I-negative
+jour I-negative
 comme O
 son O
 nom O
@@ -69,7 +69,7 @@ froides O
 
 Très O
 bon O
-bistrot O
+bistrot B-positive
 . O
 
 Des O
@@ -91,7 +91,7 @@ coin O
 
 Ensuite O
 les O
-plats O
+plats B-negative
 ... O
 pas O
 de O
@@ -108,7 +108,7 @@ maison O
 
 Reste O
 le O
-service B-negative
+service B-positive
 , O
 sympathique O
 mais O
@@ -127,7 +127,7 @@ de O
 qualité O
 de O
 ce O
-restaurant O
+restaurant B-positive
 . O
 
 En O
@@ -139,7 +139,7 @@ certainement O
 un O
 des O
 meilleurs O
-bistrot O
+bistrot B-negative
 parisien O
 . O
 
@@ -195,7 +195,7 @@ sucré O
 . O
 
 Le O
-restaurant O
+restaurant B-negative
 se O
 trouvant O
 au-dessus O
@@ -385,13 +385,13 @@ du O
 siècle O
 , O
 les O
-assiettes O
+assiettes B-negative
 sont O
 peu O
 fournies O
 , O
 les O
-plats O
+plats B-negative
 médiocres O
 et O
 le O
@@ -428,7 +428,7 @@ nous O
 dire O
 que O
 nos O
-plats O
+plats B-negative
 sont O
 entrain O
 d'arriver O
@@ -545,7 +545,7 @@ du O
 bien O
 de O
 ce O
-restaurant O
+restaurant B-positive
 . O
 
 De O
@@ -567,7 +567,7 @@ ne O
 retournerons O
 dans O
 ce O
-restaurant O
+restaurant B-positive
 . O
 
 Le O
@@ -608,7 +608,7 @@ de O
 Gap O
 , O
 ce O
-restaurant O
+restaurant B-negative
 est O
 bien O
 décoré O
@@ -620,7 +620,7 @@ beaucoup O
 fréquenté O
 ce O
 petit O
-restaurant O
+restaurant B-negative
 , O
 mais O
 là O
@@ -638,7 +638,7 @@ grand O
 plaisir O
 dans O
 ce O
-restaurant O
+restaurant B-positive
 . O
 
 Je O
@@ -688,9 +688,9 @@ mais O
 goûteuses O
 et O
 un O
-verre B-negative
+verre B-O
 de I-negative
-vin I-negative
+vin I-O
 de I-negative
 bonne O
 qualité O
@@ -785,7 +785,7 @@ P O
 les O
 entrées O
 et O
-desserts O
+desserts B-negative
 sont O
 inégaux O
 quant O
@@ -798,7 +798,7 @@ ne O
 recommanderai O
 pas O
 ce O
-restaurant O
+restaurant B-O
 et O
 n'y O
 retournerai O
@@ -811,7 +811,7 @@ bref O
 la O
 qualité O
 du O
-service B-negative
+service B-positive
 est O
 un O
 comble O
@@ -958,7 +958,7 @@ et O
 en O
 plus O
 le O
-service B-negative
+service B-positive
 est O
 avec O
 le O
@@ -977,7 +977,7 @@ lorsque O
 nous O
 lisions O
 la O
-carte B-positive
+carte B-negative
 , O
 malgré O
 cette O
@@ -988,7 +988,7 @@ le O
 contenu O
 de O
 la O
-carte B-positive
+carte B-negative
 avait O
 l'air O
 pas O
@@ -1022,7 +1022,7 @@ d'une O
 serveuse B-negative
 avec O
 ses O
-assiettes O
+assiettes B-negative
 nous O
 a O
 fait O
@@ -1156,7 +1156,7 @@ parisiennes O
 dîner O
 dans O
 cet O
-établissement B-positive
+établissement B-negative
 bien O
 situé O
 . O
@@ -1220,8 +1220,8 @@ merci O
 l O
 ' O
 accueil B-positive
-au O
-service B-negative
+au positive
+service B-positive
 , O
 la O
 gentillesse O
@@ -1241,9 +1241,9 @@ plat O
 fut O
 correct O
 ( O
-saint B-positive
-jacques I-positive
-- I-positive
+saint O
+jacques O
+- O
 risotto O
 ) O
 ... O
@@ -1257,8 +1257,8 @@ faim O
 ... O
 seulement O
 trois O
-saint B-negative
-jacques I-negative
+saint O
+jacques O
 le O
 tout O
 à O
@@ -1281,13 +1281,13 @@ Bien O
 situé O
 . O
 
-repas O
+repas B-O
 et O
 un O
 vin O
 irréprochable O
 , O
-service B-negative
+service B-positive
 impeccable O
 . O
 
@@ -1306,7 +1306,7 @@ de O
 passage O
 dans O
 le O
-restaurant O
+restaurant B-positive
 . O
 
 Certes O
@@ -1353,13 +1353,13 @@ aimable O
 de O
 la O
 vraie O
-nourriture B-positive
-traditionnelle I-positive
-française I-positive
+nourriture B-negative
+traditionnelle O
+française O
 , O
 fraîcheur O
 des O
-aliments B-negative
+aliments O
 , O
 inventivité O
 ( O
@@ -1372,7 +1372,7 @@ tester O
 ) O
 dans O
 les O
-recettes B-positive
+recettes O
 , O
 de O
 bon O
@@ -1414,7 +1414,7 @@ avons O
 testé O
 de O
 nombreux O
-plats O
+plats B-negative
 différents O
 et O
 toujours O
@@ -1461,7 +1461,7 @@ pressé O
 de O
 finir O
 son O
-service B-negative
+service B-positive
 et O
 qui O
 est O
@@ -1486,7 +1486,7 @@ tapenade O
 . O
 
 Les O
-desserts O
+desserts B-positive
 maisons O
 apparemment O
 sont O
@@ -1558,7 +1558,7 @@ de I-negative
 terre I-negative
 comme O
 une O
-soupe B-positive
+soupe B-O
 amère O
 . O
 
@@ -1599,15 +1599,15 @@ sympathique O
 
 Des O
 serveurs B-negative
-antipathiques I-negative
+antipathiques I-O
 au I-negative
 possible O
 . O
 
 Un O
-tartare B-neutral
-de I-neutral
-saumon I-neutral
+tartare B-O
+de I-negative
+saumon I-O
 avec O
 trop O
 d'oignons O
@@ -1633,7 +1633,7 @@ la O
 recette O
 des O
 moules B-negative
-marinières I-negative
+marinières O
 . O
 
 Accueil B-negative
@@ -1650,7 +1650,7 @@ bien O
 mangé O
 avec O
 des O
-plats O
+plats B-O
 traditionnels O
 comme O
 à O
@@ -1675,7 +1675,7 @@ de O
 responsable B-negative
 dans O
 le O
-restaurant O
+restaurant B-O
 pour O
 répondre O
 à O
@@ -1723,7 +1723,7 @@ nous O
 venions O
 dans O
 ce O
-restaurant O
+restaurant B-positive
 ! O
 
 Le O
@@ -1746,9 +1746,9 @@ nous O
 est O
 présentée O
 est O
-défalquée B-negative
-d'une I-negative
-cocotte I-negative
+défalquée O
+d'une O
+cocotte O
 alors O
 que O
 plus O
@@ -1774,13 +1774,13 @@ savent O
 pas O
 décrire O
 les O
-plats O
+plats B-negative
 , O
 les O
 noms O
 originaux O
 des O
-plats O
+plats B-negative
 sont O
 incompréhensible O
 . O
@@ -1805,7 +1805,7 @@ pris O
 bavette B-negative
 avec O
 des O
-frites O
+frites B-negative
 ! O
 
 A O
@@ -1829,14 +1829,14 @@ bonne O
 , O
 plus O
 de O
-plat B-neutral
-du I-neutral
-jour I-neutral
+plat B-positive
+du I-positive
+jour I-positive
 . O
 
 Arrivages O
 de O
-poissons B-positive
+poissons O
 journalier O
 , O
 donc O
@@ -1922,7 +1922,7 @@ lieu B-positive
 un O
 bon O
 verre B-negative
-de I-negative
+de I-O
 vin I-negative
 , O
 des O
@@ -1949,7 +1949,7 @@ C'est O
 la O
 fin O
 de O
-service B-negative
+service B-positive
 . O
 
 Salle O
@@ -2069,7 +2069,7 @@ testé O
 plusieurs O
 entrées O
 et O
-plats O
+plats B-negative
 .. O
 Personne O
 n O
@@ -2094,7 +2094,7 @@ temps O
 . O
 
 Le O
-service B-negative
+service B-positive
 est O
 très O
 correct O
@@ -2221,7 +2221,7 @@ gâchis O
 ! O
 
 Les O
-plats O
+plats B-negative
 sont O
 excellents O
 de O
@@ -2243,14 +2243,14 @@ affreux O
 
 Une O
 belle O
-carte B-positive
+carte B-negative
 pleine O
 de O
 bonnes O
 surprises O
 . O
 
-Serveurs B-negative
+Serveurs O
 désagréables O
 , O
 vous O
@@ -2343,12 +2343,12 @@ d'un O
 magret B-positive
 de I-positive
 canard I-positive
-miel I-positive
-/ O
-citron O
-accompagné O
-de O
-pommes B-negative
+miel I-neutral
+/ I-neutral
+citron I-negative
+accompagné I-negative
+de I-negative
+pommes negative
 sautées O
 , O
 un O
@@ -2357,7 +2357,7 @@ délice O
 ! O
 
 La O
-carte B-positive
+carte B-negative
 pourtant O
 est O
 bien O
@@ -2399,7 +2399,7 @@ serveurs B-negative
 . O
 
 Les O
-plats O
+plats B-negative
 sont O
 servis O
 en O
@@ -2450,7 +2450,7 @@ sympa O
 . O
 
 Le O
-patron O
+patron B-negative
 est O
 vraiment O
 super O
@@ -2476,7 +2476,7 @@ sec O
 mal O
 cuit O
 , O
-frites O
+frites B-negative
 sans O
 goût O
 à O
@@ -2488,7 +2488,7 @@ l'huile O
 bière B-negative
 chaude O
 ... O
-service B-negative
+service B-positive
 assez O
 sympathique O
 et O
@@ -2533,7 +2533,7 @@ la O
 soirée O
 . O
 
-Choix B-negative
+Choix O
 du O
 buffet O
 très O
@@ -2573,7 +2573,7 @@ du O
 se O
 méfier O
 du O
-restaurant O
+restaurant B-negative
 presque O
 vide O
 un O
@@ -2587,7 +2587,7 @@ pas O
 à O
 tomber O
 par O
-terre B-positive
+terre O
 
 En O
 entrée O
@@ -2604,14 +2604,14 @@ délicieux O
 ) O
 et O
 une O
-sorte B-negative
-de I-negative
+sorte B-positive
+de I-positive
 canard I-negative
-confis I-negative
-en O
-gelée O
-avec O
-noix B-positive
+confis I-O
+en I-negative
+gelée I-negative
+avec I-negative
+noix I-positive
 et O
 poires O
 ( O
@@ -2626,7 +2626,7 @@ quartier O
 tranquille O
 , O
 un O
-restaurant O
+restaurant B-negative
 où O
 l'on O
 peut O
@@ -2671,7 +2671,7 @@ patients O
 . O
 
 La O
-carte B-positive
+carte B-negative
 est O
 généreuse O
 . O
@@ -2687,21 +2687,21 @@ sont O
 bonnes O
 
 des O
-plats O
+plats B-negative
 sans O
 passion O
 , O
 vaisselle O
 cassée O
 , O
-plat B-neutral
-du I-neutral
-jour I-neutral
+plat B-O
+du I-negative
+jour I-negative
 ( O
 riz B-negative
-crustacés O
-en O
-gros O
+crustacés I-O
+en I-negative
+gros I-negative
 ) O
 très O
 sec O
@@ -2724,17 +2724,17 @@ goût O
 . O
 
 La O
-sauce B-negative
+sauce B-O
 envahissait O
 le O
-poisson O
+poisson B-negative
 . O
 
 1ère O
 fois O
 que O
 le O
-service B-negative
+service B-positive
 n'est O
 pas O
 à O
@@ -2773,16 +2773,16 @@ Service B-positive
 aimable O
 . O
 
-Choix B-negative
+Choix O
 de O
-plats O
+plats B-negative
 très O
 classique O
 , O
 et O
 qualité O
 des O
-plats O
+plats B-negative
 médiocre O
 . O
 
@@ -2841,7 +2841,7 @@ bien O
 . O
 
 Un O
-restaurant O
+restaurant B-negative
 extrêmement O
 bien O
 situé O
@@ -2865,25 +2865,25 @@ en O
 boite O
 , O
 son O
-boeuf B-negative
-bourguignon I-negative
+boeuf O
+bourguignon O
 rempli O
 de O
 bas O
 morceaux O
 ... O
 ces O
-escargots B-positive
+escargots O
 decongeles O
 etc O
 ... O
 cuisine B-positive
-française I-positive
+française O
 vraiment O
 ? O
 
 Le O
-saumon O
+saumon B-negative
 n'était O
 pas O
 très O
@@ -2956,7 +2956,7 @@ satisfait O
 
 Accueil B-negative
 et O
-service B-negative
+service B-positive
 sont O
 agréables O
 et O
@@ -3020,9 +3020,9 @@ et O
 une O
 part O
 de O
-tarte B-positive
-aux I-positive
-pommes O
+tarte B-negative
+aux I-negative
+pommes negative
 surgelée O
 ( O
 écrit O
@@ -3036,7 +3036,7 @@ carte B-positive
 Bon O
 accueil B-positive
 mais O
-service B-negative
+service B-positive
 un O
 peu O
 long O
@@ -3103,7 +3103,7 @@ cela O
 . O
 
 Des O
-plats O
+plats B-negative
 correctement O
 servis O
 , O
@@ -3165,11 +3165,11 @@ toujours O
 très O
 chaleureux O
 du O
-patron B-negative
-et I-negative
-de I-negative
-sa I-negative
-femme I-negative
+patron B-O
+et O
+de O
+sa O
+femme O
 . O
 
 Superbe O
@@ -3197,9 +3197,9 @@ de O
 la O
 qualité O
 du O
-plat B-neutral
-du I-neutral
-jour I-neutral
+plat B-positive
+du I-positive
+jour I-positive
 . O
 
 Mais O
@@ -3359,7 +3359,7 @@ en O
 tout O
 début O
 de O
-service B-negative
+service B-positive
 lorsque O
 l'endroit O
 est O
@@ -3475,7 +3475,7 @@ Je O
 connais O
 l'adresse O
 depuis O
-longtemps B-positive
+longtemps O
 
 Le O
 cadre B-positive
@@ -3498,13 +3498,13 @@ deux O
 entrées O
 , O
 deux O
-plats O
+plats B-O
 et O
 deux O
-desserts O
+desserts B-O
 à O
 la O
-carte B-positive
+carte B-O
 avec O
 une O
 bouteille B-negative
@@ -3551,7 +3551,7 @@ le O
 menu O
 avec O
 le O
-responsable B-negative
+responsable B-O
 et O
 nous O
 étions O
@@ -3609,7 +3609,7 @@ est O
 moyenne O
 
 Le O
-service B-negative
+service B-positive
 est O
 correct O
 poli O
@@ -3650,7 +3650,7 @@ déception O
 Le O
 contenu O
 des O
-assiettes O
+assiettes B-negative
 est O
 tout O
 aussi O
@@ -3662,8 +3662,8 @@ très O
 bon O
 de O
 l'entrée O
-aux O
-desserts O
+aux positive
+desserts B-positive
 . O
 
 Mais O
@@ -3671,7 +3671,7 @@ après O
 : O
 
 Les O
-plats O
+plats B-negative
 sont O
 classiques O
 mais O
@@ -3701,10 +3701,10 @@ endroits O
 . O
 
 Le O
-moelleux O
-speculos O
-/ O
-chocolat O
+moelleux B-neutral
+speculos I-neutral
+/ I-neutral
+chocolat I-positive
 était O
 a O
 tom O
@@ -3721,7 +3721,7 @@ restaurant O
 
 Manifestement O
 ce O
-restaurant O
+restaurant B-negative
 a O
 préféré O
 tout O
@@ -3730,7 +3730,7 @@ sur O
 le O
 cadre B-positive
 au I-positive
-détriment I-positive
+détriment I-O
 de I-positive
 la O
 cuisine B-positive

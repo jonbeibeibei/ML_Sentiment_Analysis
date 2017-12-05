@@ -27,3 +27,8 @@ First navigate to the `Code` folder, then run
 The results will be saved to `EvalScript/<Language of choice>/dev.p4.out`
 
 ## Part 5 - Improvements
+To run the code for part 5:  
+First navigate to the `Code` folder, then run   
+`>> python ess_p5.py`
+
+The results will be saved to `EvalScript/<Language of choice>/dev.p5.out`
