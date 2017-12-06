@@ -383,7 +383,7 @@ It O
 looked O
 like O
 shredded B-positive
-cheese I-O
+cheese I-neutral
 partly I-negative
 done O
 - O
@@ -453,7 +453,7 @@ Wow O
 . O
 
 This O
-place B-O
+place B-neutral
 blew O
 me O
 away O
@@ -1281,7 +1281,7 @@ of O
 good O
 food B-positive
 and I-positive
-belly I-O
+belly I-neutral
 dancers I-positive
 ! O
 
@@ -1296,7 +1296,7 @@ With O
 so O
 many O
 great O
-breakfast B-O
+breakfast B-neutral
 / I-negative
 lunch O
 places O
@@ -1729,7 +1729,7 @@ the O
 City O
 ; O
 the O
-place B-O
+place B-neutral
 the O
 negative O
 reviews O
@@ -1898,7 +1898,7 @@ once O
 " O
 THE O
 " O
-place B-O
+place B-neutral
 to O
 meet O
 and O
@@ -1927,7 +1927,7 @@ the O
 evening O
 , O
 this O
-place B-O
+place B-neutral
 attracted O
 a O
 well O
@@ -2133,7 +2133,7 @@ complimentary O
 
 Your O
 a O
-sushi B-O
+sushi B-neutral
 fan O
 , O
 you O
@@ -2466,7 +2466,7 @@ me O
 Subtle O
 food B-positive
 and O
-service B-O
+service B-neutral
 
 Great O
 Breakfast O
@@ -2499,7 +2499,7 @@ a O
 few O
 small O
 pieces B-negative
-of I-O
+of I-neutral
 chicken I-positive
 , O
 all O
@@ -2568,7 +2568,7 @@ japanese B-positive
 food I-positive
 with O
 mediocre O
-service B-O
+service B-neutral
 
 You O
 will O
@@ -2876,7 +2876,7 @@ Grammercy B-positive
 / I-positive
 Union I-positive
 Square I-positive
-/ I-O
+/ I-neutral
 East I-negative
 Village O
 this O
@@ -3651,7 +3651,7 @@ get O
 the O
 Chef's O
 tasting O
-menu B-O
+menu B-neutral
 and O
 your O
 favourite O
@@ -3899,7 +3899,7 @@ good O
 This O
 is O
 the O
-place B-O
+place B-neutral
 to O
 relax O
 and O

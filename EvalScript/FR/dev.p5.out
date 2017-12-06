@@ -28,7 +28,7 @@ bas O
 . O
 
 Le O
-plat B-O
+plat B-neutral
 du I-negative
 jour I-negative
 comme O
@@ -688,9 +688,9 @@ mais O
 goûteuses O
 et O
 un O
-verre B-O
+verre B-neutral
 de I-negative
-vin I-O
+vin I-neutral
 de I-negative
 bonne O
 qualité O
@@ -798,7 +798,7 @@ ne O
 recommanderai O
 pas O
 ce O
-restaurant B-O
+restaurant B-neutral
 et O
 n'y O
 retournerai O
@@ -1281,7 +1281,7 @@ Bien O
 situé O
 . O
 
-repas B-O
+repas B-neutral
 et O
 un O
 vin O
@@ -1558,7 +1558,7 @@ de I-negative
 terre I-negative
 comme O
 une O
-soupe B-O
+soupe B-neutral
 amère O
 . O
 
@@ -1599,15 +1599,15 @@ sympathique O
 
 Des O
 serveurs B-negative
-antipathiques I-O
+antipathiques I-neutral
 au I-negative
 possible O
 . O
 
 Un O
-tartare B-O
+tartare B-neutral
 de I-negative
-saumon I-O
+saumon I-neutral
 avec O
 trop O
 d'oignons O
@@ -1650,7 +1650,7 @@ bien O
 mangé O
 avec O
 des O
-plats B-O
+plats B-neutral
 traditionnels O
 comme O
 à O
@@ -1675,7 +1675,7 @@ de O
 responsable B-negative
 dans O
 le O
-restaurant B-O
+restaurant B-neutral
 pour O
 répondre O
 à O
@@ -1922,7 +1922,7 @@ lieu B-positive
 un O
 bon O
 verre B-negative
-de I-O
+de I-neutral
 vin I-negative
 , O
 des O
@@ -2607,7 +2607,7 @@ une O
 sorte B-positive
 de I-positive
 canard I-negative
-confis I-O
+confis I-neutral
 en I-negative
 gelée I-negative
 avec I-negative
@@ -2694,12 +2694,12 @@ passion O
 vaisselle O
 cassée O
 , O
-plat B-O
+plat B-neutral
 du I-negative
 jour I-negative
 ( O
 riz B-negative
-crustacés I-O
+crustacés I-neutral
 en I-negative
 gros I-negative
 ) O
@@ -2724,7 +2724,7 @@ goût O
 . O
 
 La O
-sauce B-O
+sauce B-neutral
 envahissait O
 le O
 poisson B-negative
@@ -3165,7 +3165,7 @@ toujours O
 très O
 chaleureux O
 du O
-patron B-O
+patron B-neutral
 et O
 de O
 sa O
@@ -3498,13 +3498,13 @@ deux O
 entrées O
 , O
 deux O
-plats B-O
+plats B-neutral
 et O
 deux O
-desserts B-O
+desserts B-neutral
 à O
 la O
-carte B-O
+carte B-neutral
 avec O
 une O
 bouteille B-negative
@@ -3551,7 +3551,7 @@ le O
 menu O
 avec O
 le O
-responsable B-O
+responsable B-neutral
 et O
 nous O
 étions O
@@ -3730,7 +3730,7 @@ sur O
 le O
 cadre B-positive
 au I-positive
-détriment I-O
+détriment I-neutral
 de I-positive
 la O
 cuisine B-positive

@@ -454,8 +454,11 @@ def ess_analysis(language):
                     if(sentiment_label[0] != 'O'):
                         fixed_output_states[i+1][0] = entity_label + sentiment_label[0]
 
-                    else:
+                    elif(sentiment_label[1] != 'O'):
                         fixed_output_states[i+1][0] = entity_label + sentiment_label[1]
+
+                    else:
+                        fixed_output_states[i+1][0] = entity_label + 'neutral'
 
             #Check if the beginning of the entity is a B-, not I-
             for j in range(len(sentence)):

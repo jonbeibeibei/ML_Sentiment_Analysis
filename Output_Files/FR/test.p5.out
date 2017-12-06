@@ -136,7 +136,7 @@ serveuse B-negative
 qui O
 sert O
 des O
-plats B-O
+plats B-neutral
 sur O
 la O
 table O
@@ -169,7 +169,7 @@ qu'un O
 dessert B-negative
 aux I-negative
 fruits I-negative
-rouges I-O
+rouges I-neutral
 sur O
 les O
 4 O
@@ -591,9 +591,9 @@ maison O
 , O
 la O
 petite O
-salade B-O
+salade B-neutral
 accompagné I-negative
-d'une I-O
+d'une I-neutral
 vinaigrette I-negative
 bien O
 relevée O
@@ -749,7 +749,7 @@ adresse B-positive
 
 Cuisine B-positive
 réchauffée I-negative
-au I-O
+au I-neutral
 micro I-negative
 ondes I-negative
 , O
@@ -1242,7 +1242,7 @@ excellente O
 Tarte O
 aux negative
 pommes B-negative
-au I-O
+au I-neutral
 calva I-negative
 sans I-neutral
 calva I-negative
@@ -1257,7 +1257,7 @@ avions O
 réservé O
 dans O
 ce O
-restaurant B-O
+restaurant B-neutral
 en O
 voyant O
 qu'il O
@@ -1291,7 +1291,7 @@ Marseille O
 . O
 
 Le O
-restaurant B-O
+restaurant B-neutral
 présente O
 un O
 cadre B-positive
@@ -1444,7 +1444,7 @@ une O
 honte O
 , O
 desset O
-crème B-O
+crème B-neutral
 caramel I-negative
 au I-negative
 beurre I-negative
@@ -1644,7 +1644,7 @@ retourne O
 " O
 les O
 prochains O
-plats B-O
+plats B-neutral
 seront O
 les O
 vôtres O
@@ -2138,7 +2138,7 @@ ne O
 pas O
 sélectionner O
 ce O
-restaurant B-O
+restaurant B-neutral
 pour O
 un O
 repas O
@@ -2303,7 +2303,7 @@ congelé O
 jetés O
 sur O
 nos O
-viandes B-O
+viandes B-neutral
 pour O
 camoufler O
 la O
@@ -2405,7 +2405,7 @@ peine O
 installés O
 et O
 la O
-carte B-O
+carte B-neutral
 en O
 main O
 que O
@@ -2620,7 +2620,7 @@ sent O
 la O
 passion O
 du O
-patron B-O
+patron B-neutral
 et O
 en O
 terrasse B-positive
@@ -2666,7 +2666,7 @@ le O
 comportement O
 de O
 la O
-patronne B-O
+patronne B-neutral
 exécrable O
 et O
 dédaigneux O
@@ -3099,7 +3099,7 @@ décoré O
 . O
 
 Le O
-patron B-O
+patron B-neutral
 breton O
 est O
 , O
@@ -3263,7 +3263,7 @@ des O
 nouvelles O
 de O
 nos O
-plats B-O
+plats B-neutral
 en O
 précisant O
 que O
@@ -3351,7 +3351,7 @@ tranquille O
 . O
 
 Un O
-restaurant B-O
+restaurant B-neutral
 surement O
 très O
 réputé O
@@ -3364,9 +3364,9 @@ longtemps O
 ... O
 
 Les O
-fruits B-O
+fruits B-neutral
 de I-negative
-mer I-O
+mer I-neutral
 en O
 entrée O
 étaient O
@@ -3382,7 +3382,7 @@ Service B-positive
 impeccable O
 , O
 le O
-patron B-O
+patron B-neutral
 et O
 le O
 serveur B-negative
@@ -3652,7 +3652,7 @@ des O
 amis O
 dans O
 ce O
-restaurant B-O
+restaurant B-neutral
 et O
 je O
 trouve O
@@ -3756,7 +3756,7 @@ l'emporter O
 Pour O
 conclure O
 la O
-carte B-O
+carte B-neutral
 comporte O
 quelques O
 fautes O

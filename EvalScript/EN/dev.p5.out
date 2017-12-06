@@ -481,7 +481,7 @@ a O
 cute O
 interior B-negative
 decor I-negative
-and I-O
+and I-neutral
 affordable I-negative
 city I-negative
 prices O
@@ -605,7 +605,7 @@ It's O
 definately O
 not O
 a O
-place B-O
+place B-neutral
 to O
 go O
 if O
@@ -829,7 +829,7 @@ was O
 introduced O
 to O
 this O
-place B-O
+place B-neutral
 and O
 this O
 is O
@@ -1300,7 +1300,7 @@ corner O
 After O
 dinner O
 the O
-manager B-O
+manager B-neutral
 grabbed O
 my O
 boyfriend O
@@ -1418,7 +1418,7 @@ either O
 a O
 peppercorn B-positive
 sauce I-positive
-or I-O
+or I-neutral
 red I-negative
 wine I-positive
 reduction I-negative
@@ -1543,7 +1543,7 @@ presented O
 me O
 with O
 a O
-plate B-O
+plate B-neutral
 of I-negative
 steamed I-negative
 vegetables I-negative
@@ -1899,7 +1899,7 @@ girl I-positive
 ( I-positive
 with I-positive
 winged I-positive
-/ I-O
+/ I-neutral
 Dame I-negative
 Edna I-negative
 glasses O
@@ -2746,7 +2746,7 @@ service B-positive
 Roxy O
 is O
 a O
-place B-O
+place B-neutral
 to O
 AVOID O
 ! O
@@ -2822,7 +2822,7 @@ the O
 udon O
 was O
 soy B-positive
-sauce I-O
+sauce I-neutral
 and O
 water O
 . O
@@ -3104,7 +3104,7 @@ NYU O
 i O
 need O
 a O
-place B-O
+place B-neutral
 to O
 eat O
 after O
@@ -3340,7 +3340,7 @@ stumbled O
 onto O
 this O
 hopping O
-place B-O
+place B-neutral
 the O
 other O
 night O
@@ -3632,7 +3632,7 @@ best O
 Chinese B-positive
 style I-positive
 BBQ I-positive
-ribs I-O
+ribs I-neutral
 in O
 the O
 city O
@@ -3860,7 +3860,7 @@ spreads O
 and O
 a O
 good O
-place B-O
+place B-neutral
 to O
 hang O
 out O
@@ -3930,7 +3930,7 @@ meal B-positive
 with O
 the O
 unusual O
-dessert B-O
+dessert B-neutral
 of O
 a O
 port O
@@ -4047,7 +4047,7 @@ is O
 the O
 kind O
 of O
-place B-O
+place B-neutral
 you'd O
 like O
 to O
@@ -4098,7 +4098,7 @@ knew O
 everything O
 about O
 the O
-menu B-O
+menu B-neutral
 and O
 his O
 recommendations O
@@ -4248,7 +4248,7 @@ by O
 far O
 my O
 favorite O
-place B-O
+place B-neutral
 in O
 the O
 neighborhood O
