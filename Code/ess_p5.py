@@ -463,18 +463,17 @@ def ess_analysis(language):
             #Check if the beginning of the entity is a B-, not I-
             for j in range(len(sentence)):
                 curr_state = fixed_output_states[j+1][0]
+                prev_state = fixed_output_states[j][0]
                 #Check if all previous entries in the state sequence are Os
                 if(curr_state != 'O'):
-                    for check in range(1,i):
-                        if(fixed_output_states[check][0] != 'O'):
-                            flag = False # If not all Os before, then set flag to False
-                            break
-                        flag = True #If all Os before, set flag to True
-
-                    if(flag == True): #If flag == True, check if the first entity encountered is B-, if not make sure it is B-
+                    if(prev_state == 'O'):
                         if('I-' in curr_state):
                             curr_state.replace('I-','B-')
-                        fixed_output_states[j+1][0] = curr_state
+                            fixed_output_states[j+1][0] = curr_state
+                    if('I-' in prev_state or 'B-' in prev_state):
+                        if('B-' in curr_state):
+                            curr_state.replace('B-','I-')
+                            fixed_output_states[j+1][0] = curr_state
 
             for i in range(len(sentence)):
                 output = sentence[i] + ' ' + fixed_output_states[i+1][0] + '\n'
